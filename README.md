@@ -11,12 +11,11 @@ Plataforma de audiências sintéticas que permite testar ideias, conteúdo e dec
 ```
 Highfid/
 ├── README.md                              ← Este arquivo
+├── .gitignore
 ├── docs/
 │   ├── pesquisa-personas-sinteticas.md    ← Pesquisa fundacional sobre personas sintéticas
 │   ├── estudo-de-mercado.md               ← Estudo de mercado completo
 │   ├── mercados-e-verticais.md            ← Análise de mercados e verticais B2C/B2B
 │   └── assets/
 │       └── context.png                    ← Imagem de contexto do projeto
-└── .claude/
-    └── settings.local.json                ← Configuração local do Claude Code
 ```
