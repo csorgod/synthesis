@@ -12,9 +12,9 @@ Sistema de personas sintéticas: Plataforma de simulação de personas baseados 
 
 ## Sugestões de nomes para o produto
 
-Plataforma de Simulação de Consumidores baseada em IA 
-Plataforma Data-Driven de Simulação de Consumidores 
-“Simule AI”, “Teste AI”
+1. Plataforma de Simulação de Consumidores baseada em IA 
+2. Plataforma Data-Driven de Simulação de Consumidores 
+3. “Simule AI”, “Teste AI”
 
 ## Contexto de negócio
 
@@ -87,3 +87,4 @@ Fluxo de negócio e possíveis tecnologias.
 9. Motor de Simulação: CrewAI, LangGraph, FastAPI
 10. Resultados da Simulação: Amazon S3, Apache Iceberg, Apache Parquet
 11. Dashboard: Power BI, Tableau, Apache Superset
+
