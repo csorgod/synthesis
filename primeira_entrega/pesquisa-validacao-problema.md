@@ -1,9 +1,9 @@
 # Entregável Parcial 01: Pesquisa & Validação de Problema - Synthesis
 
-**Curso:** FIAP MBA • MBI LIVE - Empreendedorismo e Inovação 
+**Curso:** FIAP MBA • MBI LIVE - Empreendedorismo e Inovação
 **Entrega:** Checkpoint 01
 **Data alvo:** 23/08/2026
-**Grupo:** 
+**Grupo:**
 
 1. Guilherme Csorgo
 2. Karen Martins
@@ -104,50 +104,141 @@ Este entregável foca no segmento primário: **profissionais de marketing e fund
 
 ---
 
-## 04. Evidências Secundárias
+## 04. Desk research
 
-> Dados, estudos e referências que ajudam a contextualizar e dimensionar o problema.
+Nessa sessão, vamos aprofundar o estudo para áreas ainda não exploradas. Queremos entender o mercado que estamos situados, a fatia que conseguiriamos alcançar inicialmente, e para quais verticais de mercado podemos extrapolar a solução. Esse estudo será fundamental para criarmos uma visão de longo prazo do negócio e quais são os primeiros passos pensando na proposta de valor imediata.
 
-### O custo e o prazo das alternativas existentes
+### Dimensionamento de Mercado (TAM SAM SOM)
 
-- Pesquisa de mercado tradicional custa entre **R$30.000 e R$150.000 por projeto** e leva **3 a 4 semanas** para gerar resultados (referência: modelo de precificação da Galaxies e benchmarks da indústria)
-- Focus groups têm custo médio de **US$3.000–8.000** por sessão com amostra de apenas 8–12 pessoas
-- Recrutamento de públicos especializados (médicos, C-level, nichos de consumo) pode custar **US$150–500 por resposta** em painéis tradicionais
-- A indústria global de pesquisa de mercado movimenta **US$142 bilhões** (ESOMAR, 2023), mas o acesso a esse recurso é profundamente desigual entre grandes empresas e o restante do mercado
+#### Total Addressable Market (TAM)
 
-### A demanda enterprise valida que o problema existe no Brasil
+A indústria global de pesquisa de mercado e insights movimentou **US$ 142 bilhões em 2023** (crescimento de 8% YoY), segundo a ESOMAR. O setor de research software cresceu 12,4% e o de reporting 6,5%, indicando que a camada tecnológica cresce mais rápido que o mercado base.
 
-- A Galaxies (São Paulo, fundada em 2022) atende **Nestlé, Boticário, Bradesco Seguros, Banco do Brasil, TikTok e Meta** com personas sintéticas
-- Resultados publicados pela Galaxies: **97% de redução no tempo de pesquisa** e **85% de economia em custos** (de R$1M para R$150K por projeto)
-- A Galaxies opera exclusivamente no segmento enterprise, com projetos na faixa de **R$150.000+** — excluindo 95%+ do mercado potencial
-- Nenhum player brasileiro oferece solução self-service acessível para PMEs e agências
+Analistas projetam que **dados sintéticos representarão mais de 50% dos inputs de pesquisa de mercado até 2027**.
 
-### O mercado reconhece o gap, mas não o fecha
+O mercado de avatares e agentes IA está projetado para crescer de **US$ 0,8 bi (2025) para US$ 5,93 bi (2032)** CAGR de 33,1%.
 
-- Internacionalmente, a Aaru (EUA) atingiu valuation de **US$1 bilhão** em dezembro de 2025 resolvendo o mesmo problema no mercado americano
-- A YouGov adquiriu a Yabble (plataforma de audiências sintéticas) por **£4,5 milhões** em agosto de 2024 — validando o valor da categoria
-- **Dados sintéticos representarão mais de 50% dos inputs de pesquisa de mercado até 2027** (projeção de analistas do setor)
-- O custo de inferência de LLMs caiu **78% em 2025** — o que viabiliza soluções acessíveis com margem saudável
+#### Serviceable Addressable Market (SAM)
+
+O SAM para uma plataforma de audência sintética inclui:
+- Empresas que gastam com pesquisa de mercado terceirizada
+- Agências de marketing e publicidade
+- Times de produto/UX em empresas de tecnologia
+- Consultorias de estratégia
+
+Considerando que o segmento de research software + synthetic data representa ~5-8% do TAM global, o SAM estimado fica entre **US$ 7-11 bilhões globalmente**.
+
+#### Serviceable Obtainable Market (SOM)
+
+Para uma startup entrando pelo mercado brasileiro e latino-americano, com foco inicial em PMEs e agências:
+- América Latina representa ~2-3% do mercado global de pesquisa
+- Meta realista de captura no primeiro ano: 0,01-0,05% do SAM regional
+- **SOM estimado: US$ 500K - US$ 2M ARR nos primeiros 24 meses**
+
+**Fontes:**
+- [ESOMAR — Drivers of our $142bn Insights Industry](https://researchworld.com/articles/drivers-of-our-142bn-insights-industry)
+- [ESOMAR — Global Market Research 2025](https://esomar.org/publications/global-market-research-2025)
+- [Ditto — Synthetic Research Platforms: 2026 Market Map](https://askditto.io/news/synthetic-research-platforms-the-2026-market-map)
+- [Bain & Company — How Synthetic Customers Bring Companies Closer](https://www.bain.com/insights/how-synthetic-customers-bring-companies-closer-to-the-real-ones/)
+
+### Análise Competitiva
+
+#### Tier 1: Estabelecidos com funding relevante
+
+| Empresa | Valuation / Funding | Diferencial | Preço |
+|---|---|---|---|
+| **Aaru** | US$ 1B valuation, US$50M+ Series A (dez/2025) | Simulação de populações sintéticas, predição eleitoral | ARR < US$10M, clientes: Accenture, EY, IPG |
+| **Synthetic Users** | Não divulgado | Multi-agent + OCEAN + RAG, qualitativo profundo | US$2-60/entrevista |
+| **Yabble** (YouGov) | Adquirida por £4,5M (ago/2024) | "Virtual Audiences", integrada ao ecossistema YouGov | Enterprise |
+
+#### Tier 2: Especializados
+
+| Empresa | Sede | Diferencial | Preço |
+|---|---|---|---|
+| **Minds** | Berlim/SF | Painéis multi-persona (5-50+ minds), GDPR-native | Customizado |
+| **Lakmoos** | Alemanha | IA neuro-simbólica, 98%+ similaridade, indústrias reguladas | Customizado |
+| **Evidenza** | EUA | Enterprise full-service em 72h, ex-LinkedIn B2B Institute | Customizado |
+| **SimSurveys** | — | End-to-end survey + respondentes sintéticos | Customizado |
+
+#### Tier 3: Entrantes e nichos
+
+| Empresa | Diferencial | Preço |
+|---|---|---|
+| **Artificial Societies** | Simulações ilimitadas | US$40/mês |
+| **OpinioAI** | Surveys + focus groups sintéticos, base na Rep. Tcheca | A partir de €99/mês |
+| **Delve AI** | Personas para marketing baseadas em analytics | Freemium |
+| **Ditto, Simile, SYMAR** | Pure-play synthetic, variados | Customizado/Demo |
+| **Personia** | Digital twins, suporte PT/ES/EN para LatAm | Customizado |
+
+###  Concorrentes no Brasil
+
+#### Galaxies: Potencial concorrente direto
+
+| Atributo | Detalhe |
+|---|---|
+| **Sede** | São Paulo, Brasil |
+| **Fundação** | 2022 |
+| **CEO** | Daniel Victorino |
+| **Produto** | Plataforma de inteligência preditiva com personas sintéticas ("Nexus") |
+| **Clientes** | Nestlé, Boticário, Bradesco Seguros, Banco do Brasil, TikTok, Meta, Logitech |
+| **Resultados publicados** | 97% de redução no tempo de pesquisa; 85% de economia em custos (de R$1M para R$150K/projeto) |
+| **Backing** | Google for Startups, NVIDIA Inception Program, Selo Cubo Itaú, vencedora do ITEC (China) |
+| **Funding** | HSR Specialist Researchers adquiriu participação (valor não divulgado) |
+| **Preço** | Não público, modelo enterprise (demo required). Projetos na faixa de R$150K+ |
+| **Posicionamento** | Se autodefine como "primeira empresa no mundo a inovar com Personas Sintéticas" |
+| **Setores** | Farmacêutico, entretenimento, bens de consumo, financeiro |
+
+**Pontos fortes da Galaxies:**
+- Base de clientes enterprise consolidada com marcas de peso
+- Validação do Google Cloud e NVIDIA
+- Resultados quantificados e publicados (97% menos tempo, 85% menos custo)
+- Presença em hub de inovação (Cubo Itaú)
+- Experiência em dados do consumidor brasileiro
+
+**Vulnerabilidades da Galaxies (oportunidades para o Synthesis):**
+- Modelo exclusivamente enterprise, sem tier self-service acessível
+- Sem plano para PMEs, agências médias, startups ou freelancers
+- Pricing na faixa de R$150K+ por projeto exclui 95%+ do mercado potencial
+- Produto fechado, sem API pública documentada
+- Não opera como SaaS self-service (requer demo e implementação assistida)
+
+#### Outros players com presença no Brasil (não brasileiros)
+
+| Empresa | Origem | Presença no Brasil |
+|---|---|---|
+| **Toluna** | Global (Londres) | Personas sintéticas ativas no Brasil como um dos mercados lançados, integradas à plataforma HarmonAIze |
+| **Personia** | Internacional | Suporte PT-BR, digital twins, concept tests com 1000+ usuários sintéticos em minutos |
+| **NVIDIA (Nemotron-Personas-Brazil)** | EUA | Dataset aberto de **6 milhões de personas sintéticas brasileiras** baseado em dados do IBGE, desenvolvido com a WideLabs. Disponível para qualquer empresa usar como base |
 
 ### O que as alternativas atuais não resolvem
 
 | Alternativa atual                  | Por que não resolve o problema                                         |
 | ---------------------------------- | ----------------------------------------------------------------------- |
 | Google Analytics / Meta Ads        | Mostra o que já aconteceu, não o que vai acontecer                    |
-| A/B test                           | Funciona após o lançamento — o erro já custou mídia                |
+| A/B test                           | Funciona após o lançamento, o erro já custou tempo e dinheiro                |
 | Opinião interna da equipe         | Viés de confirmação; não representa o público real                 |
-| Pesquisa de mercado formal         | Cara demais (R$30K+) e demorada (3–4 semanas) para o ritmo de decisão |
+| Pesquisa de mercado formal         | Cara demais (R$30K+) e demorada (3-4 semanas) para o ritmo de decisão |
 | Focus group                        | Custo alto, amostra pequena, demorado para recrutar                     |
 | Planilhas e benchmarks históricos | Dados do passado, não simulação de cenário novo                     |
 
 **Fontes:**
 
-- ESOMAR — Global Market Research 2025
-- Galaxies — [Site oficial](https://www.galaxies.com.br/) e [Google Cloud Case](https://cloud.google.com/customers/intl/pt-br/galaxies)
-- TechCrunch — [Aaru raised a Series A at $1B valuation](https://techcrunch.com/2025/12/05/ai-synthetic-research-startup-aaru-raised-a-series-a-at-a-1b-headline-valuation/)
-- Ditto — [Synthetic Research Platforms: 2026 Market Map](https://askditto.io/news/synthetic-research-platforms-the-2026-market-map)
-- Bain & Company — [How Synthetic Customers Bring Companies Closer](https://www.bain.com/insights/how-synthetic-customers-bring-companies-closer-to-the-real-ones/)
-
+- ESOMAR: Global Market Research 2025
+- Galaxies: [Site oficial](https://www.galaxies.com.br/) e [Google Cloud Case](https://cloud.google.com/customers/intl/pt-br/galaxies)
+- TechCrunch: [Aaru raised a Series A at $1B valuation](https://techcrunch.com/2025/12/05/ai-synthetic-research-startup-aaru-raised-a-series-a-at-a-1b-headline-valuation/)
+- Ditto: [Synthetic Research Platforms: 2026 Market Map](https://askditto.io/news/synthetic-research-platforms-the-2026-market-map)
+- Bain & Company: [How Synthetic Customers Bring Companies Closer](https://www.bain.com/insights/how-synthetic-customers-bring-companies-closer-to-the-real-ones/)
+- TechCrunch: [Aaru raised a Series A at $1B valuation](https://techcrunch.com/2025/12/05/ai-synthetic-research-startup-aaru-raised-a-series-a-at-a-1b-headline-valuation/)
+- Uxia: [12 Best Synthetic Users Tools 2025](https://www.uxia.app/blog/synthetic-users-tools)
+- Minds: [Best Synthetic User Research Platforms 2026](https://getminds.ai/blog/best-synthetic-user-research-platforms)
+- Personia: [AI Market Research with Synthetic Users](https://site.personia.ai/)
+- Galaxies: [Site oficial](https://www.galaxies.com.br/)
+- Economia SP: [Startup revolucionando pesquisas com personas sintéticas](https://economiasp.com/2025/06/23/como-essa-startup-esta-revolucionando-pesquisas-de-mercado-com-personas-sinteticas/)
+- Google Cloud: [Case Galaxies](https://cloud.google.com/customers/intl/pt-br/galaxies?hl=pt-BR)
+- GVAngels: [Case Galaxies](https://gvangels.com.br/blog/postagem/galaxies)
+- ABC da Comunicação: [Galaxies impulsionada pelo Google for Startups](https://www.abcdacomunicacao.com.br/de-startup-promissora-a-referencia-galaxies-gera-economia-de-85-para-os-clientes-apos-ser-impulsionada-pelo-google-for-startup/)
+- NVIDIA: [Nemotron-Personas-Brazil](https://beta.hyper.ai/en/stories/7d0bdfd7adc69f7660bdf800ed0b305e)
+- Toluna: [Synthetic Personas](https://tolunacorporate.com/ai-and-innovation/ai-is-everywhere/harmonaize/)
 ---
 
 ## 05. Evidências Primárias

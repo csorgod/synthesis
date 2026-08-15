@@ -6,7 +6,7 @@
 
 ## 1. Dimensionamento de Mercado (TAM / SAM / SOM)
 
-### TAM — Total Addressable Market
+### TAM — Total Addressable Market (TAM)
 
 A indústria global de pesquisa de mercado e insights movimentou **US$ 142 bilhões em 2023** (crescimento de 8% YoY), segundo a ESOMAR. O setor de research software cresceu 12,4% e o de reporting 6,5%, indicando que a camada tecnológica cresce mais rápido que o mercado base.
 
@@ -14,7 +14,7 @@ Analistas projetam que **dados sintéticos representarão mais de 50% dos inputs
 
 O mercado de avatares e agentes IA está projetado para crescer de **US$ 0,8 bi (2025) para US$ 5,93 bi (2032)** — CAGR de 33,1%.
 
-### SAM — Serviceable Addressable Market
+### Serviceable Addressable Market (SAM)
 
 O SAM para uma plataforma de personas sintéticas inclui:
 - Empresas que gastam com pesquisa de mercado terceirizada
@@ -24,7 +24,7 @@ O SAM para uma plataforma de personas sintéticas inclui:
 
 Considerando que o segmento de research software + synthetic data representa ~5-8% do TAM global, o SAM estimado fica entre **US$ 7-11 bilhões globalmente**.
 
-### SOM — Serviceable Obtainable Market
+### Serviceable Obtainable Market (SOM)
 
 Para uma startup entrando pelo mercado brasileiro e latino-americano, com foco inicial em PMEs e agências:
 - América Latina representa ~2-3% do mercado global de pesquisa
