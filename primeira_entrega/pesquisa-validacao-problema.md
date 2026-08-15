@@ -1,9 +1,9 @@
 # Entregável Parcial 01: Pesquisa & Validação de Problema - Synthesis
 
-**Curso:** FIAP MBA • MBI LIVE - Empreendedorismo e Inovação
+**Curso:** FIAP MBA • MBI LIVE - Empreendedorismo e Inovação 
 **Entrega:** Checkpoint 01
 **Data alvo:** 23/08/2026
-**Grupo:**
+**Grupo:** 
 
 1. Guilherme Csorgo
 2. Karen Martins
