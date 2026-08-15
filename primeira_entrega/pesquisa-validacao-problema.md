@@ -73,6 +73,10 @@ A alternativa mais usada hoje é a intuição ou a opinião interna da equipe, e
 
 O problema é sentido com mais intensidade em agências de marketing e times de produto de startups, onde as decisões são frequentes e o impacto de errar é diretamente mensurável (verba de mídia, prazo de entrega, produto que não converte).
 
+### Hipótese de solução
+
+Uma plataforma no estilo SaaS, focada em self-service, boa usabilidade e simplicidade atraria o público de pequenas e médias empresas, agentes e influenciadores a testar suas hipóteses de solução antes de lançá-las a mar aberto. 
+
 ---
 
 ## 03. Público-alvo
@@ -284,44 +288,7 @@ Para uma startup entrando pelo mercado brasileiro e latino-americano, com foco i
 > **Esta seção será preenchida após a realização das entrevistas de campo.**
 > Roteiro disponível em `roteiro-de-pesquisa.md`.
 
-### O que precisamos aprender com o campo
-
-- [ ] O problema é sentido como real e recorrente, ou as pessoas já se adaptaram e não o percebem como dor?
-- [ ] Com que frequência a situação acontece?
-- [ ] Qual é o impacto concreto que as pessoas conseguem narrar (tempo, dinheiro, cliente perdido)?
-- [ ] O que as pessoas fazem hoje para contornar o problema?
-- [ ] Já tentaram alguma ferramenta ou serviço? Por que não continuaram?
-- [ ] Há disposição percebida para pagar por uma solução rápida e acessível?
-
-### Perfis a entrevistar
-
-- [ ] Gerente ou coordenador de marketing (empresa de 20–200 funcionários)
-- [ ] Dono ou sócio de agência de marketing ou publicidade
-- [ ] Consultor ou freelancer de estratégia/marketing
-- [ ] Fundador de startup em estágio inicial
-- [ ] Profissional de e-commerce ou D2C responsável por campanhas
-
 ## 06. Síntese e Recorte
 
 > O que foi validado, refutado ou ajustado, e qual problema seguirá para a próxima etapa.
 > **Esta seção será preenchida após cruzar desk research com evidências primárias.**
-
-### O que mudou em relação à percepção inicial
-
-*(Preencher após as entrevistas)*
-
-### Declaração refinada do problema
-
-*(Reescrever com base nas evidências coletadas)*
-
-> "Quando [contexto específico], [segmento delimitado] precisa [tarefa concreta], mas [obstáculo real], o que resulta em [consequência mensurável]."
-
-### Recorte final
-
-- **Problema:** *(a definir)*
-- **Público:** *(a confirmar)*
-- **Contexto:** *(a confirmar)*
-- **O que está dentro do escopo:** *(a definir)*
-- **O que está fora do escopo:** *(a definir)*
-
----
