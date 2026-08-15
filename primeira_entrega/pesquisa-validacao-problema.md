@@ -136,10 +136,10 @@ Para uma startup entrando pelo mercado brasileiro e latino-americano, com foco i
 - **SOM estimado: US$ 500K - US$ 2M ARR nos primeiros 24 meses**
 
 **Fontes:**
-- [ESOMAR — Drivers of our $142bn Insights Industry](https://researchworld.com/articles/drivers-of-our-142bn-insights-industry)
-- [ESOMAR — Global Market Research 2025](https://esomar.org/publications/global-market-research-2025)
-- [Ditto — Synthetic Research Platforms: 2026 Market Map](https://askditto.io/news/synthetic-research-platforms-the-2026-market-map)
-- [Bain & Company — How Synthetic Customers Bring Companies Closer](https://www.bain.com/insights/how-synthetic-customers-bring-companies-closer-to-the-real-ones/)
+- ESOMAR: [Drivers of our $142bn Insights Industry](https://researchworld.com/articles/drivers-of-our-142bn-insights-industry)
+- ESOMAR: [Global Market Research 2025](https://esomar.org/publications/global-market-research-2025)
+- Ditto: [Synthetic Research Platforms: 2026 Market Map](https://askditto.io/news/synthetic-research-platforms-the-2026-market-map)
+- Bain & Company: [How Synthetic Customers Bring Companies Closer](https://www.bain.com/insights/how-synthetic-customers-bring-companies-closer-to-the-real-ones/)
 
 ### Análise Competitiva
 
@@ -241,20 +241,48 @@ Para uma startup entrando pelo mercado brasileiro e latino-americano, com foco i
 - Toluna: [Synthetic Personas](https://tolunacorporate.com/ai-and-innovation/ai-is-everywhere/harmonaize/)
 ---
 
-## 05. Evidências Primárias
+### Barreiras de Entrada e Defensibilidade (Moat)
+
+#### O que não é moat em 2026
+
+- **Acesso a LLMs**: Qualquer um pode usar APIs de Claude, GPT, Gemini, etc. O modelo não é diferencial.
+- **Features de UI**: Podem ser replicadas em dias com Agentic engineering/vibe coding.
+- **Prompt engineering**: Templates de prompt são commodities.
+
+#### O que é defensível
+
+| Tipo de Moat | Descrição | Prioridade |
+|---|---|---|
+| **Dados proprietários** | Cada pesquisa gera dados que melhoram as personas. Flywheel: mais pesquisas → personas mais precisas → mais clientes → mais pesquisas. | Alta |
+| **Integração profunda** | Quanto mais o cliente usa, mais caro trocar (dados históricos, templates, configurações). | Alta |
+| **Foco geográfico/cultural** | Personas calibradas para o consumidor brasileiro/LATAM que concorrentes globais não replicam facilmente. | Média/Alta |
+| **Marca e confiança** | Em pesquisa de mercado, confiança nos dados é tudo. Publicar benchmarks de acurácia constrói credibilidade. | Média |
+| **Velocidade de execução** | Estar no mercado antes dos concorrentes globais localizarem para PT-BR. Risco baixo a priori. | Média |
+| **Compliance LGPD** | Ser nativamente LGPD enquanto concorrentes focam em GDPR. | Média |
+
+**Fontes:**
+- BuildMVPFast: [AI Wrapper Startup: Build a Defensible Business 2026](https://www.buildmvpfast.com/blog/ai-wrapper-startup-defensible-business-2026)
+- Flybridge: [Building Defensibility in Vertical SaaS with Proprietary Data](https://www.flybridge.com/ideas/the-bow/building-defensibility-in-vertical-saas-with-proprietary-data-y5ehh)
+- TechCrunch: [Investors spill what they aren't looking for in AI SaaS](https://techcrunch.com/2026/03/01/investors-spill-what-they-arent-looking-for-anymore-in-ai-saas-companies/)
+
+### Riscos e Mitigações
+
+| Risco | Probabilidade | Impacto | Mitigação |
+|---|---|---|---|
+| **Galaxies expande para mid-market** | Média | Alto | Velocidade de execução, self-service como diferencial, pricing acessível desde o dia 1 |
+| **Concorrente global entra no Brasil** | Alta | Alto | Foco cultural/LGPD, integração local, relacionamento com mercado BR |
+| **Custos de LLM sobem** | Baixa | Alto | Arquitetura multi-model, cache agressivo, modelos open-source como fallback |
+| **Custos de LLM caem (commoditização)** | Alta | Médio | Bom para margens, mas reduz barreira de entrada. Investir em dados proprietários |
+| **Desconfiança na acurácia** | Média | Alto | Publicar benchmarks, posicionar como "hipótese rápida" não substituto |
+| **Colapso de diversidade das personas** | Média | Médio | Técnicas de diversificação, calibração com dados reais do mercado brasileiro |
+| **Regulamentação restritiva de IA** | Média | Médio | Compliance proativo, transparência sobre natureza sintética dos dados |
+| **Churn alto** | Alta | Alto | Feedback loops, integração profunda, dados persistentes do cliente |
+
+## 05. Pesquisas e entrevistas
 
 > O que foi aprendido com entrevistas e conversas exploratórias com o público.
 > **Esta seção será preenchida após a realização das entrevistas de campo.**
 > Roteiro disponível em `roteiro-de-pesquisa.md`.
-
-### Status da coleta
-
-| Etapa                                     | Status     |
-| ----------------------------------------- | ---------- |
-| Definição de perfis a entrevistar       | Concluído |
-| Recrutamento de entrevistados             | Pendente   |
-| Realização das entrevistas (meta: 5–8) | Pendente   |
-| Análise e consolidação dos achados     | Pendente   |
 
 ### O que precisamos aprender com o campo
 
@@ -272,38 +300,6 @@ Para uma startup entrando pelo mercado brasileiro e latino-americano, com foco i
 - [ ] Consultor ou freelancer de estratégia/marketing
 - [ ] Fundador de startup em estágio inicial
 - [ ] Profissional de e-commerce ou D2C responsável por campanhas
-
-### Template de registro (a preencher por entrevista)
-
-**Entrevistado:** [perfil, sem nome]
-**Data:** ___/___/______
-
-**A dor foi confirmada?** [ ] Sim [ ] Parcialmente [ ] Não**Frequência relatada:****Impacto concreto mencionado:****O que faz hoje no lugar:****Citações diretas (palavras exatas):**
-
-> " "
-
-**O que surpreendeu:**
-
----
-
-### Consolidação pós-entrevistas (a preencher)
-
-**Total de entrevistados:** ___
-**% que confirmaram a dor:** ___%
-
-| Padrão identificado | Quantos mencionaram | Citação representativa |
-| -------------------- | ------------------- | ------------------------ |
-|                      |                     |                          |
-|                      |                     |                          |
-|                      |                     |                          |
-
-**Hipóteses confirmadas:**
------------------------
-
-**Hipóteses refutadas ou ajustadas:**
-----------------------------------
-
----
 
 ## 06. Síntese e Recorte
 
@@ -328,45 +324,4 @@ Para uma startup entrando pelo mercado brasileiro e latino-americano, com foco i
 - **O que está dentro do escopo:** *(a definir)*
 - **O que está fora do escopo:** *(a definir)*
 
-### O que este entregável alimenta no TCC
-
-Este entregável contribui diretamente para as **Seções 1 e 2 do Business Deck** e orienta a construção da **Proposta de Valor na Aula 02**.
-
 ---
-
-## Checklist de conclusão (FIAP)
-
-Antes de considerar o entregável concluído:
-
-- [ ] A dor está claramente descrita?
-- [ ] O público-alvo e o recorte estão definidos?
-- [ ] As principais hipóteses iniciais foram registradas?
-- [ ] Há evidências secundárias relevantes com fontes identificadas?
-- [ ] O grupo coletou evidências diretamente com pessoas relacionadas ao problema?
-- [ ] Está claro o que foi aprendido, confirmado, refutado ou ajustado?
-- [ ] O recorte final do problema está fundamentado nas evidências?
-
----
-
-## O que NÃO entra neste entregável
-
-Para manter o foco na investigação do problema:
-
-- Detalhar funcionalidades da solução ou do produto
-- Construir um Business Model Canvas completo
-- Definir monetização, projeções financeiras ou go-to-market
-- Tentar provar que a ideia original está certa
-- Apresentar dados de mercado sem conectá-los ao problema investigado
-
----
-
-## Timeline de execução (15 dias)
-
-| Dias   | Atividade                                                                            | Status     |
-| ------ | ------------------------------------------------------------------------------------ | ---------- |
-| 1–2   | Formular a dor inicial, delimitar o público e definir 2–3 hipóteses prioritárias | Concluído |
-| 3–5   | Desk research — dados e referências ligados às hipóteses                         | Concluído |
-| 4–9   | Entrevistas e conversas exploratórias com o público                                | Pendente   |
-| 9–11  | Cruzar achados do desk research com evidências de campo                             | Pendente   |
-| 12–13 | Refinar o problema, o público e o contexto com base nas evidências                 | Pendente   |
-| 14–15 | Estruturar o entregável final e revisão de coerência                              | Pendente   |
