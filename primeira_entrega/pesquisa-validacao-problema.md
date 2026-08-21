@@ -284,11 +284,336 @@ Para uma startup entrando pelo mercado brasileiro e latino-americano, com foco i
 
 ## 05. Pesquisas e entrevistas
 
-> O que foi aprendido com entrevistas e conversas exploratórias com o público.
-> **Esta seção será preenchida após a realização das entrevistas de campo.**
-> Roteiro disponível em `roteiro-de-pesquisa.md`.
+### Metodologia
+
+A coleta de evidências primárias foi realizada por meio de formulário quantitativo estruturado, distribuído digitalmente entre os dias 16 e 19 de agosto de 2026. O formulário foi composto por 17 perguntas organizadas em cinco blocos: perfil profissional, processo atual de decisão, histórico de falhas, barreiras à validação formal e disposição a pagar. O instrumento de pesquisa foi desenhado com base no roteiro de entrevistas do projeto (ver `roteiro-de-pesquisa.md`) e nos princípios do *Teste da Mãe* (Fitzpatrick), privilegiando perguntas sobre comportamento passado em vez de intenções futuras.
+
+**Total de respondentes:** 20  
+**Período de coleta:** 16–19/08/2026  
+**Distribuição:** Rede profissional dos integrantes do grupo (LinkedIn, WhatsApp, grupos de marketing)
+
+---
+
+### 5.1 Perfil dos Respondentes
+
+| Papel Profissional | N | % |
+|---|---|---|
+| Analista ou Especialista de marketing | 3 | 15% |
+| Freelancer de marketing ou comunicação | 2 | 10% |
+| Criador(a) de conteúdo / Influenciador(a) | 3 | 15% |
+| Fundador(a) / Co-fundador(a) de startup | 2 | 10% |
+| Social media | 2 | 10% |
+| Dono(a) / Sócio(a) de agência de marketing | 1 | 5% |
+| Gerente ou Coordenador(a) de marketing | 1 | 5% |
+| Profissional de e-commerce / D2C | 1 | 5% |
+| Outros (UX, Analista TI, Cientista de Dados, Gestora de tráfego, Especialista de Qualidade) | 5 | 25% |
+
+O perfil do segmento-alvo primário (marketing, agências, freelancers, fundadores) representa **70% dos respondentes**, confirmando que o recrutamento atingiu o público de interesse.
+
+| Porte da organização | N | % |
+|---|---|---|
+| Freelancer / Trabalho sozinho | 8 | 40% |
+| Microempresa (até 9 func.) | 2 | 10% |
+| Pequena empresa (10–49 func.) | 2 | 10% |
+| Média empresa (50–200 func.) | 5 | 25% |
+| Grande empresa (+200 func.) | 3 | 15% |
+
+**60% atuam em organizações com até 49 funcionários**, alinhado ao recorte de PMEs, agências e freelancers definido na hipótese de público.
+
+| Setor | N |
+|---|---|
+| Saúde | 3 |
+| E-commerce / Varejo online | 3 |
+| Marketing / Publicidade / Comunicação | 3 |
+| Tecnologia / SaaS / Software | 3 |
+| Educação / Infoprodutos | 2 |
+| Entretenimento / Mídia | 2 |
+| Consultoria | 2 |
+| Construção civil | 1 |
+| Alimentos | 1 |
+
+A distribuição setorial é diversa — sem concentração excessiva em um único segmento —, o que indica que o problema não é de nicho e possui potencial de generalização.
+
+---
+
+### 5.2 Frequência das Decisões
+
+| Frequência de decisões | N | % |
+|---|---|---|
+| Diariamente | 4 | 20% |
+| Semanalmente | 6 | 30% |
+| Quinzenalmente | 2 | 10% |
+| Mensalmente | 3 | 15% |
+| Trimestralmente ou menos | 1 | 5% |
+| Raramente / Não tenho essa responsabilidade | 4 | 20% |
+
+**75% dos respondentes tomam decisões sobre campanhas, conteúdos ou lançamentos ao menos mensalmente.** Isso confirma que o problema não é eventual: é parte do trabalho recorrente da maioria do público investigado.
+
+---
+
+### 5.3 Necessidade de Entender a Reação do Público
+
+Pergunta: *"Antes de lançar uma campanha ou conteúdo, com que frequência você sente necessidade de entender como o público vai reagir?"*
+
+| Resposta | N | % |
+|---|---|---|
+| Sempre — em toda decisão importante | 14 | 70% |
+| Na maioria das vezes | 3 | 15% |
+| Raramente | 1 | 5% |
+| Nunca | 2 | 10% |
+
+**85% dos respondentes sentem essa necessidade sempre ou na maioria das vezes.** Este é o dado mais direto de validação da dor: a esmagadora maioria do público quer saber como a audiência vai reagir antes de lançar — e esse desejo não está sendo atendido de forma satisfatória pelas ferramentas atuais.
+
+---
+
+### 5.4 Como Tomam Decisões Hoje
+
+Pergunta: *"Hoje, o que você usa para embasar decisões sobre campanhas ou lançamentos antes de ir ao ar?"* (múltipla escolha)
+
+| Método | N | % dos respondentes |
+|---|---|---|
+| Métricas históricas (Analytics, CRM, relatórios) | 14 | 70% |
+| Análise de concorrentes e benchmarks | 14 | 70% |
+| Intuição / "feeling" / experiência pessoal | 11 | 55% |
+| Ferramentas de IA (ChatGPT, etc.) | 6 | 30% |
+| Testes A/B em plataformas de anúncios | 6 | 30% |
+| Opinião de colegas ou equipe interna | 5 | 25% |
+| Feedback informal de clientes ou conhecidos | 4 | 20% |
+| Enquetes em redes sociais | 2 | 10% |
+| Pesquisa de mercado formal | 1 | 5% |
+| Nenhuma validação — lança e vê o resultado | 2 | 10% |
+
+**Os três métodos mais usados são todos retroativos ou indiretos:** métricas históricas mostram o que já aconteceu; análise de concorrentes é inferência indireta; intuição é subjetiva. Nenhum deles responde diretamente à pergunta "como minha audiência vai reagir a esta ideia específica, agora?".
+
+A pesquisa de mercado formal — a alternativa que responderia a essa pergunta — é usada por apenas **1 em 20 respondentes (5%)**. Esse dado confirma a hipótese de que o mercado de validação formal está inacessível para a grande maioria.
+
+---
+
+### 5.5 Confiança nos Métodos Atuais
+
+Pergunta: *"O quanto você confia no método que usa atualmente para prever a reação do público?"* (escala 1–5)
+
+| Nota | N | % |
+|---|---|---|
+| 1 — Não confio | 1 | 5% |
+| 2 — Confio pouco | 3 | 15% |
+| 3 — Confiança moderada | 5 | 25% |
+| 4 — Confio bastante | 8 | 40% |
+| 5 — Confio plenamente | 3 | 15% |
+
+**Média: 3,45 / 5**
+
+A maioria dos respondentes (55%) está na faixa 3–4, o que revela uma confiança parcial, mas não plena, nos métodos atuais. **Apenas 15% confiam plenamente** no que usam hoje. Isso indica uma janela de abertura para uma solução que entregue maior confiabilidade.
+
+Vale notar que os três respondentes que marcaram 5 são perfis com acesso a estruturas mais robustas: dono de agência com processo de testes A/B, profissional de UX em grande empresa com testes com usuários beta, e social media que usa múltiplas fontes de dados. Mesmo neste grupo, o custo e a demora das validações formais foram citados como barreiras.
+
+---
+
+### 5.6 Histórico de Falhas em Lançamentos
+
+Pergunta: *"Nos últimos 12 meses, você já lançou uma campanha, produto ou conteúdo cujo resultado ficou MUITO abaixo do esperado?"*
+
+| Resposta | N | % |
+|---|---|---|
+| Sim, mais de uma vez | 7 | 35% |
+| Sim, uma vez | 2 | 10% |
+| Não que eu me lembre | 9 | 45% |
+| Não se aplica ao meu trabalho | 2 | 10% |
+
+**45% dos respondentes aplicáveis relataram ao menos uma falha significativa nos últimos 12 meses; 35% relataram mais de uma.** Esse índice confirma que o problema de lançar sem validação tem consequências concretas e recorrentes.
+
+#### Impactos relatados pelos que falharam
+
+| Impacto | N |
+|---|---|
+| Perda de verba de mídia paga (dinheiro sem retorno) | 6 |
+| Impacto emocional / frustração na equipe | 4 |
+| Perda de clientes ou oportunidades de venda | 4 |
+| Retrabalho (refazer campanha, conteúdo ou produto) | 3 |
+
+#### Relatos diretos (transcrições da pesquisa)
+
+> *"Gastei muito no mkt e nunca achamos o público alvo, falávamos de assuntos de mulher e só chegava perfis querendo conteúdo adulto — isso me fez desistir do projeto."* (Freelancer, Entretenimento/Mídia)
+
+> *"Gastamos um valor considerável em tráfego para vídeos sem qualquer pesquisa, resultando em praticamente nenhuma conversão de matrícula para a faculdade."* (Social media, Educação)
+
+> *"Geramos uma campanha de mídia paga e CRM para o dia dos pais, com produtos exclusivos. Investimos aproximadamente R$ 4 mil em ads + R$ 5,5 mil em CRM. Os ads converteram aproximadamente 30% abaixo do esperado, e o CRM gerou baixa demanda qualificada."* (Analista de marketing, Saúde)
+
+> *"Como as demandas geralmente vêm de outra área, é necessário fazer campanhas de serviços ou produtos que não geraram interesse no público da campanha."* (Analista de marketing, Tecnologia)
+
+> *"Investi tempo em uma campanha que não teve a conversão em clientes ou pelo menos contatos."* (Social media, Tecnologia)
+
+Esses relatos tornam o problema concreto: as perdas são mensuráveis (R$ 9,5 mil em um único caso documentado), e o padrão de "lançar e ver" tem custos reais.
+
+---
+
+### 5.7 Experiência com Validação Formal
+
+Pergunta: *"Você já tentou contratar ou usar algum serviço/ferramenta de pesquisa de mercado ou validação com o público antes de lançar?"*
+
+| Resposta | N | % |
+|---|---|---|
+| Nunca considerei | 7 | 35% |
+| Já pensei, mas nunca contratei | 6 | 30% |
+| Sim, já usei ferramentas online de pesquisa | 4 | 20% |
+| Sim, já contratei pesquisa formal (instituto/consultoria) | 2 | 10% |
+| Já usei algo, mas parei porque não atendia | 1 | 5% |
+
+**65% nunca chegou a contratar qualquer forma de validação formal.** Dos 35% que tentaram alguma coisa, apenas 10% contrataram pesquisa formal — e ambos estão em grandes empresas (Saúde e Alimentos), fora do recorte de PMEs e freelancers.
+
+O dado mais revelador é o da respondente que *usou e parou*: ela relata que a ferramenta "não atendia suas necessidades", reforçando que o problema não é só de acesso (custo), mas também de adequação das soluções existentes.
+
+---
+
+### 5.8 Barreiras para Validação Formal
+
+Pergunta: *"O que te impede (ou impediu) de fazer uma pesquisa/validação formal antes de lançar?"* (múltipla escolha)
+
+| Barreira | N | % dos respondentes |
+|---|---|---|
+| Demora muito (semanas ou meses) | 7 | 35% |
+| Custo muito alto (pesquisas formais custam R$ 30K+) | 6 | 30% |
+| Nunca encontrei uma ferramenta prática para isso | 5 | 25% |
+| Falta de tempo no dia a dia | 5 | 25% |
+| Não achei necessário — confio na minha experiência | 4 | 20% |
+| Não sei como fazer / complexidade do processo | 3 | 15% |
+| Os resultados não justificaram o investimento | 1 | 5% |
+
+**As três principais barreiras são sistêmicas e estruturais**, não comportamentais: demora, custo alto e ausência de ferramentas práticas. Isso é especialmente relevante porque valida que existe uma lacuna de mercado real — o problema não é falta de vontade de validar, é falta de uma alternativa viável.
+
+A barreira "não achei necessário" (20%) merece atenção: ela concentra perfis com confiança mais alta nos métodos atuais (notas 4 e 5 na pergunta de confiança), o que sugere que uma parte do público ainda não percebe o custo real de lançar sem validação — possivelmente porque ainda não vivenciaram uma falha expressiva.
+
+---
+
+### 5.9 Intensidade da Dor
+
+Pergunta: *"De 1 a 5, o quanto a FALTA de informações sobre a reação do público ANTES de lançar algo te incomoda no seu dia a dia profissional?"*
+
+| Nota | N | % |
+|---|---|---|
+| 1 — Não incomoda | 3 | 15% |
+| 2 — Incomoda pouco | 4 | 20% |
+| 3 — Incomoda moderadamente | 3 | 15% |
+| 4 — Incomoda bastante | 7 | 35% |
+| 5 — Incomoda muito | 3 | 15% |
+
+**Média: 3,15 / 5**
+
+**50% dos respondentes marcaram 4 ou 5**, indicando que a dor é relevante para metade do público. Os 35% que marcaram 1 ou 2 são, majoritariamente, os que raramente tomam decisões de lançamento ou que confiam plenamente na intuição — o que está fora do core do segmento-alvo.
+
+---
+
+### 5.10 O que Fariam Diferente com Dados Confiáveis
+
+Pergunta aberta: *"Se antes do seu último lançamento você tivesse tido acesso a dados confiáveis sobre como o público reagiria, o que teria feito de diferente?"*
+
+Os temas mais recorrentes nas respostas foram:
+
+- **Segmentação mais precisa:** "Faria a campanha voltada para o público-alvo, já que teria maior assertividade"; "Teria feito uma segmentação mais assertiva, além de ter alinhado a comunicação e a oferta"
+- **Tomada de decisão diferente (inclusive não lançar):** "Talvez decidido não lançar"; "Estes dados seriam o centro da minha análise"
+- **Criativos e oferta ajustados:** "Oferta e criativos mais assertivos"; "Talvez mudaria ofertas"; "Campanha mais efetiva"
+- **Investimento redirecionado:** "Mais investimento em propagandas [nos canais certos]"
+
+A recorrência de respostas ligadas a **segmentação e adequação da oferta** revela onde o produto sintético precisaria entregar valor: não apenas "prever se vai funcionar", mas "entender quem vai reagir e como ajustar para esse público".
+
+---
+
+### 5.11 Disposição a Pagar
+
+Pergunta: *"Quanto você gasta (ou estaria disposto a gastar) por mês em ferramentas ou serviços que ajudem a entender melhor seu público antes de lançar campanhas?"*
+
+| Faixa mensal | N | % |
+|---|---|---|
+| R$ 0 — não gasto nada | 5 | 25% |
+| Até R$ 100/mês | 5 | 25% |
+| R$ 100 a R$ 300/mês | 1 | 5% |
+| R$ 300 a R$ 500/mês | 5 | 25% |
+| Acima de R$ 500/mês | 4 | 20% |
+
+**75% estariam dispostos a pagar algo; 50% pagariam R$ 100 ou mais por mês; 45% pagariam R$ 300 ou mais por mês.** Esse dado é um sinal positivo de viabilidade de monetização — especialmente considerando que a pesquisa inclui freelancers e microempresas com orçamento mais restrito.
+
+O grupo dos 25% que responderam R$ 0 é composto majoritariamente por criadores de conteúdo e cientistas de dados — perfis com menor frequência de decisão de campanha ou que não enxergam o produto como para eles. Esse segmento pode ser abordado com plano freemium como estratégia de entrada, sem depender dele para monetização.
+
+---
+
+### 5.12 Resumo Quantitativo das Evidências
+
+| Indicador | Resultado |
+|---|---|
+| Respondentes que sentem necessidade frequente de entender audiência | **85%** (17/20) |
+| Que usam intuição ou dados históricos (retroativos) como principal método | **70%+** |
+| Com confiança plena nos métodos atuais (nota 5) | **15%** (3/20) |
+| Que falharam em pelo menos um lançamento nos últimos 12 meses | **45%** (9/20) |
+| Que nunca chegaram a contratar validação formal | **65%** (13/20) |
+| Que apontam custo ou demora como barreira | **>50%** |
+| Que avaliam a dor como 4 ou 5 (incomoda bastante ou muito) | **50%** (10/20) |
+| Dispostos a pagar algo por mês | **75%** (15/20) |
+| Dispostos a pagar R$ 300+/mês | **45%** (9/20) |
+
+---
 
 ## 06. Síntese e Recorte
 
-> O que foi validado, refutado ou ajustado, e qual problema seguirá para a próxima etapa.
-> **Esta seção será preenchida após cruzar desk research com evidências primárias.**
+### 6.1 Validação das Hipóteses
+
+| Hipótese | Status | Evidência Principal |
+|---|---|---|
+| **H1 — A dor é real e recorrente** | ✅ Confirmada | 85% sentem necessidade frequente; 45% já falharam concretamente nos últimos 12 meses |
+| **H2 — A barreira é custo e tempo** | ✅ Confirmada | Demora (35%) e custo (30%) são as duas principais barreiras relatadas; apenas 1 de 20 usa pesquisa formal |
+| **H3 — O problema ocorre com frequência mensal ou maior** | ✅ Confirmada | 75% toma decisões de campanha ao menos mensalmente; 50% semanal ou mais |
+| **H4 — O custo de não validar é percebido e concreto** | ✅ Confirmada | Perdas de verba, clientes e tempo documentadas; caso de R$ 9,5K em uma única campanha |
+| **H5 — A alternativa mais usada é intuição** | ✅ Confirmada | Intuição é o 2º método mais citado (55%); 70% usa métricas históricas que são retroativas — nenhum método responde ao futuro |
+| **H6 — Agências e startups são mais afetadas** | ⚠️ Parcialmente confirmada | Freelancers e analistas de marketing aparecem com igual intensidade; o segmento afetado é mais amplo do que o esperado |
+
+### 6.2 O que mudou em relação à percepção inicial
+
+| Dimensão | Hipótese inicial | O que os dados revelaram |
+|---|---|---|
+| **Público-alvo** | Foco em agências e startups | Freelancers de marketing e criadores de conteúdo representam volume relevante e sentem a mesma dor |
+| **Principal barreira** | Custo como barreira dominante | Demora e ausência de ferramenta prática dividem o protagonismo com o custo — velocidade é tão importante quanto preço |
+| **Comportamento de fallback** | Intuição como alternativa principal | Métricas históricas (retroativas) são igualmente populares — o público busca dados, mas usa dados do passado por falta de alternativa para o futuro |
+| **Intensidade da dor** | Alta e generalizada | Polarizada: 50% sentem dor alta (4–5); 35% sentem dor baixa (1–2) — haverá um segmento resistente à adoção |
+| **Disposição a pagar** | Incerta no mercado de PMEs | Mais positiva do que esperado: 45% pagariam R$ 300+/mês — mesmo em perfis de freelancers |
+| **Confiança nos métodos atuais** | Esperava confiança baixa | Confiança moderada (média 3,45) — o público sabe que não tem o melhor, mas convive com isso por falta de alternativa |
+
+### 6.3 Padrões que Emergem dos Dados
+
+**Padrão 1 — O problema é de acesso, não de consciência.**
+Quase ninguém questiona a importância de entender a audiência. O que falta é uma solução acessível em custo, tempo e complexidade. A frase que resume: *"Já pensei, mas nunca contratei"* (30% dos respondentes).
+
+**Padrão 2 — Velocidade é o critério mais urgente.**
+A barreira "demora muito" supera até o custo nas respostas. O público precisa de resposta em horas, não em semanas. Qualquer solução que demore mais de 24–48h para entregar insights começa com desvantagem.
+
+**Padrão 3 — Os dados existem, mas são sobre o passado.**
+O mercado já usa dados: métricas históricas e análise de concorrentes são os métodos dominantes. O problema não é convencer o público a usar dados — é oferecer dados que apontem para o futuro, não para o passado.
+
+**Padrão 4 — O segmento de não-pagadores tem um perfil específico.**
+Os 25% que não pagariam nada são majoritariamente criadores de conteúdo, cientistas de dados e profissionais que raramente tomam decisões de lançamento. Não são o ICP principal — podem ser addressados com freemium como estratégia de aquisição.
+
+**Padrão 5 — Falha sem diagnóstico é a norma.**
+Entre os que falharam, a maioria não sabe exatamente o que causou o problema — apenas que "não converteu". Isso abre espaço para uma ferramenta que não só preveja a reação, mas explique o porquê da reação esperada.
+
+### 6.4 Declaração de Problema Refinada
+
+> "Profissionais de marketing, fundadores de PMEs, freelancers e criadores de conteúdo no Brasil tomam decisões recorrentes sobre campanhas e lançamentos sem conseguir entender como o público vai reagir antes de ir ao ar — porque as alternativas formais custam R$ 30K+ e levam semanas, enquanto os métodos que usam hoje (métricas históricas e intuição) respondem sobre o passado, não sobre o futuro. O resultado são campanhas que não convertem, verba desperdiçada e decisões tomadas no escuro."
+
+### 6.5 Recorte Final do Público
+
+O problema é confirmado para um público mais amplo do que o inicialmente delimitado. O recorte para a próxima etapa prioriza:
+
+**Perfil de maior dor + maior disposição a pagar:**
+- Analistas e especialistas de marketing em empresas de 50–200 funcionários
+- Donos de agências e freelancers senior de marketing com clientes recorrentes
+- Fundadores de startups em estágio inicial com budget limitado mas decisões frequentes
+
+**Perfil de entrada com plano freemium:**
+- Criadores de conteúdo e social medias com audiência profissional estabelecida
+- Gestores de tráfego que precisam otimizar segmentação antes de investir em anúncios
+
+**Fora do recorte imediato:**
+- Grandes empresas com budget para pesquisa formal (atendidas por Galaxies e similares)
+- Profissionais que raramente tomam decisões de lançamento (não têm frequência de uso suficiente)
+
+### 6.6 Frase-Síntese do Entregável
+
+> "Estamos investigando a falta de acesso a validação de audiência rápida e acessível, que afeta profissionais de marketing, fundadores de PMEs e freelancers no Brasil em cada decisão de campanha ou lançamento. Inicialmente levantamos que o problema era sentido com mais intensidade em agências e startups, e que as barreiras eram principalmente custo e complexidade. A partir de pesquisa quantitativa com 20 respondentes, encontramos que 85% sentem necessidade frequente de entender a reação do público, 45% já falharam com lançamentos nos últimos 12 meses, e que a barreira de velocidade (demora) supera até o custo como obstáculo à validação formal. Com isso, nosso recorte do problema é: profissionais que tomam decisões de campanha com frequência semanal ou mensal, em organizações sem budget para pesquisa formal, que hoje dependem de dados históricos retroativos e intuição — e que pagariam por uma solução que entregasse insights sobre o futuro em horas, não em semanas."
