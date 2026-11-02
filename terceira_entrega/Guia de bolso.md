@@ -4,42 +4,45 @@ Consulta rápida para a apresentação da Entrega 3. O detalhe de cada ponto est
 
 ## 1. Resumo do modelo
 
-- SaaS self-service. A conta (workspace) paga uma mensalidade que dá um saldo de créditos. Quem acaba o saldo pode comprar pacotes extras, se quiser.
-- Planos: Starter R$ 79, Pro R$ 249 e topo a partir de R$ 399 (sob orçamento). Plano anual: pague 10, leve 12.
+- SaaS self-service. Cada assinatura, por empresa ou profissional, paga uma mensalidade que dá um saldo de créditos. Quem acaba o saldo pode comprar créditos extras, se quiser.
+- Planos: Starter R$ 79, Pro R$ 249 e Business a partir de R$ 399 (sob orçamento). Plano anual: pague 10, leve 12.
 - Capital próprio de R$ 90 mil, sem pró-labore para os sócios no 1º ano.
 
 ## 2. Regras de cobrança
 
 | Regra | Definição |
 |---|---|
-| Unidade | Conta/workspace, não usuário |
+| Unidade | Assinatura por empresa ou profissional, não por usuário |
 | Saldo mensal | Expira no fim do ciclo |
-| Pacote extra | Opcional, acumula enquanto a assinatura estiver ativa (no anual, durante o contrato) |
-| Estouro do saldo | As simulações pausam, a menos que haja pacote ativo. Alertas aos 80% e 100% |
-| Teste gratuito | Créditos de boas-vindas únicos, sem cartão |
-| Plano anual | Pago adiantado, com fidelidade. Os créditos mensais continuam expirando |
+| Créditos extras | Opcionais, acumulam enquanto a assinatura estiver ativa (no anual, durante o contrato) |
+| Estouro do saldo | As simulações pausam, a menos que haja créditos extras ativos. Alertas aos 80% e 100% |
+| Teste gratuito | 200 créditos de boas-vindas únicos, sem cobrança e sem cartão (custo de R$ 28 por cadastro; ver Anexo C, P34) |
+| Plano anual | Pago adiantado, com fidelidade. Os créditos mensais continuam expirando. Sem reembolso: quem cancela usa até o fim do plano e não renova |
+| Usuários incluídos | Starter 1, Pro até 3, Business até 10 (espaço de trabalho compartilhado) |
+| Saldo mensal por plano | Starter 200, Pro 650, Business 1.100 créditos. 1 crédito é a resposta de uma persona |
+| Se o cliente cancelar | Os créditos valem até o fim do período contratado; depois, são perdidos |
 
 ## 3. Premissas de receita
 
 | Premissa | Ano 1 | Ano 2 | Ano 3 | Origem |
 |---|---|---|---|---|
 | Mix Starter / Pro | 35/65 | 30/70 | 25/75 | Estimativa nossa |
-| Contas em plano anual | 20% | 30% | 35% | Estimativa nossa |
-| Pacotes extras, Linha 1 (% da mensalidade) | 10% | 14% | 19% | Estimativa nossa |
-| Pacotes extras, topo | 20% | 30% | 40% | Estimativa nossa |
-| **Ticket médio por conta, Linha 1** | **R$ 202** | **R$ 214** | **R$ 231** | Resultado das linhas acima |
-| **Ticket médio por conta, topo** | **R$ 463** | **R$ 493** | **R$ 526** | Piso de R$ 399 com desconto anual e extras |
+| Assinaturas anuais | 20% | 30% | 35% | Estimativa nossa |
+| Créditos extras, Linha 1 (% da mensalidade) | 10% | 14% | 19% | Estimativa nossa |
+| Créditos extras, Business | 20% | 30% | 40% | Estimativa nossa |
+| **Ticket médio por assinatura, Linha 1** | **R$ 202** | **R$ 214** | **R$ 231** | Resultado das linhas acima |
+| **Ticket médio por assinatura, Business** | **R$ 463** | **R$ 493** | **R$ 526** | Piso de R$ 399 com desconto anual e extras |
 
 Como sai o R$ 202: (0,35 × 79 + 0,65 × 249) = 189,50; × 0,967 do desconto anual = 183,20; × 1,10 dos extras = 201,50.
 
-O ticket é receita média por conta, não preço de plano. O mix de 65% no Pro é a hipótese mais frágil (ver seção 8).
+O ticket é a receita média por assinatura e não coincide com o preço de nenhum plano. O mix de 65% no Pro é a hipótese mais frágil (ver seção 8).
 
 ## 4. Premissas de volume e retenção
 
 | Premissa | Ano 1 | Ano 2 | Ano 3 | Origem |
 |---|---|---|---|---|
 | Novos clientes por mês, Linha 1 | 6 a partir do mês 7 (média de 12 meses: 3) | 16 | 28 | Estimativa nossa |
-| Contas no topo (média do ano) | 0,5 | 4 | 10 | Estimativa nossa |
+| Assinaturas Business (média do ano) | 0,5 | 4 | 10 | Estimativa nossa |
 | Churn mensal, plano mensal | 9% | 7% | 6% | Estimativa nossa |
 | Churn do plano anual | 3% ao mês equivalente (cerca de 30% de não renovação ao ano) | | | Estimativa nossa |
 | **Churn combinado usado na planilha** | **8%** | **6%** | **5%** | Resultado das linhas acima |
@@ -98,8 +101,8 @@ O aporte foi dimensionado pelo caixa mínimo do modelo mensal, que é de R$ 56 m
 | Base | R$ 796 mil | +R$ 186 mil | R$ 56 mil |
 | Mix 50/50 | R$ 647 mil | +R$ 94 mil | R$ 67 mil |
 | Mix 65% Starter / 35% Pro | R$ 555 mil | +R$ 37 mil | R$ 90 mil |
-| Sem pacotes extras | R$ 661 mil | +R$ 102 mil | R$ 65 mil |
-| Mix 50/50 e sem pacotes extras | R$ 534 mil | +R$ 24 mil | R$ 92 mil |
+| Sem créditos extras | R$ 661 mil | +R$ 102 mil | R$ 65 mil |
+| Mix 50/50 e sem créditos extras | R$ 534 mil | +R$ 24 mil | R$ 92 mil |
 | Lançamento no mês 13 | R$ 768 mil | +R$ 169 mil | R$ 88 mil |
 | COGS de 45%, 40% e 35% | R$ 796 mil | +R$ 131 mil | R$ 64 mil |
 | Metade dos novos clientes | | EBITDA negativo no ano 3 | |
@@ -109,9 +112,9 @@ O aporte foi dimensionado pelo caixa mínimo do modelo mensal, que é de R$ 56 m
 - A variável que mais pesa é a aquisição de clientes.
 - O custo real por crédito só se mede no MVP.
 
-## 9. A fórmula da planilha FIAP
+## 9. A fórmula da planilha
 
-Na aba Premissas, as células D12 e E12 calculam `ticket × clientes_finais / 2 × 12`, mas a dica da célula F12 diz que a conta usa a média entre o início e o fim do ano. Isso subestima a receita da Linha 1 em 12% no ano 2 e 28% no ano 3.
+Na aba Premissas, as células D12 e E12 calculam `ticket × clientes_finais / 2 × 12`, mas a dica da célula F12 diz que o cálculo usa a média entre o início e o fim do ano. Isso subestima a receita da Linha 1 em 12% no ano 2 e 28% no ano 3.
 
 | Leitura | Receita ano 3 | EBITDA ano 3 |
 |---|---|---|
@@ -123,10 +126,10 @@ A correção proposta é `=D8*(C11+D11)/2*12` em D12 e `=E8*(D11+E11)/2*12` em E
 
 ## 10. O que ainda está em aberto
 
-- Nome da moeda interna.
-- Número de créditos de cada plano e custo por crédito.
-- Subfaixas do plano de topo.
-- Política de cancelamento e reembolso do plano anual.
+- Nome da moeda interna (por ora, apenas "créditos").
+- Confirmar a cota de créditos de cada plano com o custo real por crédito.
+- Subfaixas do plano Business.
+- Validação jurídica da política de cancelamento e reembolso do plano anual.
 - Mix de planos do cenário base.
 - Regime tributário.
 - Recorte brasileiro de TAM, SAM e SOM.

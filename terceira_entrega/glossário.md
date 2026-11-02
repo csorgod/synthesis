@@ -29,7 +29,7 @@
 * **MRR:** receita recorrente do mês, ou seja, clientes pagantes × valor da assinatura. Mostra a tração.
 * **ARR:** MRR × 12. É o "tamanho" anualizado do negócio, e investidores o usam para valuation.
 * **Churn:** percentual de clientes que cancelam no mês. Com churn de 5%, você perde metade da base em cerca de 13 meses se não repuser.
-* **ARPU/ARPA:** receita média por usuário ou por conta. É o ticket médio efetivo.
+* **ARPU/ARPA:** receita média por usuário (ARPU) ou por assinatura (ARPA). É o ticket médio efetivo.
 * **Margem bruta:** (receita − custos diretos de entrega) ÷ receita. Mostra o que sobra de cada real para pagar time, marketing e lucro.
 * **Burn rate:** quanto a empresa queima de caixa por mês (despesas − receita).
 * **Runway:** meses de sobrevivência com o caixa atual, ou seja, caixa ÷ burn.
