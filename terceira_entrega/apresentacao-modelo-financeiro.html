@@ -17,8 +17,7 @@ html,body{height:100%;background:var(--bg);overflow:hidden;font-family:'Inter',s
 .bgfill{position:fixed;inset:0;background:var(--bg);transition:background-color .35s ease;z-index:0}
 .bgfill::before{content:"";position:absolute;inset:0;opacity:0;transition:opacity .35s ease;background:radial-gradient(60vw 60vh at 88% -8%,rgba(96,86,255,.5),transparent 62%),radial-gradient(50vw 50vh at -4% 108%,rgba(96,86,255,.28),transparent 62%)}
 .bgfill.dark{background:var(--navy)}.bgfill.dark::before{opacity:1}
-.bgfill.dark~#particles-js{opacity:.8;filter:none}
-#particles-js{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:1;filter:brightness(.62) saturate(1.5);transition:opacity .35s ease,filter .35s ease}
+#particles-js{position:fixed;inset:0;z-index:0;pointer-events:none}
 #particles-js canvas{display:block;width:100%;height:100%}
 .stage{position:absolute;left:50%;top:50%;width:1280px;height:720px;transform:translate(-50%,-50%);transform-origin:center center;overflow:hidden;z-index:1}
 .slide{position:absolute;inset:0;padding:84px 72px 62px;opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s}
@@ -45,8 +44,8 @@ h3{font-size:17px;letter-spacing:-.01em;font-weight:600}
 .foot{position:absolute!important;left:72px;right:72px;bottom:22px;display:flex;justify-content:space-between;font-size:11.5px;color:var(--muted);z-index:3}
 .dark .foot{color:rgba(255,255,255,.45)}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;color:var(--indigo-d);letter-spacing:.04em;text-transform:uppercase;margin-bottom:14px}
-.eyebrow::before{content:"";width:18px;height:2px;background:var(--indigo);border-radius:2px}
-.dark .eyebrow{color:#b9b4ff}.dark .eyebrow::before{background:#8f87ff}
+
+.dark .eyebrow{color:#b9b4ff}
 /* components */
 .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;box-shadow:0 1px 2px rgba(13,22,47,.04)}
 .card.hl{border-color:var(--indigo);box-shadow:0 0 0 4px rgba(96,86,255,.1),0 12px 30px -12px rgba(96,86,255,.35)}
@@ -87,7 +86,7 @@ svg text{font-family:'Inter',sans-serif}
 @media (prefers-reduced-motion:reduce){.rv{transition:none;opacity:1;transform:none}.slide{transition:none}}
 /* nav */
 .progress{position:fixed;left:0;top:0;height:3px;background:linear-gradient(90deg,#6056ff,#a9a3ff);z-index:20;transition:width .35s ease}
-.dots{position:fixed;left:50%;bottom:10px;transform:translateX(-50%);display:flex;gap:7px;z-index:20;padding:6px 10px;border-radius:999px;background:rgba(13,22,47,.55);backdrop-filter:blur(6px)}
+.dots{position:fixed;left:50%;bottom:10px;transform:translateX(-50%);display:flex;gap:7px;z-index:20;padding:6px 10px;border-radius:999px;background:rgba(13,22,47,.72)}
 .dots button{width:7px;height:7px;border-radius:50%;border:0;background:rgba(255,255,255,.35);cursor:pointer;padding:0;transition:all .2s}
 .dots button.on{background:#fff;width:20px;border-radius:6px}
 .hint{position:fixed;right:14px;top:10px;font-size:11.5px;color:rgba(255,255,255,.55);z-index:20;transition:opacity .6s}
@@ -120,6 +119,7 @@ svg text{font-family:'Inter',sans-serif}
   <div style="margin-top:62px" class="rv"><span class="eyebrow">Business case</span></div>
   <h1 class="rv" style="max-width:900px"><span class="ind">Synthesis</span>: <br> Modelo financeiro</h1>
   <p class="lead rv" style="font-size:20px;max-width:600px">Como a receita, os custos e o capital se encaixam no curto prazo.</p>
+  <p class="rv sora" style="margin-top:34px;font-size:12px;font-weight:600;letter-spacing:.04em;white-space:nowrap;text-transform:uppercase;color:#fff">Guilherme Csorgo<span style="color:#8f87ff;margin:0 9px">&bull;</span>Karen Martins<span style="color:#8f87ff;margin:0 9px">&bull;</span>Ludmila Rocha<span style="color:#8f87ff;margin:0 9px">&bull;</span>Thiago Guilherme</p>
   <style>
     .illus{position:absolute!important;right:44px;top:120px;width:560px;height:440px;pointer-events:none}
     .illus svg{width:100%;height:100%;overflow:visible}
@@ -151,7 +151,7 @@ svg text{font-family:'Inter',sans-serif}
     <span class="pill" style="font-size:13px;padding:7px 13px">Entregável Parcial 03</span>
     <span class="small" style="opacity:.6">Projeções Financeiras e Business Case</span>
   </div>
-  <div class="foot"><span>Cenário base · modelo mensal de 36 meses</span><span data-n></span></div>
+  <!-- <div class="foot"><span>Cenário base · projeção mensal de 36 meses</span><span data-n></span></div> -->
 </section>
 
 <!-- 2 ROTEIRO -->
@@ -159,15 +159,16 @@ svg text{font-family:'Inter',sans-serif}
   <div class="top"><div class="brand"><span class="mark">S</span>Synthesis</div></div>
   <span class="eyebrow rv">Roteiro</span>
   <h2 class="rv">A apresentação segue a ordem de preenchimento da planilha</h2>
-  <p class="lead rv">Cada slide indica a aba e as linhas da planilha FIAP que ele alimenta.</p>
-  <div class="grid g5 rv" style="margin-top:34px;gap:14px">
+  <p class="lead rv">Cada slide indica a aba e as linhas da planilha que ele alimenta.</p>
+  <style>.road .card{display:flex;flex-direction:column;align-items:flex-start}.road .card p{flex:1}</style>
+  <div class="grid g5 rv road" style="margin-top:34px;gap:14px">
     <div class="card"><div class="num">1</div><h3>Monetização</h3><p class="small muted" style="margin:8px 0 14px">Como cobramos e quanto: créditos, planos e ticket médio.</p><span class="sheet"><i></i>Premissas · Receita</span></div>
     <div class="card"><div class="num">2</div><h3>Volume</h3><p class="small muted" style="margin:8px 0 14px">Novos clientes, churn e lançamento.</p><span class="sheet"><i></i>Premissas · Receita</span></div>
     <div class="card"><div class="num">3</div><h3>Custos</h3><p class="small muted" style="margin:8px 0 14px">COGS, estrutura mensal e investimento inicial.</p><span class="sheet"><i></i>Premissas · Custos</span></div>
     <div class="card"><div class="num">4</div><h3>Resultado</h3><p class="small muted" style="margin:8px 0 14px">Projeção de 3 anos e indicadores de viabilidade.</p><span class="sheet"><i></i>Projeção · Dashboard</span></div>
     <div class="card"><div class="num">5</div><h3>Capital e risco</h3><p class="small muted" style="margin:8px 0 14px">Aporte, vale da morte, cenários e limites.</p><span class="sheet"><i></i>Premissas · Capital</span></div>
   </div>
-  <div class="card rv" style="margin-top:22px;display:flex;gap:14px;align-items:center"><span class="pill n">Como ler</span><span class="small">Os números principais vêm de um modelo mensal de 36 meses, que mostra o caixa mínimo. A planilha FIAP é anual e é lida em paralelo (slide 15).</span></div>
+  <!-- <p class="rv muted" style="margin-top:26px;font-size:14.5px;line-height:1.55;white-space:nowrap"><b style="color:var(--text);font-weight:600">Como ler:</b> Os números vêm de uma projeção mês a mês, que mostra o menor saldo de caixa. A planilha calcula só por ano e serve de conferência (slide 15).</p> -->
   <div class="foot"><span>Mapa de preenchimento completo: Anexo A do documento</span><span data-n></span></div>
 </section>
 
@@ -176,20 +177,17 @@ svg text{font-family:'Inter',sans-serif}
   <div class="top"><div class="brand"><span class="mark">S</span>Synthesis</div><span class="sheet"><i></i>Ponto de partida da monetização</span></div>
   <span class="eyebrow rv">1 · Monetização</span>
   <h2 class="rv">A dor do cliente define como cobramos</h2>
-  <div class="grid g2" style="margin-top:30px;gap:26px">
-    <div class="grid rv" style="gap:14px;align-content:start">
-      <div class="card" style="display:flex;gap:18px;align-items:center"><div class="big ind" style="font-size:44px;min-width:190px">85%</div><div class="small">sentem necessidade frequente de entender a audiência antes de lançar</div></div>
-      <div class="card" style="display:flex;gap:18px;align-items:center"><div class="big ind" style="font-size:44px;min-width:190px;white-space:nowrap">35%<span style="font-size:20px;color:var(--muted);letter-spacing:0"> e 30%</span></div><div class="small">citam demora e custo como as maiores barreiras à validação formal</div></div>
-      <div class="card" style="display:flex;gap:18px;align-items:center"><div class="big ind" style="font-size:44px;min-width:190px">65%</div><div class="small">nunca contrataram uma pesquisa formal</div></div>
-    </div>
-    <div class="rv">
-      <div class="small muted" style="margin-bottom:10px;font-weight:600;letter-spacing:.05em;text-transform:uppercase">O que isso exige do modelo de preço</div>
-      <div class="grid" style="gap:12px">
-        <div class="card" style="padding:16px 18px"><h3>Resultado em horas</h3><p class="small muted" style="margin-top:4px">Self-service, sem consultoria. Mantém o CAC e o time pequenos.</p></div>
-        <div class="card" style="padding:16px 18px"><h3>Preço fora da faixa de pesquisa formal</h3><p class="small muted" style="margin-top:4px">Mensalidade acessível, a partir de R$ 79, contra projetos de R$ 150 mil dos concorrentes enterprise.</p></div>
-        <div class="card" style="padding:16px 18px"><h3>Uso irregular de criadores e freelancers</h3><p class="small muted" style="margin-top:4px">Saldo de créditos flexível e excedente opcional, sem cobrança surpresa.</p></div>
-      </div>
-    </div>
+  <div style="display:grid;grid-template-columns:1fr 64px 1.08fr;column-gap:14px;row-gap:14px;margin-top:26px">
+    <div class="small muted rv" style="font-weight:600;letter-spacing:.05em;text-transform:uppercase">O que a pesquisa mostrou</div><div></div><div class="small muted rv" style="font-weight:600;letter-spacing:.05em;text-transform:uppercase">O que isso exige do modelo de preço</div>
+    <div class="card rv" style="display:flex;gap:18px;align-items:center"><div class="big ind" style="font-size:44px;min-width:190px">85%</div><div class="small">sentem necessidade frequente de entender a audiência antes de lançar</div></div>
+    <div class="rv" style="display:grid;place-items:center"><svg width="64" height="20" viewBox="0 0 64 20" fill="none" style="display:block"><circle cx="4" cy="10" r="3.2" fill="#6056ff"/><path d="M7 10h50m-6-6l6 6-6 6" stroke="#6056ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="rv" style="background:var(--indigo-10);border-radius:16px;padding:16px 20px;display:flex;flex-direction:column;justify-content:center"><h3>Mensalidade recorrente, em créditos</h3><p class="small" style="margin-top:5px;color:#4b4f63">A necessidade é frequente, então a cobrança também é: uma assinatura mensal (ou anual) por conta.</p></div>
+    <div class="card rv" style="display:flex;gap:18px;align-items:center"><div class="big ind" style="font-size:44px;min-width:190px;white-space:nowrap">~35%</div><div class="small">citam demora e custo como as maiores barreiras à validação formal</div></div>
+    <div class="rv" style="display:grid;place-items:center"><svg width="64" height="20" viewBox="0 0 64 20" fill="none" style="display:block"><circle cx="4" cy="10" r="3.2" fill="#6056ff"/><path d="M7 10h50m-6-6l6 6-6 6" stroke="#6056ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="rv" style="background:var(--indigo-10);border-radius:16px;padding:16px 20px;display:flex;flex-direction:column;justify-content:center"><h3>Resultado em horas, a preço acessível</h3><p class="small" style="margin-top:5px;color:#4b4f63">Self-service, sem consultoria, a partir de R$ 79 por mês. Concorrentes voltados a grandes empresas cobram projetos de R$ 150 mil.</p></div>
+    <div class="card rv" style="display:flex;gap:18px;align-items:center"><div class="big ind" style="font-size:44px;min-width:190px">65%</div><div class="small">nunca contrataram uma pesquisa formal</div></div>
+    <div class="rv" style="display:grid;place-items:center"><svg width="64" height="20" viewBox="0 0 64 20" fill="none" style="display:block"><circle cx="4" cy="10" r="3.2" fill="#6056ff"/><path d="M7 10h50m-6-6l6 6-6 6" stroke="#6056ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="rv" style="background:var(--indigo-10);border-radius:16px;padding:16px 20px;display:flex;flex-direction:column;justify-content:center"><h3>Entrada sem barreira</h3><p class="small" style="margin-top:5px;color:#4b4f63">Teste gratuito e excedente opcional: Quem quer mais, paga a parte, sem cobrança surpresa.</p></div>
   </div>
   <div class="foot"><span>Fonte: pesquisa de validação, 20 respondentes, ago/2026</span><span data-n></span></div>
 </section>
@@ -198,17 +196,17 @@ svg text{font-family:'Inter',sans-serif}
 <section class="slide" data-title="Como cobramos">
   <div class="top"><div class="brand"><span class="mark">S</span>Synthesis</div><span class="sheet"><i></i>Premissas · descrição da receita (L7 e L15)</span></div>
   <span class="eyebrow rv">1 · Monetização</span>
-  <h2 class="rv">Uma mensalidade por conta, paga em créditos</h2>
+  <h2 class="rv">Uma mensalidade por conta, créditos no lugar de cotas</h2>
   <p class="lead rv">O cliente escolhe como gastar o saldo: vários estudos simples ou poucos estudos complexos.</p>
   <div class="flow rv" style="margin-top:30px">
-    <div class="node"><span class="pill">Conta / workspace</span><h3 style="margin-top:12px">Mensalidade fixa</h3><p class="small muted" style="margin-top:6px">Cobrança por conta, não por usuário. Alguns usuários incluídos.</p></div>
+    <div class="node"><span class="pill">Conta</span><h3 style="margin-top:12px">Mensalidade fixa</h3><p class="small muted" style="margin-top:6px">Cobrança por conta, não por usuário. Alguns usuários incluídos.</p></div>
     <div class="arrow"><svg width="26" height="14" viewBox="0 0 26 14"><path d="M1 7h22m-5-5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
     <div class="node" style="border-color:var(--indigo);box-shadow:0 0 0 4px rgba(96,86,255,.1)"><span class="pill">Moeda interna</span><h3 style="margin-top:12px">Saldo de créditos</h3><p class="small muted" style="margin-top:6px">Expira no fim do ciclo mensal.</p></div>
     <div class="arrow"><svg width="26" height="14" viewBox="0 0 26 14"><path d="M1 7h22m-5-5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
     <div class="node"><span class="pill">Uso</span><h3 style="margin-top:12px">Estudos de audiência</h3><p class="small muted" style="margin-top:6px">Cada estudo consome créditos proporcionais ao seu custo de LLM.</p></div>
   </div>
   <div class="grid g2" style="margin-top:20px">
-    <div class="card rv" style="display:flex;gap:16px"><span class="pill a" style="align-self:flex-start">Saldo acabou</span><div class="small"><b>Pacote extra, só se o cliente quiser.</b> Acumula enquanto a assinatura estiver ativa. Sem pacote ativo, as simulações pausam, com alertas aos 80% e 100%: nunca há cobrança surpresa.</div></div>
+    <div class="card rv" style="display:flex;gap:16px"><span class="pill a" style="align-self:flex-start">Saldo acabou</span><div class="small"><b>Pacote extra, comprado só se o cliente quiser.</b> Acumula enquanto a assinatura estiver ativa. Sem pacote ativo, as simulações pausam, com alertas aos 80% e 100%: nunca há cobrança surpresa.</div></div>
     <div class="card rv" style="display:flex;gap:16px"><span class="pill g" style="align-self:flex-start">Plano anual</span><div class="small"><b>Pague 10, leve 12.</b> Pago adiantado, com fidelidade. Os pacotes extras valem durante todo o contrato; os créditos mensais continuam expirando.</div></div>
   </div>
   <div class="card rv" style="margin-top:18px;display:flex;gap:14px;align-items:center"><span class="pill">Na planilha</span><span class="small">As células L7 e L15 descrevem as duas receitas. Os pacotes extras não têm linha própria: já estão dentro do ticket médio (L8 e L16), slide 6.</span></div>
@@ -217,7 +215,7 @@ svg text{font-family:'Inter',sans-serif}
 
 <!-- 5 PLANOS -->
 <section class="slide" data-title="Planos">
-  <div class="top"><div class="brand"><span class="mark">S</span>Synthesis</div><span class="sheet"><i></i>Premissas · Linha 1 (L7–L12) e Linha 2 (L15–L19)</span></div>
+  <div class="top"><div class="brand"><span class="mark">S</span>Synthesis</div><span class="sheet"><i></i>Premissas · Linha 1 (L7 a L12) e Linha 2 (L15 a L19)</span></div>
   <span class="eyebrow rv">1 · Monetização</span>
   <h2 class="rv">Três faixas, duas linhas de receita</h2>
   <div class="grid g3 rv" style="margin-top:28px;gap:18px">
@@ -225,7 +223,7 @@ svg text{font-family:'Inter',sans-serif}
     <div class="card hl" style="padding:26px"><span class="pill">Linha 1 · self-service</span><h3 style="margin:16px 0 6px;font-size:22px">Pro</h3><div class="big" style="font-size:44px">R$ 249<span style="font-size:15px;color:var(--muted);font-weight:500;letter-spacing:0"> /mês</span></div><p class="small muted" style="margin:8px 0 16px">Anual: R$ 2.490 (R$ 207,50 por mês)</p><ul class="tick"><li>Freelancers sênior e analistas</li><li>PMEs</li><li>Subiu de R$ 197 para R$ 249</li></ul></div>
     <div class="card" style="padding:26px"><span class="pill g">Linha 2 · sob orçamento</span><h3 style="margin:16px 0 6px;font-size:22px">Topo</h3><div class="big" style="font-size:44px"><span style="font-size:15px;color:var(--muted);font-weight:500;letter-spacing:0">a partir de </span>R$ 399</div><p class="small muted" style="margin:8px 0 16px">Anual a partir de R$ 3.990</p><ul class="tick"><li>Agências e times de marketing</li><li>Quem pagaria R$ 300 ou mais (45% da pesquisa)</li><li>Subfaixas ficam para depois</li></ul></div>
   </div>
-  <div class="card rv" style="margin-top:20px;display:flex;gap:14px;align-items:center"><span class="pill a">Atenção</span><span class="small">O orçamento não pode virar o atrito que criticamos na Galaxies. O preço "a partir de" é público; o orçamento fica para volume e condições especiais.</span></div>
+  <div class="card rv" style="margin-top:20px;display:flex;gap:14px;align-items:center"><span class="pill a">Atenção</span><span class="small">O orçamento não pode virar a barreira que apontamos na Galaxies, que exige demonstração e implementação assistida. O preço "a partir de" é público; o orçamento fica para grandes volumes e condições especiais.</span></div>
   <div class="foot"><span>Free: créditos de boas-vindas únicos. No modelo, o piso de R$ 399 é a base do topo</span><span data-n></span></div>
 </section>
 
@@ -233,8 +231,8 @@ svg text{font-family:'Inter',sans-serif}
 <section class="slide" data-title="Ticket médio">
   <div class="top"><div class="brand"><span class="mark">S</span>Synthesis</div><span class="sheet"><i></i>Premissas · ticket médio (L8 e L16)</span></div>
   <span class="eyebrow rv">1 · Monetização</span>
-  <h2 class="rv">Por que o ticket médio é R$ 202 e não R$ 79 ou R$ 249</h2>
-  <p class="lead rv">O ticket é a receita média por conta no ano. Ele junta o mix de planos, o desconto do anual e os pacotes extras.</p>
+  <h2 class="rv">Como se chega ao ticket médio de R$ 202</h2>
+  <p class="lead rv">O ticket é a receita média por conta no ano. Ele junta a proporção entre planos, o desconto do anual e os pacotes extras.</p>
   <div class="flow rv" style="margin-top:26px;align-items:center">
     <div class="node"><div class="big" style="font-size:34px">R$ 189,50</div><p class="small muted" style="margin-top:8px"><b style="color:var(--text)">Mensalidade média</b><br>35% Starter × 79 + 65% Pro × 249</p></div>
     <div class="arrow sora" style="width:36px;font-size:22px;font-weight:600">×</div>
@@ -245,8 +243,8 @@ svg text{font-family:'Inter',sans-serif}
     <div class="node" style="background:var(--indigo);border-color:var(--indigo);color:#fff"><div class="big" style="font-size:40px">R$ 202</div><p class="small" style="margin-top:8px;opacity:.85">ticket médio por conta, ano 1</p></div>
   </div>
   <div class="grid g2" style="margin-top:22px">
-    <div class="card rv"><table><thead><tr><th>Linha 1 · células L8–L10</th><th>Ano 1</th><th>Ano 2</th><th>Ano 3</th></tr></thead><tbody>
-      <tr><td>Mix Starter / Pro</td><td>35/65</td><td>30/70</td><td>25/75</td></tr>
+    <div class="card rv"><table><thead><tr><th>Linha 1 · células L8 a L10</th><th>Ano 1</th><th>Ano 2</th><th>Ano 3</th></tr></thead><tbody>
+      <tr><td>Proporção Starter / Pro</td><td>35/65</td><td>30/70</td><td>25/75</td></tr>
       <tr><td>Contas em plano anual</td><td>20%</td><td>30%</td><td>35%</td></tr>
       <tr><td>Pacotes extras</td><td>10%</td><td>14%</td><td>19%</td></tr>
       <tr class="b"><td>Ticket médio (L8)</td><td>R$ 202</td><td>R$ 214</td><td>R$ 231</td></tr></tbody></table></div>
@@ -256,7 +254,7 @@ svg text{font-family:'Inter',sans-serif}
       <tr><td>Pacotes extras</td><td>20%</td><td>30%</td><td>40%</td></tr>
       <tr class="b"><td>Ticket médio (L16)</td><td>R$ 463</td><td>R$ 493</td><td>R$ 526</td></tr></tbody></table></div>
   </div>
-  <div class="foot"><span>Mix, extras e adesão ao anual são estimativas nossas, sem evidência direta (slide 14)</span><span data-n></span></div>
+  <div class="foot"><span>A proporção entre planos, os pacotes extras e a adesão ao anual são estimativas nossas, sem evidência direta (slide 14)</span><span data-n></span></div>
 </section>
 
 <!-- 7 VOLUME -->
@@ -273,25 +271,25 @@ svg text{font-family:'Inter',sans-serif}
         <tr><td>Contas no topo (L17)</td><td>0,5</td><td>4</td><td>10</td></tr></tbody></table>
         <p class="small muted" style="margin-top:10px">* Média de 12 meses: 6 por mês a partir do mês 7.</p></div>
       <div class="card" style="padding:16px 18px"><span class="pill n">Churn combinado</span><p class="small" style="margin-top:10px">Plano mensal 9%, 7% e 6%. Plano anual equivale a 3% ao mês. A mistura dá 8%, 6% e 5%.</p></div>
-      <div class="card" style="padding:16px 18px"><span class="pill a">Sem funil</span><p class="small" style="margin-top:10px">Os novos clientes são uma meta. Com 5% de conversão do trial, exigem de 120 a 560 cadastros por mês.</p></div>
+      <div class="card" style="padding:16px 18px"><span class="pill a">Sem funil</span><p class="small" style="margin-top:10px">O número de novos clientes é uma meta informada. Com 5% de conversão do teste gratuito, isso exige de 120 a 560 cadastros por mês.</p></div>
     </div>
   </div>
-  <div class="foot"><span>Modelo mensal · lançamento no mês 7, depois de 6 meses de MVP sem receita</span><span data-n></span></div>
+  <div class="foot"><span>Projeção mensal · lançamento no mês 7, depois de 6 meses de MVP sem receita</span><span data-n></span></div>
 </section>
 
 <!-- 8 CUSTOS -->
 <section class="slide" data-title="Custos">
-  <div class="top"><div class="brand"><span class="mark">S</span>Synthesis</div><span class="sheet"><i></i>Premissas · custos (L23–L28), investimento (L33–L35), COGS (L41)</span></div>
+  <div class="top"><div class="brand"><span class="mark">S</span>Synthesis</div><span class="sheet"><i></i>Premissas · custos (L23 a L28), investimento (L33 a L35), COGS (L41)</span></div>
   <span class="eyebrow rv">3 · Custos</span>
-  <h2 class="rv">O custo de LLM manda na margem</h2>
+  <h2 class="rv">O custo de LLM pesa na margem</h2>
   <div class="grid" style="grid-template-columns:1fr 1.25fr;gap:22px;margin-top:24px">
     <div class="grid rv" style="gap:12px;align-content:start">
       <div class="card" style="padding:16px 20px"><div class="small muted" style="font-weight:600">COGS sobre a receita (L41)</div>
         <div style="display:flex;gap:10px;margin:14px 0 8px;align-items:flex-end">
           <div class="big" style="font-size:34px">38%</div><span class="muted" style="padding-bottom:4px">→</span><div class="big" style="font-size:34px">33%</div><span class="muted" style="padding-bottom:4px">→</span><div class="big ind" style="font-size:34px">28%</div></div>
-        <p class="small muted">Cai com cache de prompt, processamento em lote e modelos menores na triagem. É uma meta, não uma medição.</p></div>
+        <p class="small muted">Cai com cache de prompt, processamento em lote e modelos menores na triagem. É uma meta; o custo real só será medido no MVP.</p></div>
       <div class="card" style="padding:16px 20px"><div class="small muted" style="font-weight:600">Regra de projeto</div><p class="small" style="margin-top:6px">O custo de inferência com o saldo cheio não passa de <b>40% da mensalidade</b>. Referência: US$ 0,05 a 0,30 por entrevista curta, câmbio de R$ 5,50.</p></div>
-      <div class="card" style="padding:16px 20px"><div class="small muted" style="font-weight:600">Investimento inicial (L33–L35): R$ 18 mil</div>
+      <div class="card" style="padding:16px 20px"><div class="small muted" style="font-weight:600">Investimento inicial (L33 a L35): R$ 18 mil</div>
         <div id="inv" style="margin-top:6px"></div></div>
     </div>
     <div class="card rv"><table><thead><tr><th>Custos por mês</th><th>Ano 1</th><th>Ano 2</th><th>Ano 3</th></tr></thead><tbody>
@@ -302,7 +300,7 @@ svg text{font-family:'Inter',sans-serif}
       <tr><td>Administrativo (L27)</td><td>R$ 600</td><td>R$ 1.000</td><td>R$ 1.600</td></tr>
       <tr class="b"><td>Total fixo por mês</td><td>R$ 2.800</td><td>R$ 13.500</td><td>R$ 25.600</td></tr>
       <tr><td>Impostos sobre receita (L28)</td><td>6%</td><td>8%</td><td>10%</td></tr></tbody></table>
-      <div class="card" style="margin-top:14px;padding:14px 16px;background:var(--amber-bg);border-color:#fde68a"><p class="small"><b>Pessoal zero no ano 1 é custo de oportunidade dos sócios, não custo nulo.</b> O MVP é construído por eles e ninguém recebe pró-labore.</p></div>
+      <div class="card" style="margin-top:14px;padding:14px 16px;background:var(--amber-bg);border-color:#fde68a"><p class="small"><b>No ano 1 o pessoal custa zero porque os sócios constroem o MVP sem pró-labore.</b> Existe um custo de oportunidade que a conta não mostra.</p></div>
     </div>
   </div>
   <div class="foot"><span>Impostos: Simples Nacional, a confirmar com contador (o fator R pode elevar a alíquota no ano 1)</span><span data-n></span></div>
@@ -315,7 +313,7 @@ svg text{font-family:'Inter',sans-serif}
   <h2 class="rv">Receita de R$ 796 mil no ano 3, com EBITDA de R$ 186 mil</h2>
   <div class="grid" style="grid-template-columns:1.35fr 1fr;gap:22px;margin-top:22px">
     <div class="card rv" style="padding:18px 18px 8px"><div style="display:flex;gap:16px;font-size:12.5px;margin-bottom:4px"><span><b style="color:var(--indigo)">■</b> Receita</span><span><b style="color:#0d162f">■</b> EBITDA</span></div><div id="ch-proj"></div></div>
-    <div class="card rv"><table><thead><tr><th>Modelo mensal</th><th>A1</th><th>A2</th><th>A3</th></tr></thead><tbody>
+    <div class="card rv"><table><thead><tr><th>Projeção mensal</th><th>A1</th><th>A2</th><th>A3</th></tr></thead><tbody>
       <tr><td>Receita (R$ mil)</td><td>25</td><td>292</td><td>796</td></tr>
       <tr><td>EBITDA (R$ mil)</td><td class="neg">−20</td><td class="pos">+10</td><td class="pos">+186</td></tr>
       <tr><td>MRR no fim (R$ mil)</td><td>6,4</td><td>34,9</td><td>83,9</td></tr>
@@ -325,7 +323,7 @@ svg text{font-family:'Inter',sans-serif}
         <div style="display:flex;gap:10px;align-items:center"><span class="pill">Mês 29</span><span class="small">o caixa acumulado volta a zero (payback do capital)</span></div>
       </div></div>
   </div>
-  <div class="foot"><span>A planilha FIAP lida como está dá números menores nos anos 2 e 3 (slide 15)</span><span data-n></span></div>
+  <div class="foot"><span>A planilha, lida como está, dá números menores nos anos 2 e 3 (slide 15)</span><span data-n></span></div>
 </section>
 
 <!-- 10 DASHBOARD -->
@@ -336,7 +334,7 @@ svg text{font-family:'Inter',sans-serif}
   <div class="grid g4 rv" style="margin-top:26px;gap:14px">
     <div class="card"><div class="small muted">MRR no fim do ano 3</div><div class="big" style="font-size:34px;margin:10px 0 6px">R$ 83,9 mil</div><span class="pill">ARR ≈ R$ 1,0 mi</span></div>
     <div class="card"><div class="small muted">LTV/CAC completo</div><div class="big" style="font-size:34px;margin:10px 0 6px">4,7</div><span class="pill g">acima da regra de 3×</span></div>
-    <div class="card"><div class="small muted">Margem bruta</div><div class="big" style="font-size:34px;margin:10px 0 6px">62 → 72%</div><span class="pill n">referência SaaS: 60–80%</span></div>
+    <div class="card"><div class="small muted">Margem bruta</div><div class="big" style="font-size:34px;margin:10px 0 6px">62 → 72%</div><span class="pill n">referência SaaS: 60% a 80%</span></div>
     <div class="card"><div class="small muted">Payback do CAC completo</div><div class="big" style="font-size:34px;margin:10px 0 6px">4,3 meses</div><span class="pill g">meta: menos de 12</span></div>
   </div>
   <div class="grid g2 rv" style="margin-top:18px;gap:18px">
@@ -367,7 +365,7 @@ svg text{font-family:'Inter',sans-serif}
         <table style="margin-top:10px"><tbody>
         <tr><td>Início</td><td>R$ 35 mil</td></tr><tr><td>Lançamento do MVP (mês 6)</td><td>R$ 30 mil</td></tr><tr><td>Reserva (mês 12)</td><td>R$ 25 mil</td></tr></tbody></table>
         <p class="small muted" style="margin-top:8px">A parcela 3 depende de MRR de pelo menos R$ 3 mil no mês 12.</p></div>
-      <div class="card" style="padding:16px 18px;background:var(--amber-bg);border-color:#fde68a"><p class="small"><b>Folga curta no começo.</b> A parcela 1 cobre os custos até o lançamento com cerca de R$ 3 mil de sobra. Antecipar a parcela 2 em um mês, ou subir a parcela 1 para R$ 40 mil, dá mais conforto.</p></div>
+      <div class="card" style="padding:16px 18px;background:var(--amber-bg);border-color:#fde68a"><p class="small"><b>Folga curta no começo.</b> A parcela 1 cobre os custos até o lançamento com cerca de R$ 3 mil de sobra. Antecipar a parcela 2 em um mês ou subir a parcela 1 para R$ 40 mil aumenta a margem de segurança.</p></div>
       <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="pill">Folga no fundo do vale: R$ 34 mil</span><span class="pill g">Sem pró-labore no ano 1</span></div>
     </div>
   </div>
@@ -389,42 +387,42 @@ svg text{font-family:'Inter',sans-serif}
       <tr><td>Pessimista, com cortes</td><td>R$ 60 mil</td><td class="pos">+R$ 47 mil</td></tr>
       <tr><td>Ticket 20% menor</td><td>R$ 70 mil</td><td class="pos">+R$ 96 mil</td></tr>
       <tr><td>Pessimista, sem cortes</td><td class="neg">R$ 217 mil</td><td class="neg">−R$ 89 mil</td></tr></tbody></table>
-      <p class="small muted" style="margin-top:12px"><b style="color:var(--text)">Pessimista:</b> metade dos novos clientes e do topo, churn de 10%, 8% e 7%. Os cortes: pessoal e marketing no mínimo (gatilho de MRR).</p>
+      <p class="small muted" style="margin-top:12px"><b style="color:var(--text)">Pessimista:</b> metade dos novos clientes e do topo, churn de 10%, 8% e 7%. Os cortes: pessoal e marketing no mínimo (acionados por meta de MRR).</p>
       <p class="small" style="margin-top:10px"><b>Sem disciplina de corte, o capital próprio não sustenta o cenário ruim.</b></p></div>
   </div>
-  <div class="foot"><span>Aporte necessário = caixa mínimo do cenário, no modelo mensal</span><span data-n></span></div>
+  <div class="foot"><span>Aporte necessário = caixa mínimo do cenário, na projeção mensal</span><span data-n></span></div>
 </section>
 
 <!-- 13 SENSIBILIDADE -->
 <section class="slide" data-title="Sensibilidade">
   <div class="top"><div class="brand"><span class="mark">S</span>Synthesis</div><span class="sheet"><i></i>Premissas · variações de L8, L9 e COGS</span></div>
   <span class="eyebrow rv">5 · Capital e risco</span>
-  <h2 class="rv">O aporte aguenta uma premissa ruim, não duas</h2>
+  <h2 class="rv">O aporte cobre uma premissa errada de cada vez</h2>
   <div class="grid" style="grid-template-columns:1.5fr 1fr;gap:22px;margin-top:20px">
     <div class="card rv" style="padding:18px 20px"><div class="small muted" style="margin-bottom:8px;font-weight:600">Aporte necessário (caixa mínimo), em R$ mil</div><div id="ch-sens"></div></div>
     <div class="grid rv" style="gap:12px;align-content:start">
-      <div class="card" style="padding:16px 18px"><h3>O mix é a premissa mais frágil</h3><p class="small muted" style="margin-top:6px">Com 50% das contas no Pro em vez de 65%, a receita do ano 3 cai 19% e o EBITDA, pela metade (de R$ 186 mil para R$ 94 mil).</p></div>
-      <div class="card" style="padding:16px 18px"><h3>Combinar premissas esgota o aporte</h3><p class="small muted" style="margin-top:6px">Mix 50/50 sem pacotes extras exige R$ 92 mil, acima do capital previsto.</p></div>
+      <div class="card" style="padding:16px 18px"><h3>A proporção entre planos é a premissa mais frágil</h3><p class="small muted" style="margin-top:6px">Com 50% das contas no Pro em vez de 65%, a receita do ano 3 cai 19% e o EBITDA, pela metade (de R$ 186 mil para R$ 94 mil).</p></div>
+      <div class="card" style="padding:16px 18px"><h3>Combinar premissas esgota o aporte</h3><p class="small muted" style="margin-top:6px">Proporção de 50/50 sem pacotes extras exige R$ 92 mil, acima do capital previsto.</p></div>
       <div class="card" style="padding:16px 18px"><h3>Atraso de lançamento custa caixa</h3><p class="small muted" style="margin-top:6px">Seis meses de atraso levam o aporte necessário a R$ 88 mil, quase sem efeito no resultado do ano 3.</p></div>
     </div>
   </div>
-  <div class="foot"><span>Uma alteração por vez, exceto onde indicado · modelo mensal</span><span data-n></span></div>
+  <div class="foot"><span>Uma alteração por vez, exceto onde indicado · projeção mensal</span><span data-n></span></div>
 </section>
 
 <!-- 14 PREMISSAS -->
 <section class="slide" data-title="Premissas e confiança">
   <div class="top"><div class="brand"><span class="mark">S</span>Synthesis</div><span class="sheet"><i></i>Todas as células amarelas da aba Premissas</span></div>
   <span class="eyebrow rv">5 · Capital e risco</span>
-  <h2 class="rv">O que é decisão, o que é dado e o que é estimativa</h2>
+  <h2 class="rv">De onde vêm as premissas</h2>
   <div class="grid g3 rv" style="margin-top:24px;gap:16px">
     <div class="card"><span class="pill g">Decisão do grupo</span><ul class="tick" style="margin-top:12px">
       <li>Preços: R$ 79, R$ 249 e topo a partir de R$ 399</li><li>Anual: pague 10, leve 12</li><li>Cobrança por conta, com créditos</li><li>Lançamento no mês 7</li><li>Sem pró-labore no ano 1</li><li>Capital próprio de R$ 90 mil</li></ul></div>
-    <div class="card"><span class="pill">Dado ou benchmark</span><ul class="tick" style="margin-top:12px">
-      <li>Disposição a pagar: pesquisa, 20 respondentes</li><li>Custo de LLM por entrevista: estudo de mercado</li><li>TAM e SAM: ESOMAR, via estudo</li><li>Referências de SaaS: margem 60–80%, LTV/CAC acima de 3</li></ul></div>
+    <div class="card"><span class="pill">Dado ou referência de mercado</span><ul class="tick" style="margin-top:12px">
+      <li>Disposição a pagar: pesquisa, 20 respondentes</li><li>Custo de LLM por entrevista: estudo de mercado</li><li>TAM e SAM: ESOMAR, via estudo</li><li>Referências de SaaS: margem 60% a 80%, LTV/CAC acima de 3</li></ul></div>
     <div class="card" style="border-color:#fde68a;background:var(--amber-bg)"><span class="pill a">Estimativa nossa, confiança baixa</span><ul class="tick" style="margin-top:12px">
-      <li>Mix de planos (35/65)</li><li>Pacotes extras (10% a 40%)</li><li>Adesão ao anual (20% a 35%)</li><li>Novos clientes por mês, sem funil</li><li>Churn (8%, 6%, 5%)</li><li>COGS (38% a 28%)</li><li>Impostos (6% a 10%)</li></ul></div>
+      <li>Proporção entre planos (35/65)</li><li>Pacotes extras (10% a 40%)</li><li>Adesão ao anual (20% a 35%)</li><li>Novos clientes por mês, sem funil</li><li>Churn (8%, 6%, 5%)</li><li>COGS (38% a 28%)</li><li>Impostos (6% a 10%)</li></ul></div>
   </div>
-  <div class="card rv" style="margin-top:18px;display:flex;gap:14px;align-items:center"><span class="pill n">Validar primeiro</span><span class="small">Preço e mix no lançamento, custo real por crédito no MVP, conversão do trial. Ponto em aberto: adotar mix de 50/50 como cenário base.</span></div>
+  <div class="card rv" style="margin-top:18px;display:flex;gap:14px;align-items:center"><span class="pill n">Validar primeiro</span><span class="small">Preço e proporção entre planos no lançamento, custo real por crédito no MVP, conversão do teste gratuito. Ponto em aberto: adotar 50/50 como cenário base.</span></div>
   <div class="foot"><span>Registro completo, com origem e impacto de cada premissa: Anexo C do documento</span><span data-n></span></div>
 </section>
 
@@ -432,7 +430,7 @@ svg text{font-family:'Inter',sans-serif}
 <section class="slide" data-title="A fórmula da planilha">
   <div class="top"><div class="brand"><span class="mark">S</span>Synthesis</div><span class="sheet"><i></i>Premissas · células D12 e E12</span></div>
   <span class="eyebrow rv">5 · Capital e risco</span>
-  <h2 class="rv">A planilha FIAP subestima a receita dos anos 2 e 3</h2>
+  <h2 class="rv">A planilha subestima a receita dos anos 2 e 3</h2>
   <div class="grid" style="grid-template-columns:1fr 1.15fr;gap:22px;margin-top:22px">
     <div class="grid rv" style="gap:14px;align-content:start">
       <p class="small" style="line-height:1.55">A dica da célula F12 diz que a receita usa a média entre os clientes do início e do fim do ano. As fórmulas de D12 e E12 dividem só o saldo final por 2, e tratam o começo do ano como zero.</p>
@@ -440,10 +438,10 @@ svg text{font-family:'Inter',sans-serif}
         <div style="color:#9a97d6;font-size:11.5px;margin:10px 0 4px">E12 (ano 3)</div><s>=E8*E11/2*12</s><br><b>=E8*(D11+E11)/2*12</b></div>
       <div class="card" style="padding:14px 16px"><span class="pill a">Pendente</span><p class="small" style="margin-top:8px">Não alteramos a fórmula. Confirmar com o professor se a correção vale.</p></div>
     </div>
-    <div class="card rv" style="padding:18px 18px 8px"><div style="display:flex;gap:16px;font-size:12.5px;margin-bottom:2px"><span><b style="color:#b8b4f5">■</b> Planilha como está</span><span><b style="color:var(--indigo)">■</b> Média corrigida</span><span><b style="color:#0d162f">■</b> Modelo mensal</span></div><div id="ch-form"></div>
+    <div class="card rv" style="padding:18px 18px 8px"><div style="display:flex;gap:16px;font-size:12.5px;margin-bottom:2px"><span><b style="color:#b8b4f5">■</b> Planilha como está</span><span><b style="color:var(--indigo)">■</b> Média corrigida</span><span><b style="color:#0d162f">■</b> Projeção mensal</span></div><div id="ch-form"></div>
       <p class="small muted" style="margin:2px 6px 12px">Receita do ano 3, em R$ mil, e EBITDA correspondente.</p></div>
   </div>
-  <div class="foot"><span>A leitura direta da planilha dá EBITDA de +R$ 23 mil no ano 3. Corrigida, +R$ 153 mil. Modelo mensal: +R$ 186 mil</span><span data-n></span></div>
+  <div class="foot"><span>A leitura direta da planilha dá EBITDA de +R$ 23 mil no ano 3. Corrigida, +R$ 153 mil. Projeção mensal: +R$ 186 mil</span><span data-n></span></div>
 </section>
 
 <!-- 16 FECHAMENTO -->
@@ -453,11 +451,11 @@ svg text{font-family:'Inter',sans-serif}
   <h2 class="rv">O que falta decidir e validar</h2>
   <div class="grid g2 rv" style="margin-top:28px;gap:20px">
     <div class="card"><h3>Decisões em aberto</h3><ul class="tick" style="margin-top:12px">
-      <li>Nome da moeda interna</li><li>Créditos por plano e custo por crédito</li><li>Subfaixas do plano de topo</li><li>Política de cancelamento e reembolso do anual</li><li>Mix de planos do cenário base</li><li>Correção da fórmula D12 e E12</li></ul></div>
+      <li>Nome da moeda interna</li><li>Créditos por plano e custo por crédito</li><li>Subfaixas do plano de topo</li><li>Política de cancelamento e reembolso do anual</li><li>Proporção entre planos do cenário base</li><li>Correção da fórmula D12 e E12</li></ul></div>
     <div class="card"><h3>Para validar</h3><ul class="tick" style="margin-top:12px">
-      <li>Preço do Pro (R$ 249) e mix real, no lançamento</li><li>Custo de inferência por crédito, no MVP</li><li>Conversão do trial e aquisição orgânica</li><li>Regime tributário, com contador</li><li>Recorte brasileiro de TAM, SAM e SOM</li><li>Amostra maior que 20 respondentes</li></ul></div>
+      <li>Preço do Pro (R$ 249) e proporção real entre planos, no lançamento</li><li>Custo de inferência por crédito, no MVP</li><li>Conversão do teste gratuito e aquisição orgânica</li><li>Regime tributário, com contador</li><li>Recorte brasileiro de TAM, SAM e SOM</li><li>Amostra maior que 20 respondentes</li></ul></div>
   </div>
-  <div class="rv" style="margin-top:26px;display:flex;gap:12px;align-items:center"><span class="pill">Documentos de apoio</span><span class="small" style="color:rgba(255,255,255,.6)">projecoes-financeiras-business-case.md · Guia de bolso.md · planilha FIAP preenchida</span></div>
+  <div class="rv" style="margin-top:26px;display:flex;gap:12px;align-items:center"><span class="pill">Documentos de apoio</span><span class="small" style="color:rgba(255,255,255,.6)">projecoes-financeiras-business-case.md · Guia de bolso.md · planilha preenchida</span></div>
   <div class="foot"><span>Synthesis · Entrega 3</span><span data-n></span></div>
 </section>
 
@@ -481,7 +479,7 @@ function hexToRgb(e){var a=/^#?([a-f\d])([a-f\d])([a-f\d])$/i;e=e.replace(a,func
 if(window.particlesJS&&!matchMedia('(prefers-reduced-motion:reduce)').matches){
   particlesJS('particles-js',{
     particles:{
-      number:{value:56,density:{enable:true,value_area:900}},
+      number:{value:44,density:{enable:true,value_area:900}},
       color:{value:'#7a72ff'},shape:{type:'circle'},
       opacity:{value:.5,random:true,anim:{enable:false}},
       size:{value:2.2,random:true,anim:{enable:false}},
@@ -489,7 +487,7 @@ if(window.particlesJS&&!matchMedia('(prefers-reduced-motion:reduce)').matches){
       move:{enable:true,speed:.55,direction:'none',random:true,straight:false,out_mode:'out',bounce:false}
     },
     interactivity:{detect_on:'window',events:{onhover:{enable:false},onclick:{enable:false},resize:true}},
-    retina_detect:true
+    retina_detect:false
   });
 }
 /* ---------- modelo mensal (mesmas premissas do documento) ---------- */
@@ -567,7 +565,7 @@ lineChart('ch-scen',{w:760,h:430,xmax:36,xstep:6,ymin:-100000,ymax:200000,ystep:
 
 /* sensibilidade: barras horizontais */
 (function(){
-  const rows=[['Base',56,0],['Sem pacotes extras',65,0],['Mix 50/50',67,0],['Ticket da Linha 1 20% menor',70,0],['Lançamento no mês 13',88,0],['Mix 65% Starter / 35% Pro',90,1],['Mix 50/50 e sem pacotes extras',92,2]];
+  const rows=[['Base',56,0],['Sem pacotes extras',65,0],['Proporção 50/50',67,0],['Ticket da Linha 1 20% menor',70,0],['Lançamento no mês 13',88,0],['65% Starter / 35% Pro',90,1],['50/50 e sem pacotes extras',92,2]];
   const w=700,rh=40,h=rows.length*rh+34,l=235,r=30,max=100;
   const sx=v=>l+v/max*(w-l-r);let s=`<svg viewBox="0 0 ${w} ${h}" width="100%" style="display:block">`;
   [0,25,50,75,100].forEach(v=>{s+=`<line x1="${sx(v)}" x2="${sx(v)}" y1="0" y2="${h-22}" stroke="${C.grid}"/><text x="${sx(v)}" y="${h-6}" text-anchor="middle" font-size="10.5" fill="${C.mut}">${v}</text>`});
@@ -579,7 +577,7 @@ lineChart('ch-scen',{w:760,h:430,xmax:36,xstep:6,ymin:-100000,ymax:200000,ystep:
 
 /* fórmula: três leituras */
 (function(){
-  const data=[['Planilha como está',533,23,C.soft],['Média corrigida',742,153,C.ind],['Modelo mensal',796,186,C.navy]];
+  const data=[['Planilha como está',533,23,C.soft],['Média corrigida',742,153,C.ind],['Projeção mensal',796,186,C.navy]];
   const w=560,h=310,l=20,r=10,t=22,b=34,ymax=900;const sy=v=>t+(ymax-v)/ymax*(h-t-b);
   let s=`<svg viewBox="0 0 ${w} ${h}" width="100%" style="display:block"><line x1="${l}" x2="${w-r}" y1="${sy(0)}" y2="${sy(0)}" stroke="#9aa0ad"/>`;
   const gw=(w-l-r)/3;
@@ -589,6 +587,23 @@ lineChart('ch-scen',{w:760,h:430,xmax:36,xstep:6,ymin:-100000,ymax:200000,ystep:
   document.getElementById('ch-form').innerHTML=s+'</svg>';
 })();
 
+/* ---------- partículas: cor por tema e pausa durante a transição ---------- */
+const pj=(window.pJSDom&&pJSDom[0])?pJSDom[0].pJS:null;
+let pResume=null,pDark=null;
+function pTheme(dark){
+  if(!pj||dark===pDark)return;pDark=dark;
+  const rgb=dark?{r:122,g:114,b:255}:{r:84,g:72,b:200};
+  pj.particles.array.forEach(p=>{p.color.rgb=rgb});
+  pj.particles.color.rgb=rgb;
+  pj.particles.line_linked.color_rgb_line=rgb;
+  pj.particles.line_linked.opacity=dark?.2:.3;
+}
+function pPause(){
+  if(!pj)return;
+  cancelRequestAnimFrame(pj.fn.drawAnimFrame);
+  clearTimeout(pResume);
+  pResume=setTimeout(()=>pj.fn.vendors.draw(),420);
+}
 /* ---------- navegação ---------- */
 const slides=[...document.querySelectorAll('.slide')],stage=document.getElementById('stage'),dots=document.getElementById('dots'),prog=document.getElementById('progress');
 let cur=0;
@@ -602,6 +617,7 @@ function go(i){
   slides.forEach((s,k)=>s.classList.toggle('active',k===cur));
   [...dots.children].forEach((d,k)=>d.classList.toggle('on',k===cur));
   document.getElementById('bgfill').classList.toggle('dark',slides[cur].classList.contains('dark'));
+  pPause();pTheme(slides[cur].classList.contains('dark'));
   prog.style.width=((cur+1)/slides.length*100)+'%';
   try{history.replaceState(null,'','#'+(cur+1))}catch(e){}
 }
