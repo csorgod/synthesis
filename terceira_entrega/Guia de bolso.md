@@ -1,0 +1,132 @@
+# Guia de bolso: premissas do Synthesis
+
+Consulta rápida para a apresentação da Entrega 3. O detalhe de cada ponto está em `projecoes-financeiras-business-case.md`.
+
+## 1. Resumo do modelo
+
+- SaaS self-service. A conta (workspace) paga uma mensalidade que dá um saldo de créditos. Quem acaba o saldo pode comprar pacotes extras, se quiser.
+- Planos: Starter R$ 79, Pro R$ 249 e topo a partir de R$ 399 (sob orçamento). Plano anual: pague 10, leve 12.
+- Capital próprio de R$ 90 mil, sem pró-labore para os sócios no 1º ano.
+
+## 2. Regras de cobrança
+
+| Regra | Definição |
+|---|---|
+| Unidade | Conta/workspace, não usuário |
+| Saldo mensal | Expira no fim do ciclo |
+| Pacote extra | Opcional, acumula enquanto a assinatura estiver ativa (no anual, durante o contrato) |
+| Estouro do saldo | As simulações pausam, a menos que haja pacote ativo. Alertas aos 80% e 100% |
+| Teste gratuito | Créditos de boas-vindas únicos, sem cartão |
+| Plano anual | Pago adiantado, com fidelidade. Os créditos mensais continuam expirando |
+
+## 3. Premissas de receita
+
+| Premissa | Ano 1 | Ano 2 | Ano 3 | Origem |
+|---|---|---|---|---|
+| Mix Starter / Pro | 35/65 | 30/70 | 25/75 | Estimativa nossa |
+| Contas em plano anual | 20% | 30% | 35% | Estimativa nossa |
+| Pacotes extras, Linha 1 (% da mensalidade) | 10% | 14% | 19% | Estimativa nossa |
+| Pacotes extras, topo | 20% | 30% | 40% | Estimativa nossa |
+| **Ticket médio por conta, Linha 1** | **R$ 202** | **R$ 214** | **R$ 231** | Resultado das linhas acima |
+| **Ticket médio por conta, topo** | **R$ 463** | **R$ 493** | **R$ 526** | Piso de R$ 399 com desconto anual e extras |
+
+Como sai o R$ 202: (0,35 × 79 + 0,65 × 249) = 189,50; × 0,967 do desconto anual = 183,20; × 1,10 dos extras = 201,50.
+
+O ticket é receita média por conta, não preço de plano. O mix de 65% no Pro é a hipótese mais frágil (ver seção 8).
+
+## 4. Premissas de volume e retenção
+
+| Premissa | Ano 1 | Ano 2 | Ano 3 | Origem |
+|---|---|---|---|---|
+| Novos clientes por mês, Linha 1 | 6 a partir do mês 7 (média de 12 meses: 3) | 16 | 28 | Estimativa nossa |
+| Contas no topo (média do ano) | 0,5 | 4 | 10 | Estimativa nossa |
+| Churn mensal, plano mensal | 9% | 7% | 6% | Estimativa nossa |
+| Churn do plano anual | 3% ao mês equivalente (cerca de 30% de não renovação ao ano) | | | Estimativa nossa |
+| **Churn combinado usado na planilha** | **8%** | **6%** | **5%** | Resultado das linhas acima |
+| Lançamento | Mês 7 (MVP de 6 meses sem receita) | | | Decisão do grupo, alinhada ao 5W2H |
+
+Os novos clientes são uma meta informada, não o resultado de um funil. Com 5% de conversão do trial, exigem cerca de 120, 320 e 560 cadastros por mês.
+
+## 5. Premissas de custo
+
+| Item (por mês) | Ano 1 | Ano 2 | Ano 3 | Origem |
+|---|---|---|---|---|
+| COGS (% da receita) | 38% | 33% | 28% | Estimativa nossa |
+| Pessoal | R$ 0 | R$ 7.000 | R$ 14.000 | Decisão do grupo |
+| Marketing | R$ 1.000 | R$ 2.500 | R$ 4.500 | Estimativa nossa |
+| Vendas e comissões | R$ 0 | R$ 500 | R$ 1.500 | Estimativa nossa |
+| Tecnologia fixa | R$ 1.200 | R$ 2.500 | R$ 4.000 | Estimativa nossa |
+| Administrativo | R$ 600 | R$ 1.000 | R$ 1.600 | Estimativa nossa |
+| Impostos sobre receita | 6% | 8% | 10% | Simples Nacional, a confirmar com contador |
+
+- Investimento inicial de R$ 18 mil: tecnologia R$ 8 mil, marketing R$ 5 mil, abertura da empresa e LGPD R$ 5 mil. O MVP é desenvolvido pelos sócios.
+- Regra de projeto do COGS: o custo de inferência com o saldo cheio não passa de 40% da mensalidade. Custo de LLM de US$ 0,05 a 0,30 por entrevista curta (estudo de mercado), câmbio de R$ 5,50.
+- Pessoal zero no ano 1 é custo de oportunidade dos sócios, não custo nulo.
+
+## 6. Capital
+
+| Item | Valor |
+|---|---|
+| Aporte principal | R$ 90 mil de capital próprio |
+| Parcelas | R$ 35 mil no início, R$ 30 mil no lançamento do MVP, R$ 25 mil como reserva no mês 12 |
+| Condição da parcela 3 | MRR de pelo menos R$ 3 mil no mês 12 |
+| Alternativa | Seed de R$ 150 mil por volta do mês 9 |
+| Variante com um sócio em tempo integral | Aporte necessário sobe para cerca de R$ 98 mil (recomendação: R$ 120 mil) |
+
+O aporte foi dimensionado pelo caixa mínimo do modelo mensal, que é de R$ 56 mil no cenário base, no mês 17.
+
+## 7. Resultados (cenário base)
+
+| | Ano 1 | Ano 2 | Ano 3 |
+|---|---|---|---|
+| Receita, modelo mensal | R$ 25 mil | R$ 292 mil | R$ 796 mil |
+| EBITDA, modelo mensal | −R$ 20 mil | +R$ 10 mil | +R$ 186 mil |
+| MRR no fim do ano | R$ 6,4 mil | R$ 34,9 mil | R$ 83,9 mil |
+| CAC (marketing e vendas) | R$ 333 | R$ 188 | R$ 214 |
+| CAC completo (com pessoal) | R$ 333 | R$ 625 | R$ 714 |
+| LTV | R$ 1.566 | R$ 2.390 | R$ 3.326 |
+| LTV/CAC completo | 4,7 | 3,8 | 4,7 |
+| MRR de equilíbrio | R$ 5,0 mil | R$ 22,9 mil | R$ 41,3 mil |
+
+- EBITDA mensal positivo de forma sustentada a partir do mês 18. Payback do capital no mês 29.
+- Mercado: TAM de US$ 142 bi, SAM regional (América Latina) de US$ 140 a 330 milhões, SOM de cerca de R$ 1,0 mi de ARR no fim do ano 3 (0,06% a 0,13% do SAM regional).
+
+## 8. Onde o modelo é frágil
+
+| Premissa alterada | Receita ano 3 | EBITDA ano 3 | Aporte necessário |
+|---|---|---|---|
+| Base | R$ 796 mil | +R$ 186 mil | R$ 56 mil |
+| Mix 50/50 | R$ 647 mil | +R$ 94 mil | R$ 67 mil |
+| Mix 65% Starter / 35% Pro | R$ 555 mil | +R$ 37 mil | R$ 90 mil |
+| Sem pacotes extras | R$ 661 mil | +R$ 102 mil | R$ 65 mil |
+| Mix 50/50 e sem pacotes extras | R$ 534 mil | +R$ 24 mil | R$ 92 mil |
+| Lançamento no mês 13 | R$ 768 mil | +R$ 169 mil | R$ 88 mil |
+| COGS de 45%, 40% e 35% | R$ 796 mil | +R$ 131 mil | R$ 64 mil |
+| Metade dos novos clientes | | EBITDA negativo no ano 3 | |
+
+- Nada disso foi validado com clientes. A pesquisa tem 20 respondentes e serve de indício de disposição a pagar.
+- O mix 35/65 é provavelmente otimista. A decisão sobre usar 50/50 como base está em aberto.
+- A variável que mais pesa é a aquisição de clientes.
+- O custo real por crédito só se mede no MVP.
+
+## 9. A fórmula da planilha FIAP
+
+Na aba Premissas, as células D12 e E12 calculam `ticket × clientes_finais / 2 × 12`, mas a dica da célula F12 diz que a conta usa a média entre o início e o fim do ano. Isso subestima a receita da Linha 1 em 12% no ano 2 e 28% no ano 3.
+
+| Leitura | Receita ano 3 | EBITDA ano 3 |
+|---|---|---|
+| Planilha como está | R$ 533 mil | +R$ 23 mil |
+| Planilha com a média corrigida | R$ 742 mil | +R$ 153 mil |
+| Modelo mensal | R$ 796 mil | +R$ 186 mil |
+
+A correção proposta é `=D8*(C11+D11)/2*12` em D12 e `=E8*(D11+E11)/2*12` em E12. Não alteramos a fórmula original. Pendente: perguntar ao professor se a correção é aceita.
+
+## 10. O que ainda está em aberto
+
+- Nome da moeda interna.
+- Número de créditos de cada plano e custo por crédito.
+- Subfaixas do plano de topo.
+- Política de cancelamento e reembolso do plano anual.
+- Mix de planos do cenário base.
+- Regime tributário.
+- Recorte brasileiro de TAM, SAM e SOM.
