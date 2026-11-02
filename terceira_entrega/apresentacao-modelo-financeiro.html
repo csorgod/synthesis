@@ -685,7 +685,17 @@ function go(i){
 }
 function fit(){const s=Math.min(innerWidth/1280,innerHeight/720);stage.style.transform=`translate(-50%,-50%) scale(${s})`}
 addEventListener('resize',fit);fit();
-document.getElementById('prev').onclick=()=>go(cur-1);document.getElementById('next').onclick=()=>go(cur+1);
+/* as zonas de navegação ficam por cima do palco: se houver um controle do slide sob o clique (ex.: seletor mensal/anual), o clique vai para ele */
+function navClick(e,d){
+  const hit=document.elementsFromPoint(e.clientX,e.clientY).find(x=>x.matches&&x.matches('.slide button,.slide .bill'));
+  if(hit){
+    /* nos cantos arredondados o alvo é a pílula: usa o botão mais próximo na horizontal */
+    const bt=hit.tagName==='BUTTON'?hit:[...hit.querySelectorAll('button')].sort((a,b)=>{const c=r=>Math.abs((r.left+r.right)/2-e.clientX);return c(a.getBoundingClientRect())-c(b.getBoundingClientRect())})[0];
+    if(bt)bt.click();return;
+  }
+  go(cur+d);
+}
+document.getElementById('prev').onclick=e=>navClick(e,-1);document.getElementById('next').onclick=e=>navClick(e,1);
 addEventListener('keydown',e=>{
   if((e.key===' '||e.key==='Enter')&&e.target.closest&&e.target.closest('.bill'))return;
   if(['ArrowRight','ArrowDown','PageDown',' ','Enter'].includes(e.key)){e.preventDefault();go(cur+1)}
