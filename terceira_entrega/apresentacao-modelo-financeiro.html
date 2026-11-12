@@ -298,7 +298,7 @@ svg text{font-family:'Inter',sans-serif}
   <div class="flow rv" style="margin-top:26px;align-items:center">
     <div class="node"><div class="big" style="font-size:34px">R$ 212,50</div><p class="small muted" style="margin-top:8px"><b style="color:var(--text)">Mensalidade média</b><br>35% Starter × 89 + 65% Pro × 279</p></div>
     <div class="arrow sora" style="width:36px;font-size:22px;font-weight:600">×</div>
-    <div class="node"><div class="big" style="font-size:34px">0,949</div><p class="small muted" style="margin-top:8px"><b style="color:var(--text)">Efeito do anual</b><br>20% das assinaturas, com 26% a menos</p></div>
+    <div class="node"><div class="big" style="font-size:34px">0,949</div><p class="small muted" style="margin-top:8px"><b style="color:var(--text)">Efeito do anual</b><br>20% das assinaturas, com 26% de desconto (anual)</p></div>
     <div class="arrow sora" style="width:36px;font-size:22px;font-weight:600">×</div>
     <div class="node"><div class="big" style="font-size:34px">1,10</div><p class="small muted" style="margin-top:8px"><b style="color:var(--text)">Créditos extras</b><br>10% da mensalidade</p></div>
     <div class="arrow sora" style="width:36px;font-size:22px;font-weight:600">=</div>
@@ -316,7 +316,7 @@ svg text{font-family:'Inter',sans-serif}
       <tr><td>Créditos extras</td><td>20%</td><td>30%</td><td>40%</td></tr>
       <tr class="b"><td>Ticket médio (L16)</td><td>R$ 511</td><td>R$ 538</td><td>R$ 572</td></tr></tbody></table></div>
   </div>
-  <div class="foot"><span>A proporção entre planos, os créditos extras e a adesão ao anual são estimativas nossas, sem evidência direta (slide 14)</span><span data-n></span></div>
+  <div class="foot"><span><b>*</b> A proporção entre planos, os créditos extras e a adesão ao anual são estimativas</span><span data-n></span></div>
 </section>
 
 <!-- 7 VOLUME -->
@@ -332,7 +332,7 @@ svg text{font-family:'Inter',sans-serif}
         <tr><td>Churn mensal (L10)</td><td>8%</td><td>6%</td><td>5%</td></tr>
         <tr><td>Assinaturas Business (L17)</td><td>0,5</td><td>4</td><td>10</td></tr></tbody></table>
         <p class="small muted" style="margin-top:10px">* Média de 12 meses: 6 por mês a partir do mês 7.</p></div>
-      <div class="card" style="padding:16px 18px"><span class="pill n">Churn combinado</span><p class="small" style="margin-top:10px">Plano mensal 9%, 7% e 6%. Plano anual equivale a 3% ao mês. A mistura dá 8%, 6% e 5%.</p></div>
+      <div class="card" style="padding:16px 18px"><span class="pill n">Churn combinado</span><p class="small" style="margin-top:10px">A média ponderada (80% mensal, 20% anual) resulta em 8%, 6% e 5% ao longo dos três anos</p></div>
       <div class="card" style="padding:16px 18px"><span class="pill a">Sem funil</span><p class="small" style="margin-top:10px">O número de novos clientes é uma meta informada. Com 5% de conversão do teste gratuito, isso exige de 120 a 560 cadastros por mês.</p></div>
     </div>
   </div>
@@ -374,18 +374,20 @@ svg text{font-family:'Inter',sans-serif}
   <span class="eyebrow rv">4 · Resultado</span>
   <h2 class="rv">Receita de R$ 865 mil no ano 3, com EBITDA de R$ 229 mil</h2>
   <div class="grid" style="grid-template-columns:1.35fr 1fr;gap:22px;margin-top:22px">
-    <div class="card rv" style="padding:18px 18px 8px"><div style="display:flex;gap:16px;font-size:12.5px;margin-bottom:4px"><span><b style="color:var(--indigo)">■</b> Receita</span><span><b style="color:#0d162f">■</b> EBITDA</span></div><div id="ch-proj"></div></div>
-    <div class="card rv"><table><thead><tr><th>Projeção mensal</th><th>A1</th><th>A2</th><th>A3</th></tr></thead><tbody>
-      <tr><td>Receita (R$ mil)</td><td>28</td><td>319</td><td>865</td></tr>
-      <tr><td>EBITDA (R$ mil)</td><td class="neg">−18</td><td class="pos">+26</td><td class="pos">+229</td></tr>
-      <tr><td>MRR no fim (R$ mil)</td><td>7,1</td><td>38,1</td><td>91,2</td></tr>
-      <tr><td>Assinaturas Starter/Pro</td><td>30</td><td>154</td><td>341</td></tr></tbody></table>
+    <div class="card rv" style="padding:18px 18px 8px"><div style="display:flex;gap:16px;font-size:12.5px;margin-bottom:4px"><span><b style="color:#b8b4f5">■</b> Receita, planilha como está</span><span><b style="color:var(--indigo)">■</b> Receita, projeção mensal</span><span><b style="color:#0d162f">■</b> EBITDA, projeção mensal</span></div><div id="ch-proj"></div></div>
+    <div class="card rv"><table><thead><tr><th>Indicador</th><th>A1</th><th>A2</th><th>A3</th></tr></thead><tbody>
+      <tr class="muted"><td>Receita (R$ mil), planilha como está</td><td>35</td><td>238</td><td>579</td></tr>
+      <tr><td><b>Receita (R$ mil), projeção mensal</b></td><td><b>28</b></td><td><b>319</b></td><td><b>865</b></td></tr>
+      <tr class="muted"><td>EBITDA (R$ mil), planilha como está</td><td class="neg">−14</td><td class="neg">−22</td><td class="pos">+52</td></tr>
+      <tr><td><b>EBITDA (R$ mil), projeção mensal</b></td><td class="neg"><b>−18</b></td><td class="pos"><b>+26</b></td><td class="pos"><b>+229</b></td></tr>
+      <tr><td>MRR no fim (R$ mil), projeção mensal</td><td>7,1</td><td>38,1</td><td>91,2</td></tr>
+      <tr><td>Assinaturas Starter/Pro (nº), projeção mensal</td><td>30</td><td>154</td><td>341</td></tr></tbody></table>
       <div style="display:grid;gap:10px;margin-top:16px">
         <div style="display:flex;gap:10px;align-items:center"><span class="pill g">Mês 17</span><span class="small">EBITDA positivo de forma sustentada</span></div>
         <div style="display:flex;gap:10px;align-items:center"><span class="pill">Mês 26</span><span class="small">o caixa acumulado volta a zero (payback do capital)</span></div>
       </div></div>
   </div>
-  <div class="foot"><span>A planilha, lida como está, dá números menores nos anos 2 e 3 (slide 15)</span><span data-n></span></div>
+  <div class="foot"><span>A planilha dá menos nos anos 2 e 3 porque a fórmula de receita do template divide a base final por 2; a projeção mensal soma mês a mês (slide 15)</span><span data-n></span></div>
 </section>
 
 <!-- 10 DASHBOARD -->
@@ -396,8 +398,8 @@ svg text{font-family:'Inter',sans-serif}
   <div class="grid g4 rv" style="margin-top:26px;gap:14px">
     <div class="card"><div class="small muted">MRR no fim do ano 3</div><div class="big" style="font-size:34px;margin:10px 0 6px">R$ 91,2 mil</div><span class="pill">ARR ≈ R$ 1,1 mi</span></div>
     <div class="card"><div class="small muted">LTV/CAC completo</div><div class="big" style="font-size:34px;margin:10px 0 6px">5,1</div><span class="pill g">acima da regra de 3×</span></div>
-    <div class="card"><div class="small muted">Margem bruta</div><div class="big" style="font-size:34px;margin:10px 0 6px">62 → 72%</div><span class="pill n">referência SaaS: 60% a 80%</span></div>
-    <div class="card"><div class="small muted">Payback do CAC completo</div><div class="big" style="font-size:34px;margin:10px 0 6px">4,0 meses</div><span class="pill g">meta: menos de 12</span></div>
+    <div class="card"><div class="small muted">Margem bruta</div><div class="big" style="font-size:28px;margin:10px 0 6px">62 → 67% → 72%</div><span class="pill n">referência SaaS: 60% a 80%</span></div>
+    <div class="card"><div class="small muted">Payback do CAC por cliente</div><div class="big" style="font-size:34px;margin:10px 0 6px">4,0 meses</div><span class="pill g">meta: menos de 12</span></div>
   </div>
   <div class="grid g2 rv" style="margin-top:18px;gap:18px">
     <div class="card"><table><thead><tr><th>Dashboard</th><th>Ano 1</th><th>Ano 2</th><th>Ano 3</th></tr></thead><tbody>
@@ -602,10 +604,13 @@ lineChart('ch-contas',{w:760,h:430,xmax:36,xstep:6,ymin:0,ymax:350,ystep:50,l:42
   const sy=y=>t+(ymax-y)/(ymax-ymin)*(h-t-b);let s=`<svg viewBox="0 0 ${w} ${h}" width="100%" style="display:block">`;
   for(let y=ymin;y<=ymax;y+=100){s+=`<line x1="${l}" x2="${w-r}" y1="${sy(y)}" y2="${sy(y)}" stroke="${y===0?'#9aa0ad':C.grid}"/><text x="${l-8}" y="${sy(y)+4}" text-anchor="end" font-size="10.5" fill="${C.mut}">${y}</text>`}
   const gw=(w-l-r)/3;
-  [0,1,2].forEach(i=>{const gx=l+gw*i+gw/2,bw=46,rev=K(base.R[i]),eb=K(base.E[i]);
-    s+=`<rect x="${gx-bw-4}" y="${sy(rev)}" width="${bw}" height="${sy(0)-sy(rev)}" rx="6" fill="${C.ind}"/><text x="${gx-bw/2-4}" y="${sy(rev)-7}" text-anchor="middle" font-size="12" font-weight="700" fill="${C.navy}">${Math.round(rev)}</text>`;
+  const plan=[34.651,237.884,579.195]; /* receita da planilha como está */
+  [0,1,2].forEach(i=>{const gx=l+gw*i+gw/2,bw=34,g=4,pl=plan[i],rev=K(base.R[i]),eb=K(base.E[i]);
+    const x1=gx-bw*1.5-g,x2=gx-bw/2,x3=gx+bw/2+g;
+    s+=`<rect x="${x1}" y="${sy(pl)}" width="${bw}" height="${sy(0)-sy(pl)}" rx="5" fill="${C.soft}"/><text x="${x1+bw/2}" y="${sy(pl)-7}" text-anchor="middle" font-size="11.5" font-weight="700" fill="${C.mut}">${Math.round(pl)}</text>`;
+    s+=`<rect x="${x2}" y="${sy(rev)}" width="${bw}" height="${sy(0)-sy(rev)}" rx="5" fill="${C.ind}"/><text x="${x2+bw/2}" y="${sy(rev)-7}" text-anchor="middle" font-size="12" font-weight="700" fill="${C.navy}">${Math.round(rev)}</text>`;
     const y0=eb>=0?sy(eb):sy(0),hh=Math.abs(sy(eb)-sy(0));
-    s+=`<rect x="${gx+4}" y="${y0}" width="${bw}" height="${Math.max(hh,2)}" rx="5" fill="${C.navy}"/><text x="${gx+4+bw/2}" y="${eb>=0?sy(eb)-7:sy(eb)+16}" text-anchor="middle" font-size="12" font-weight="700" fill="${eb>=0?C.navy:C.red}">${eb>0?'+':''}${Math.round(eb)}</text>`;
+    s+=`<rect x="${x3}" y="${y0}" width="${bw}" height="${Math.max(hh,2)}" rx="5" fill="${C.navy}"/><text x="${x3+bw/2}" y="${eb>=0?sy(eb)-7:sy(eb)+16}" text-anchor="middle" font-size="12" font-weight="700" fill="${eb>=0?C.navy:C.red}">${eb>0?'+':''}${Math.round(eb)}</text>`;
     s+=`<text x="${gx}" y="${h-10}" text-anchor="middle" font-size="12" fill="${C.mut}">Ano ${i+1}</text>`});
   document.getElementById('ch-proj').innerHTML=s+'</svg>';
 })();
