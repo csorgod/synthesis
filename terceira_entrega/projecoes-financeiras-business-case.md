@@ -12,10 +12,10 @@ O Synthesis é um SaaS self-service de simulação de reação de audiência com
 - **Monetização:** assinatura mensal, por empresa ou profissional, que dá um saldo de **créditos** (moeda interna, nome a definir), usados livremente em estudos simples ou complexos. Quem estoura o saldo pode **opcionalmente** comprar créditos extras. Há também **plano anual** (com vantagens), pago antecipadamente.
 - **Planos (preço inicial, a validar):** Starter R$ 89, Pro R$ 279 e uma faixa Business **a partir de R$ 449, sob orçamento**. O plano anual tem preço fixo de R$ 790, R$ 2.490 e a partir de R$ 3.990 por ano, cerca de 26% abaixo de 12 mensalidades.
 - **Capital:** cenário principal com **capital próprio de R$ 90 mil**, liberado em três parcelas, **sem pró-labore para os sócios no ano 1** (os sócios mantêm renda própria). Seed como cenário alternativo.
-- **Resultado (cenário base, modelo mensal de 36 meses):** receita de R$ 28 mil, R$ 319 mil e R$ 865 mil nos anos 1, 2 e 3; EBITDA mensal sustentadamente positivo a partir do mês 17; caixa mínimo de R$ 50 mil (mês 16), coberto pelo aporte com folga de R$ 40 mil; capital recuperado no mês 26.
+- **Resultado (cenário base, modelo mensal de 36 meses):** receita de R$ 48 mil, R$ 377 mil e R$ 962 mil nos anos 1, 2 e 3; EBITDA mensal sustentadamente positivo a partir do mês 18; caixa mínimo de R$ 54 mil (mês 17), coberto pelo aporte com folga de R$ 36 mil; capital recuperado no mês 27. O ritmo de novos clientes segue uma rampa (10 no mês do lançamento e +5% ao mês) e o teste gratuito de 50 créditos entra como custo de aquisição.
 - **Pontos de atenção:**
-  1. O crescimento de novos clientes é a variável que mais pesa: com metade dos novos clientes, o EBITDA do ano 3 fica negativo.
-  2. A planilha compartilhada traz uma inconsistência de fórmula que **subestima a receita dos anos 2 e 3** (seção 7.2). Lida AS IS, ela mostra o ano 3 com EBITDA positivo, porém baixo (+R$ 52 mil); com a fórmula corrigida, o mesmo cenário dá +R$ 193 mil.
+  1. O crescimento de novos clientes é a variável que mais pesa: com metade dos novos clientes, o EBITDA do ano 3 fica negativo e o aporte necessário sobe para R$ 147 mil.
+  2. A planilha compartilhada traz uma inconsistência de fórmula que **subestima a receita dos anos 2 e 3** (seção 7.2). Lida AS IS, ela mostra o ano 3 com EBITDA positivo, porém baixo (+R$ 41 mil); com a fórmula corrigida, o mesmo cenário dá +R$ 209 mil.
   3. As premissas de preço, mix, créditos extras, custo por crédito e CAC **não foram validadas com clientes reais**. A pesquisa dá indício de disposição a pagar, não prova de conversão. Todas as premissas estão registradas no Anexo C, com o efeito de errá-las.
 
 ---
@@ -31,7 +31,7 @@ O Synthesis é um SaaS self-service de simulação de reação de audiência com
 | **Saldo mensal** | Incluído na mensalidade. **Expira** no fim do ciclo. |
 | **Créditos extras** | Opcionais, comprados à parte. **Acumulam** (não expiram enquanto a assinatura estiver ativa; no plano anual, durante todo o contrato). Isso reduz o receio de "gastar demais" e incentiva o uso. |
 | **Estouro do saldo** | Teto rígido com opt-in: sem créditos extras ativos, as simulações pausam. Alertas aos 80% e 100% do saldo. O cliente nunca recebe cobrança surpresa. |
-| **Teste gratuito** | **200 créditos** de boas-vindas **únicos** (não renovam todo mês), sem cobrança e sem cadastro de cartão. Esse bônus tem custo relevante (ver P34 no Anexo C). |
+| **Teste gratuito** | **50 créditos** de boas-vindas **únicos** (não renovam todo mês), sem cobrança e sem cadastro de cartão. Esse bônus tem custo (R$ 7 por cadastro) e entra no modelo como custo de aquisição (ver P34 no Anexo C). |
 
 Por que créditos e não "entrevistas" ou "simulações": o saldo flexível acompanha o custo real de LLM de cada estudo e permite trocar de modelo de IA sem mudar o preço ao cliente. Os créditos expirados também geram receita sem custo associado ("breakage"), o que ajuda a margem.
 
@@ -39,7 +39,7 @@ Por que créditos e não "entrevistas" ou "simulações": o saldo flexível acom
 
 | Plano | Mensal | Anual | Equivalente por mês no anual | Economia no anual* | Público |
 |---|---|---|---|---|---|
-| **Free** | R$ 0 | n.a. | n.a. | n.a. | 200 créditos de boas-vindas únicos, para experimentar |
+| **Free** | R$ 0 | n.a. | n.a. | n.a. | 50 créditos de boas-vindas únicos, para experimentar |
 | **Starter** | R$ 89 | R$ 790 | R$ 65,83 | R$ 278 (26%) | Criadores de conteúdo e freelancers |
 | **Pro** | R$ 279 | R$ 2.490 | R$ 207,50 | R$ 858 (26%) | Freelancers sênior, analistas de marketing, PMEs |
 | **Business (sob orçamento)** | **A partir de R$ 449** | A partir de R$ 3.990 | A partir de R$ 332,50 | A partir de R$ 1.398 (26%) | Agências, times de marketing e quem usaria mais que o Pro |
@@ -172,7 +172,7 @@ O mix migra para o Pro e os créditos extras ganham peso porque o hábito de uso
 
 - **No ticket:** o preço anual, cerca de 26% menor, reduz a receita mensal reconhecida (já incluído acima). Com o preço mensal atual, o anual passa a custar receita: sem ele, a receita do ano 3 seria cerca de 3% maior (Anexo C.3).
 - **No churn:** quem assina o anual só cancela na renovação. Adotamos churn mensal de 9%, 7% e 6% para o plano mensal e o equivalente a 3% ao mês (cerca de 30% de não renovação ao ano) para o anual. O churn combinado fica em 7,8%, 5,8% e 5,0%, que arredondamos para **8%, 6% e 5%**.
-- **No caixa:** o anual é recebido antes de a receita ser reconhecida. A planilha calcula caixa a partir do EBITDA e **não captura esse adiantamento**. Como ordem de grandeza (cobrança distribuída ao longo do ano e 70% de renovação), o adiantamento líquido seria de cerca de R$ 55 mil no ano 2 e R$ 100 mil no ano 3. Não entra nos números abaixo, então é uma folga conservadora. É também uma obrigação de entregar o serviço, não lucro; a política de cancelamento e reembolso do anual (inclusive o prazo legal de arrependimento em compras online) precisa ser validada com jurídico.
+- **No caixa:** o anual é recebido antes de a receita ser reconhecida. A planilha calcula caixa a partir do EBITDA e **não captura esse adiantamento**. Como ordem de grandeza (cobrança distribuída ao longo do ano e 70% de renovação), o adiantamento líquido seria de cerca de R$ 65 mil no ano 2 e R$ 110 mil no ano 3 (valores reescalados com o novo volume de clientes). Não entra nos números abaixo, então é uma folga conservadora. É também uma obrigação de entregar o serviço, não lucro; a política de cancelamento e reembolso do anual (inclusive o prazo legal de arrependimento em compras online) precisa ser validada com jurídico.
 
 ---
 
@@ -187,15 +187,15 @@ Fonte: [estudo de mercado](../docs/estudo-de-mercado.md), seção 1 (ESOMAR e ou
 | **TAM** | Mercado global de pesquisa e insights (2023) | US$ 142 bi |
 | **SAM global** | Research software + dados sintéticos (5 a 8% do TAM) | US$ 7 a 11 bi |
 | **SAM regional** | América Latina (2 a 3% do mercado global de pesquisa) | US$ 140 a 330 mi (R$ 0,8 a 1,8 bi) |
-| **SOM do plano** | MRR de R$ 91,2 mil no fim do ano 3, ou ARR de cerca de R$ 1,1 mi (US$ 199 mil) | 0,06% a 0,14% do SAM regional |
+| **SOM do plano** | MRR de R$ 107,0 mil no fim do ano 3, ou ARR de cerca de R$ 1,3 mi (US$ 233 mil) | 0,07% a 0,17% do SAM regional |
 
 ### 4.2 Bottom-up
 
-Parte do nosso modelo: no fim do ano 3, cerca de **341 assinaturas** nos planos Starter e Pro e **10 assinaturas** na faixa Business, com ticket médio de R$ 251 e R$ 572 por mês. É o SOM do plano: aproximadamente R$ 1,1 mi de ARR.
+Parte do nosso modelo: no fim do ano 3, cerca de **404 assinaturas** nos planos Starter e Pro e **10 assinaturas** na faixa Business, com ticket médio de R$ 251 e R$ 572 por mês. É o SOM do plano: aproximadamente R$ 1,3 mi de ARR.
 
 ### 4.3 Leitura
 
-- O SOM do plano é **conservador**: o estudo de mercado estimava US$ 0,5 a 2 mi de ARR em 24 meses (aproximadamente R$ 2,8 a 11 mi), de 3 a 10 vezes acima do que o plano projeta para o fim do ano 3. A diferença vem de partirmos de um MVP sem receita nos 6 primeiros meses, preços de entrada baixos e crescimento essencialmente orgânico.
+- O SOM do plano é **conservador**: o estudo de mercado estimava US$ 0,5 a 2 mi de ARR em 24 meses (aproximadamente R$ 2,8 a 11 mi), de 2 a 9 vezes acima do que o plano projeta para o fim do ano 3. A diferença vem de partirmos de um MVP sem receita nos 6 primeiros meses, preços de entrada baixos e crescimento essencialmente orgânico.
 - **Lacuna:** o top-down usa o mercado global/regional. Falta o recorte do universo brasileiro (número de agências, PMEs com marketing digital e criadores monetizados) a partir de fontes como IBGE, Sebrae e relatórios do setor. Esse levantamento está nos próximos passos; **não foram inventados números** para preencher o campo.
 
 ---
@@ -207,13 +207,14 @@ Valores inseridos na planilha (aba Premissas). Os custos são mensais. **O regis
 | Premissa | Ano 1 | Ano 2 | Ano 3 | Base da premissa | Confiança |
 |---|---|---|---|---|---|
 | Ticket médio Linha 1 | R$ 222 | R$ 234 | R$ 251 | Seção 3.1 | Baixa |
-| Novos clientes/mês, Linha 1 | 3 | 16 | 28 | Ano 1: 6 por mês a partir do mês 7 (MVP nos 6 primeiros meses), média de 12 meses de 3 | Baixa |
+| Novos clientes/mês, Linha 1 | 6 | 18 | 32 | Rampa mensal: 10 no mês 7 (lançamento) e +5% ao mês, até cerca de 41 no mês 36. Médias de 12 meses: 5,7, 17,8 e 31,9, arredondadas na planilha (a célula só aceita inteiros) | Baixa |
 | Churn mensal combinado | 8% | 6% | 5% | Seção 3.2; público de renda variável | Baixa |
 | Ticket médio Linha 2 | R$ 511 | R$ 538 | R$ 572 | Seção 3.1 (piso de R$ 449) | Baixa |
 | Assinaturas na faixa Business (média no ano) | 0,5 | 4 | 10 | Ano 1: 1 assinatura a partir do mês 7; parceria com agências é canal de aquisição | Baixa |
-| COGS (% da receita) | 38% | 33% | 28% | Orçamento de inferência (2.3) e gateway, cloud e custo do trial; cai com cache de prompt, lote e modelos menores | Média-baixa |
+| COGS (% da receita) | 38% | 33% | 28% | Orçamento de inferência (2.3), gateway e cloud; cai com cache de prompt, lote e modelos menores. O teste gratuito está em linha à parte | Média-baixa |
 | Pessoal | R$ 0 | R$ 7.000 | R$ 14.000 | Sem pró-labore no ano 1; a partir do ano 2, pró-labore escalonado e apoio part-time | Média |
-| Marketing e aquisição | R$ 1.000 | R$ 2.500 | R$ 4.500 | Conteúdo, LinkedIn e comunidades (PLG, pouca mídia paga) | Média |
+| Marketing e aquisição | R$ 1.500 | R$ 3.000 | R$ 5.000 | Conteúdo, LinkedIn e comunidades, com parte da aquisição vinda de influência (comissão ou permuta) e de indicação (boca a boca). Essas duas frentes são hipóteses sem dado. No ano 1: R$ 1.000 até o lançamento e R$ 2.000 depois (média de R$ 1.500) | Baixa |
+| Teste gratuito (50 créditos por cadastro) | R$ 790 | R$ 2.490 | R$ 4.470 | R$ 7 por cadastro (50 × R$ 0,14), cadastros = novos clientes ÷ 5% de conversão, bônus inteiro consumido. Média mensal do ano. Na planilha entra somado ao marketing | Baixa |
 | Vendas e comissões | R$ 0 | R$ 500 | R$ 1.500 | Bônus de parceria com agências | Média |
 | Tecnologia (fixa) | R$ 1.200 | R$ 2.500 | R$ 4.000 | Cloud base, observabilidade, ferramentas; o LLM está no COGS | Média |
 | Administrativo | R$ 600 | R$ 1.000 | R$ 1.600 | Contador, jurídico e LGPD | Média |
@@ -225,6 +226,7 @@ Observações:
 
 - **Pessoal no ano 1 é zero** porque os sócios têm renda própria e o produto é construído por eles. Isso **não é custo zero**: é custo de oportunidade assumido pelos sócios. Quem lê o plano deve considerar esse subsídio.
 - **Impostos:** o regime tributário (Simples Nacional, anexo e fator R) pode elevar a alíquota acima do assumido, em especial no ano 1, quando não há folha de pagamento. Precisa ser validado com contador.
+- **Marketing na planilha:** a célula de marketing (linha 24) leva o marketing mais o teste gratuito, arredondado: R$ 2.300, R$ 5.500 e R$ 9.500 por mês. Assim o CAC da planilha já inclui o custo do teste.
 - **COGS** é uma meta, não uma medição. O primeiro marco do MVP é medir o custo real por crédito.
 
 ---
@@ -233,9 +235,9 @@ Observações:
 
 | Tipo | Itens | Comportamento |
 |---|---|---|
-| **Variáveis (COGS)** | Chamadas de LLM por simulação, taxas do gateway de pagamento, armazenamento e egress, custo dos créditos do teste gratuito | Crescem com o uso; protegidos pelo teto de inferência por plano |
+| **Variáveis (COGS)** | Chamadas de LLM por simulação, taxas do gateway de pagamento, armazenamento e egress | Crescem com o uso; protegidos pelo teto de inferência por plano |
 | **Fixos de pessoal** | Pró-labore e apoio part-time | Zero no ano 1; escalonados nos anos 2 e 3 |
-| **Aquisição** | Marketing de conteúdo e comunidades, bônus de parceria | Pequenos: o modelo PLG e a indicação orgânica sustentam a aquisição |
+| **Aquisição** | Marketing de conteúdo e comunidades, bônus de parceria, custo dos créditos do teste gratuito | Crescem com o volume de novos clientes; o teste gratuito pesa quase tanto quanto o marketing no ano 3 |
 | **Fixos de operação** | Cloud base, ferramentas, contador, jurídico/LGPD | Crescem devagar |
 | **Investimento inicial** | MVP, marca, abertura da empresa, termos de uso e política de privacidade | R$ 18 mil, no ano 1 |
 
@@ -251,37 +253,37 @@ Resultado da aba **Projeção 3 Anos** com as premissas da seção 5, em R$:
 
 | | Ano 1 | Ano 2 | Ano 3 |
 |---|---|---|---|
-| Receita Linha 1 | 31.585 | 212.060 | 510.555 |
+| Receita Linha 1 | 63.170 | 252.431 | 589.333 |
 | Receita Linha 2 | 3.066 | 25.824 | 68.640 |
-| **Receita total** | **34.651** | **237.884** | **579.195** |
-| COGS | (13.167) | (78.502) | (162.175) |
-| **Lucro bruto** | **21.484** | **159.382** | **417.021** |
+| **Receita total** | **66.236** | **278.255** | **657.973** |
+| COGS | (25.170) | (91.824) | (184.232) |
+| **Lucro bruto** | **41.066** | **186.431** | **473.740** |
 | Margem bruta | 62% | 67% | 72% |
 | Pessoal | 0 | (84.000) | (168.000) |
-| Marketing | (12.000) | (30.000) | (54.000) |
+| Marketing e aquisição (inclui o teste gratuito) | (27.600) | (66.000) | (114.000) |
 | Vendas | 0 | (6.000) | (18.000) |
 | Tecnologia | (14.400) | (30.000) | (48.000) |
 | Administrativo | (7.200) | (12.000) | (19.200) |
-| Impostos | (2.079) | (19.031) | (57.920) |
-| **EBITDA** | **(14.195)** | **(21.648)** | **51.901** |
-| Margem EBITDA | −41% | −9% | 9% |
-| Caixa final (início: R$ 90.000; investimento: R$ 18.000) | 57.805 | 36.156 | 88.057 |
+| Impostos | (3.974) | (22.260) | (65.797) |
+| **EBITDA** | **(12.108)** | **(33.829)** | **40.743** |
+| Margem EBITDA | −18% | −12% | 6% |
+| Caixa final (início: R$ 90.000; investimento: R$ 18.000) | 59.892 | 26.063 | 66.806 |
 
 ### 7.2 Atenção: a fórmula de receita da Linha 1 subestima os anos 2 e 3
 
-Na aba Premissas, a dica da célula F12 diz que a receita usa "a média entre clientes ativos no início e no fim do ano". Mas as fórmulas de D12 e E12 usam `ticket × clientes_finais / 2 × 12`, ou seja, tratam o início do ano como zero. No ano 1 isso está correto (a base começa em zero). Nos anos 2 e 3, a receita fica subestimada em **12% e 28%**.
+Na aba Premissas, a dica da célula F12 diz que a receita usa "a média entre clientes ativos no início e no fim do ano". Mas as fórmulas de D12 e E12 usam `ticket × clientes_finais / 2 × 12`, ou seja, tratam o início do ano como zero. No ano 1 isso está correto (a base começa em zero). Nos anos 2 e 3, a receita fica subestimada em **19% e 29%**.
 
 **Não alteramos essa fórmula**, pois não é uma célula de entrada. A correção seria `=D8*(C11+D11)/2*12` em D12 e `=E8*(D11+E11)/2*12` em E12. Com ela, as mesmas premissas dão:
 
 | | Planilha como está | Planilha com média corrigida | Modelo mensal (36 meses) |
 |---|---|---|---|
-| Receita ano 1 / 2 / 3 (R$ mil) | 35 / 238 / 579 | 35 / 271 / 807 | 28 / 319 / 865 |
-| EBITDA ano 1 / 2 / 3 (R$ mil) | −14 / −22 / +52 | −14 / −2 / +193 | −18 / +26 / +229 |
-| Caixa final ano 1 / 2 / 3 (R$ mil)* | 58 / 36 / 88 | 58 / 56 / 249 | −36 / −10 / +219 |
+| Receita ano 1 / 2 / 3 (R$ mil) | 66 / 278 / 658 | 66 / 345 / 929 | 48 / 377 / 962 |
+| EBITDA ano 1 / 2 / 3 (R$ mil) | −12 / −34 / +41 | −12 / +5 / +209 | −22 / +24 / +230 |
+| Caixa final ano 1 / 2 / 3 (R$ mil)* | 60 / 26 / 67 | 60 / 65 / 274 | −40 / −16 / +214 |
 
 \* Planilhas partem de R$ 90 mil de capital; o modelo mensal parte de zero (mostra o caixa acumulado antes do aporte).
 
-O **modelo mensal** é a nossa referência de cálculo: parte do lançamento no mês 7, aplica churn mês a mês e permite achar o **caixa mínimo** (o ponto mais fundo do vale da morte), que a planilha anual não mostra. É a base para dimensionar o aporte. Os valores diferem da planilha corrigida porque a planilha distribui os novos clientes de forma uniforme ao longo do ano e o modelo mensal reflete o MVP sem receita nos meses 1 a 6.
+O **modelo mensal** é a nossa referência de cálculo: parte do lançamento no mês 7, aplica churn mês a mês e permite achar o **caixa mínimo** (o ponto mais fundo do vale da morte), que a planilha anual não mostra. É a base para dimensionar o aporte. Os valores diferem da planilha corrigida porque a planilha usa um número fixo de novos clientes por mês em cada ano (a rampa vira uma média, arredondada para inteiro) e o modelo mensal reflete o MVP sem receita nos meses 1 a 6 e o crescimento mês a mês.
 
 **Como ler:** a planilha oficial, lida como está, mostra um ano 3 com lucro baixo por causa da fórmula. Para o business case, a referência é o modelo mensal; a planilha corrigida confirma a ordem de grandeza.
 
@@ -289,14 +291,15 @@ O **modelo mensal** é a nossa referência de cálculo: parte do lançamento no 
 
 | | Ano 1 | Ano 2 | Ano 3 |
 |---|---|---|---|
-| Receita (R$) | 27.593 | 319.006 | 864.972 |
-| EBITDA (R$) | (18.148) | 26.214 | 229.083 |
-| MRR no fim do ano (R$) | 7.065 | 38.142 | 91.188 |
-| Assinaturas Starter/Pro no fim do ano | 30 | 154 | 341 |
+| Receita (R$) | 47.724 | 376.646 | 962.037 |
+| EBITDA (R$) | (22.397) | 24.358 | 229.634 |
+| MRR no fim do ano (R$) | 13.041 | 46.066 | 107.013 |
+| Assinaturas Starter/Pro no fim do ano | 56 | 188 | 404 |
+| Custo do teste gratuito no ano (R$) | 9.523 | 29.863 | 53.629 |
 
-- O EBITDA mensal passa a ser **sustentadamente positivo a partir do mês 17**.
-- O **caixa mínimo** é de R$ 50 mil, no **mês 16**. Os R$ 90 mil de capital cobrem esse ponto com folga de R$ 40 mil.
-- O **payback do capital** (mês em que o caixa acumulado volta a zero) é o **mês 26**.
+- O EBITDA mensal passa a ser **sustentadamente positivo a partir do mês 18**.
+- O **caixa mínimo** é de R$ 54 mil, no **mês 17**. Os R$ 90 mil de capital cobrem esse ponto com folga de R$ 36 mil.
+- O **payback do capital** (mês em que o caixa acumulado volta a zero) é o **mês 27**.
 
 ---
 
@@ -306,18 +309,18 @@ O **modelo mensal** é a nossa referência de cálculo: parte do lançamento no 
 
 | Indicador | Ano 1 | Ano 2 | Ano 3 |
 |---|---|---|---|
-| MRR médio do ano (receita ÷ 12) | R$ 2.888 | R$ 19.824 | R$ 48.266 |
-| ARR (receita anual) | R$ 34.651 | R$ 237.884 | R$ 579.195 |
-| Assinaturas Starter/Pro ativas no fim do ano | 24 | 151 | 339 |
+| MRR médio do ano (receita ÷ 12) | R$ 5.520 | R$ 23.188 | R$ 54.831 |
+| ARR (receita anual) | R$ 66.236 | R$ 278.255 | R$ 657.973 |
+| Assinaturas Starter/Pro ativas no fim do ano | 47 | 180 | 391 |
 | Churn mensal | 8% | 6% | 5% |
-| CAC (marketing + vendas ÷ novos clientes) | R$ 333 | R$ 188 | R$ 214 |
+| CAC (marketing, teste gratuito e vendas ÷ novos clientes) | R$ 383 | R$ 333 | R$ 344 |
 | LTV (ticket × margem bruta ÷ churn) | R$ 1.720 | R$ 2.613 | R$ 3.614 |
-| LTV/CAC | 5,2 | 13,9 | 16,9 |
-| Payback do CAC (meses) | 2,4 | 1,2 | 1,2 |
+| LTV/CAC | 4,5 | 7,8 | 10,5 |
+| Payback do CAC (meses) | 2,8 | 2,1 | 1,9 |
 | Margem bruta | 62% | 67% | 72% |
-| EBITDA | −R$ 14.195 | −R$ 21.648 | +R$ 51.901 |
-| Runway (meses de caixa) | 48,9 | 20,0 | Caixa gerador |
-| Crescimento da receita YoY | n.a. | 587% | 143% |
+| EBITDA | −R$ 12.108 | −R$ 33.829 | +R$ 40.743 |
+| Runway (meses de caixa) | 59,4 | 9,2 | Caixa gerador |
+| Crescimento da receita YoY | n.a. | 320% | 136% |
 
 O "MRR" do dashboard é a receita média mensal do ano. O MRR de fim de ano (seção 7.3) é maior.
 
@@ -327,12 +330,12 @@ O CAC da planilha considera só marketing e vendas. Como o modelo é PLG (conte�
 
 | | Ano 1 | Ano 2 | Ano 3 |
 |---|---|---|---|
-| CAC de mídia | R$ 333 | R$ 188 | R$ 214 |
-| CAC completo (inclui pessoal) | R$ 333 | R$ 625 | R$ 714 |
-| LTV/CAC completo | 5,2 | 4,2 | 5,1 |
-| Payback do CAC completo (meses) | 2,4 | 4,0 | 4,0 |
+| CAC de mídia (com teste gratuito) | R$ 383 | R$ 333 | R$ 344 |
+| CAC completo (inclui pessoal) | R$ 383 | R$ 722 | R$ 781 |
+| LTV/CAC completo | 4,5 | 3,6 | 4,6 |
+| Payback do CAC completo (meses) | 2,8 | 4,6 | 4,3 |
 
-A leitura prudente é **LTV/CAC em torno de 4 a 5**, acima da regra de ouro de 3×. O CAC de mídia, muito abaixo disso, depende de a aquisição orgânica funcionar de verdade, o que ainda não foi testado. O CAC do ano 1 é igual nas duas versões porque não há pessoal remunerado (o custo de oportunidade dos sócios não entra).
+A leitura prudente é **LTV/CAC entre 3,6 e 4,6**, acima da regra de ouro de 3×, mas com pouca folga no ano 2. O CAC de mídia, bem abaixo disso, já inclui o custo do teste gratuito e depende de a aquisição orgânica funcionar de verdade, o que ainda não foi testado. O CAC do ano 1 é igual nas duas versões porque não há pessoal remunerado (o custo de oportunidade dos sócios não entra).
 
 ### 8.3 Ponto de equilíbrio
 
@@ -340,14 +343,14 @@ Receita mensal necessária para cobrir os custos fixos do ano, com margem de con
 
 | | Ano 1 | Ano 2 | Ano 3 |
 |---|---|---|---|
-| Custos fixos mensais | R$ 2.800 | R$ 13.500 | R$ 25.600 |
-| MRR de equilíbrio | R$ 5.000 | R$ 22.900 | R$ 41.300 |
-| Equivalente em assinaturas Starter/Pro | 23 | 98 | 165 |
+| Custos fixos mensais (com marketing e teste gratuito) | R$ 4.100 | R$ 16.500 | R$ 30.600 |
+| MRR de equilíbrio | R$ 7.300 | R$ 28.000 | R$ 49.400 |
+| Equivalente em assinaturas Starter/Pro | 33 | 120 | 197 |
 
 ### 8.4 Retorno
 
-- **Payback do capital:** mês 26 (cenário base).
-- **ROI em 36 meses:** o caixa acumulado ao fim de 36 meses é de R$ 219 mil, sobre um capital máximo investido de R$ 50 mil, ou seja, **ROI de cerca de 436%**. Não inclui valor residual do negócio, e depende de o cenário base se realizar.
+- **Payback do capital:** mês 27 (cenário base).
+- **ROI em 36 meses:** o caixa acumulado ao fim de 36 meses é de R$ 214 mil, sobre um capital máximo investido de R$ 54 mil, ou seja, **ROI de cerca de 392%**. Não inclui valor residual do negócio, e depende de o cenário base se realizar.
 - **Margem bruta de 62% a 72%:** dentro da faixa de 60 a 80% de referência para SaaS, mas na parte baixa; é a contrapartida do custo de LLM.
 - **Churn de 5 a 8% ao mês:** acima do referencial de SaaS B2B (< 3%). É coerente com o público (freelancers e criadores), mas é o segundo ponto de atenção do modelo.
 
@@ -355,7 +358,7 @@ Receita mensal necessária para cobrir os custos fixos do ano, com margem de con
 
 ## 9. Capital, vale da morte e aporte dos sócios
 
-O "vale da morte" do Synthesis é o período entre o gasto do MVP e a receita cobrir os custos: do lançamento (mês 7) até cerca do mês 17. O ponto mais fundo, no cenário base, ocorre no **mês 16**.
+O "vale da morte" do Synthesis é o período entre o gasto do MVP e a receita cobrir os custos: do lançamento (mês 7) até cerca do mês 18. O ponto mais fundo, no cenário base, ocorre no **mês 17**.
 
 ### 9.1 Proposta principal: capital próprio de R$ 90 mil
 
@@ -375,25 +378,25 @@ Aporte necessário = caixa mínimo de cada cenário (modelo mensal, sem capital 
 
 | Cenário | Caixa mínimo (aporte necessário) | Mês | Receita ano 3 | EBITDA ano 3 | Payback |
 |---|---|---|---|---|---|
-| **Base** | R$ 50 mil | 16 | R$ 865 mil | +R$ 229 mil | Mês 26 |
-| Otimista | R$ 36 mil | 8 | R$ 1,41 mi | +R$ 565 mil | Mês 18 |
-| Pessimista, com cortes de custo | R$ 56 mil | 18 | R$ 382 mil | +R$ 66 mil | Mês 35 |
-| Pessimista, sem cortes | R$ 190 mil | 36 | R$ 382 mil | −R$ 71 mil | n.a. |
-| Base com ticket da Linha 1 20% menor | R$ 63 mil | 18 | R$ 706 mil | +R$ 131 mil | Mês 32 |
-| Base com 1 sócio em tempo integral (variante 9.3) | R$ 92 mil | 16 | R$ 865 mil | +R$ 229 mil | Mês 29 |
+| **Base** | R$ 54 mil | 17 | R$ 962 mil | +R$ 230 mil | Mês 27 |
+| Otimista | R$ 40 mil | 9 | R$ 1,57 mi | +R$ 581 mil | Mês 19 |
+| Pessimista, com cortes de custo | R$ 55 mil | 19 | R$ 422 mil | +R$ 65 mil | Mês 35 |
+| Pessimista, sem cortes | R$ 209 mil | 36 | R$ 422 mil | −R$ 78 mil | n.a. |
+| Base com ticket da Linha 1 20% menor | R$ 75 mil | 19 | R$ 784 mil | +R$ 119 mil | Mês 34 |
+| Base com 1 sócio em tempo integral (variante 9.3) | R$ 96 mil | 17 | R$ 962 mil | +R$ 230 mil | Mês 30 |
 
-- Os R$ 90 mil cobrem o **base** (folga de R$ 40 mil), o **pessimista com cortes** (folga de R$ 34 mil) e o **ticket 20% menor** (folga de R$ 27 mil).
-- O caixa mínimo do base, do otimista, do pessimista com cortes e do ticket 20% menor fica abaixo de R$ 65 mil, o total das duas primeiras parcelas. A parcela 3 funciona como reserva e só é necessária no cenário do sócio em tempo integral.
+- Os R$ 90 mil cobrem o **base** (folga de R$ 36 mil), o **pessimista com cortes** (folga de R$ 35 mil) e o **ticket 20% menor** (folga de R$ 15 mil, a menor).
+- O caixa mínimo do base, do otimista e do pessimista com cortes fica abaixo de R$ 65 mil, o total das duas primeiras parcelas. No ticket 20% menor (R$ 75 mil) a parcela 3 deixa de ser reserva e passa a ser necessária. No sócio em tempo integral (variante 9.3) o aporte necessário passa de R$ 90 mil.
 - **Sem cortes, o pessimista não se sustenta só com capital próprio.** Por isso o plano exige disciplina: se o MRR ficar abaixo do esperado, congelar o pró-labore do ano 2 e reduzir marketing ao mínimo.
-- Como o caixa mínimo do base é de R$ 50 mil, o aporte principal poderia ser menor. Mantivemos R$ 90 mil pela folga nos cenários adversos; reduzir é uma decisão dos sócios.
+- **A folga é de R$ 36 mil** (40% do aporte), perto dos R$ 40 mil do plano anterior. Alguns cenários da C.3 passam de R$ 90 mil (mix 65% Starter, R$ 95 mil; mix 50/50 sem créditos extras, R$ 97 mil; lançamento no mês 13, R$ 128 mil). Um aporte de cerca de R$ 100 mil cobriria o mix 65% Starter, o mix 50/50 sem créditos extras e o sócio em tempo integral, mas não um atraso de 6 meses nem a perda de metade dos novos clientes. A decisão é dos sócios.
 
 Premissas do cenário pessimista com cortes: metade dos novos clientes e das assinaturas Business, churn de 10%, 8% e 7%, e custos reduzidos (pessoal R$ 0, 3,5 mil e 7 mil por mês; marketing R$ 800, 1,5 mil e 2,5 mil). No otimista: 50% mais novos clientes e assinaturas Business, churn de 6%, 4,5% e 4%.
 
-**Elasticidade ao preço mensal.** O preço mensal atual é uma aposta. Se ele afastar 15% dos novos clientes da Linha 1, o ano 3 ainda fecha com receita de R$ 746 mil e EBITDA de +R$ 155 mil (caixa mínimo de R$ 59 mil), então o plano tolera uma queda de conversão dessa ordem.
+**Elasticidade ao preço mensal.** O preço mensal atual é uma aposta. Se ele afastar 15% dos novos clientes da Linha 1, o ano 3 ainda fecha com receita de R$ 828 mil e EBITDA de +R$ 155 mil (caixa mínimo de R$ 65 mil), então o plano tolera uma queda de conversão dessa ordem.
 
 ### 9.3 Variante: um sócio em tempo integral
 
-Se um sócio se dedicar integralmente já no ano 1, com pró-labore de R$ 3,5 mil por mês, o custo extra é de R$ 42 mil por ano. O aporte necessário no base sobe para cerca de **R$ 92 mil**, acima dos R$ 90 mil previstos, e a recomendação passa a ser de cerca de **R$ 115 mil**.
+Se um sócio se dedicar integralmente já no ano 1, com pró-labore de R$ 3,5 mil por mês, o custo extra é de R$ 42 mil por ano. O aporte necessário no base sobe para cerca de **R$ 96 mil**, acima dos R$ 90 mil previstos, e a recomendação passa a ser de cerca de **R$ 120 mil**.
 
 ### 9.4 Cenário alternativo: plano acelerado com seed
 
@@ -401,32 +404,32 @@ Plano um pouco mais acelerado, com seed de **R$ 150 mil por volta do mês 9**, m
 
 | | Ano 1 | Ano 2 | Ano 3 |
 |---|---|---|---|
-| Receita | R$ 28 mil | R$ 421 mil | R$ 1,17 mi |
-| EBITDA | −R$ 18 mil | −R$ 17 mil | +R$ 231 mil |
+| Receita | R$ 48 mil | R$ 474 mil | R$ 1,28 mi |
+| EBITDA | −R$ 22 mil | −R$ 26 mil | +R$ 227 mil |
 
-- Premissas: novos clientes de 22 e 38 por mês nos anos 2 e 3; 6 e 14 assinaturas Business; pessoal de R$ 12 mil e R$ 24 mil por mês; marketing de R$ 5 mil e R$ 8 mil.
-- **Esse plano acelerado, por si só, precisa de cerca de R$ 80 mil de capital:** o caixa mínimo é de R$ 50 mil sobre os R$ 30 mil iniciais. Ou seja, ele cabe no mesmo aporte do cenário principal.
-- O seed, portanto, **não é necessário para financiar** o plano; ele **substituiria capital próprio**. Com seed de R$ 100 mil no mês 9, os sócios precisariam colocar cerca de R$ 40 mil antes de a rodada fechar (rodadas demoram), e o caixa mínimo seguinte ficaria perto de R$ 50 mil. Com R$ 150 mil, a folga é maior (cerca de R$ 100 mil).
-- **Comparação com o cenário principal:** o plano acelerado entrega cerca de R$ 305 mil a mais de receita no ano 3 (R$ 1,17 mi contra R$ 865 mil) com EBITDA parecido (R$ 231 mil contra R$ 229 mil). O que o seed compra é menos capital próprio exigido e mais velocidade, ao custo de diluição societária.
+- Premissas: ano 1 igual ao base; a partir do mês 13, 35% mais novos clientes que o base (médias de 24 e 43 por mês nos anos 2 e 3); 6 e 14 assinaturas Business; pessoal de R$ 12 mil e R$ 24 mil por mês; marketing de R$ 5 mil e R$ 8 mil. O teste gratuito acompanha o volume.
+- **Esse plano acelerado, por si só, precisa de cerca de R$ 90 mil de capital:** o caixa mínimo é de R$ 60 mil sobre os R$ 30 mil iniciais. Ou seja, ele cabe, na margem, no aporte do cenário principal.
+- O seed, portanto, **não é necessário para financiar** o plano; ele **substituiria capital próprio** e daria folga. Antes de a rodada fechar (mês 9), os sócios precisariam colocar cerca de R$ 42 mil no total (R$ 30 mil iniciais e mais R$ 12 mil). Com seed de R$ 100 mil no mês 9, o caixa mínimo seguinte fica perto de R$ 40 mil; com R$ 150 mil, a folga é maior (cerca de R$ 90 mil).
+- **Comparação com o cenário principal:** o plano acelerado entrega cerca de R$ 320 mil a mais de receita no ano 3 (R$ 1,28 mi contra R$ 962 mil) com EBITDA parecido (R$ 227 mil contra R$ 230 mil), porque investe mais em pessoal e marketing. O que o seed compra é velocidade, ao custo de diluição societária.
 - As entradas para reproduzir esse cenário na planilha estão no Anexo B (ela vai subestimar o ano 3 pelo problema de fórmula descrito em 7.2).
 
 ---
 
 ## 10. Sensibilidade
 
-EBITDA do ano 3, variando uma premissa por vez (planilha com média corrigida, base de +R$ 193 mil):
+EBITDA do ano 3, variando uma premissa por vez (planilha com média corrigida, base de +R$ 209 mil):
 
 | Variação | EBITDA ano 3 |
 |---|---|
-| Base | +R$ 193 mil |
+| Base | +R$ 209 mil |
 | Ticket da Linha 1 −20% | +R$ 102 mil |
-| COGS +12 p.p. (50%, 45%, 40%) | +R$ 96 mil |
-| Churn +4 p.p. (12%, 10%, 8%) | +R$ 96 mil |
-| Novos clientes −50% | −R$ 36 mil |
+| COGS +12 p.p. (50%, 45%, 40%) | +R$ 97 mil |
+| Churn +4 p.p. (12%, 10%, 8%) | +R$ 91 mil |
+| Novos clientes −50% | −R$ 58 mil |
 
 Conclusões:
 
-1. **Preço, custo de LLM e churn, cada um sozinho, reduzem o lucro do ano 3 em cerca de metade.** O negócio funciona, mas a margem de segurança não é grande.
+1. **Preço, custo de LLM e churn, cada um sozinho, reduzem o lucro do ano 3 em mais da metade (de 51% a 56%).** O negócio funciona, mas a margem de segurança não é grande.
 2. **A aquisição de clientes é a variável mais crítica.** Com metade dos novos clientes, o ano 3 fica no vermelho mesmo sem outros problemas.
 3. Os três primeiros riscos (preço, COGS, churn) são mensuráveis cedo, ainda no MVP.
 
@@ -456,14 +459,14 @@ O Canvas já previa assinatura mensal por perfil de uso e um modelo por crédito
 |---|---|---|
 | Premissas de preço, mix, extras e adesão ao anual não validadas | Receita pode ficar 20% ou mais abaixo | Testar preços no lançamento (inclusive o Pro de R$ 279) |
 | Custo real do LLM por crédito desconhecido | Margem bruta menor que 62 a 72% | Medir no MVP; cache de prompt, processamento em lote, modelos menores na triagem; teto de inferência por plano |
-| Preço mensal mais alto reduz a conversão no plano mensal | Menos novos clientes que o modelado (com 15% menos novos clientes na Linha 1: EBITDA do ano 3 de +R$ 155 mil e aporte de R$ 59 mil) | Testar o preço no lançamento; o plano anual, cerca de 26% mais barato, é a alternativa |
+| Preço mensal mais alto reduz a conversão no plano mensal | Menos novos clientes que o modelado (com 15% menos novos clientes na Linha 1: EBITDA do ano 3 de +R$ 155 mil e aporte de R$ 65 mil) | Testar o preço no lançamento; o plano anual, cerca de 26% mais barato, é a alternativa |
 | Crescimento orgânico abaixo do esperado | Maior sensibilidade do modelo (seção 10) | Gatilhos de corte; reforço do canal de agências |
 | Churn maior que o modelado | LTV menor | Plano anual, loop de feedback, dashboard de acurácia |
 | Preço do crédito extra no anual (R$ 0,50 a R$ 0,59) é de 1,5 a 2,3 vezes o crédito do plano anual | Pode soar como punição a quem pagou adiantado e frear a compra de extras | Testar preço menor para o anual; manter o mesmo preço só se o teste não mostrar rejeição |
 | Faixa sob orçamento reintroduz atrito de venda | Contradiz o diferencial self-service e pode atrasar a conversão | Preço "a partir de" público; orçamento só para volumes maiores |
 | Ceticismo sobre dados sintéticos | Conversão baixa do trial | Transparência metodológica, cases com acurácia verificável |
 | Concorrência (Galaxies no topo, global no entry) | Pressão de preço | Posição de self-service acessível e foco no Brasil |
-| Teste gratuito de 200 créditos consome custo de LLM (R$ 28 por cadastro, a R$ 0,14 por crédito) | Margem e CAC: com 5% de conversão, cada cliente pagante carrega R$ 560 de bônus | Reduzir o bônus, exigir verificação de e-mail e limitar um bônus por pessoa (ver P34) |
+| Teste gratuito de 50 créditos consome custo de LLM (R$ 7 por cadastro, a R$ 0,14 por crédito) | CAC: com 5% de conversão, cada cliente pagante carrega R$ 140 de bônus. Com 200 créditos o aporte necessário iria a R$ 143 mil | Exigir verificação de e-mail e limitar um bônus por pessoa; medir uso do bônus e conversão (ver P34) |
 | Regime tributário e fator R | Impostos acima de 6% | Validar com contador |
 | Fórmula da planilha subestima receita (7.2) | Resultado anual da planilha pior que o real | Reportado; fórmula corrigida mostrada em paralelo |
 | Pesquisa com apenas 20 respondentes | Indício de disposição a pagar, não prova | Ampliar a amostra e validar com pré-vendas |
@@ -477,6 +480,7 @@ O Canvas já previa assinatura mensal por perfil de uso e um modelo por crédito
 
 - Nome da moeda interna: por ora, apenas "créditos".
 - Confirmar a cota de créditos de cada plano (200, 750 e 1.300) medindo o custo real por crédito no MVP (seção 2.5).
+- Rampa de novos clientes (10 no lançamento e +5% ao mês) e conversão do teste gratuito: validar com lista de espera e primeiros meses (P08, P34).
 - Preço dos pacotes de créditos extras (proposta de R$ 59, R$ 159 e R$ 499, seção 2.5), inclusive se o anual deve ter preço menor por crédito extra.
 - Subfaixas internas da faixa Business (hoje só existe o piso de R$ 449).
 - Validação jurídica da política de cancelamento e reembolso do anual (seção 2.6).
@@ -501,13 +505,13 @@ Aba **Premissas**, apenas as células amarelas de entrada (todas as fórmulas e 
 |---|---|---|---|---|
 | 7 | Descrição da receita (Linha 1) | Assinatura Starter/Pro + créditos extras | idem | idem |
 | 8 | Ticket médio (R$) | 222 | 234 | 251 |
-| 9 | Novos clientes por mês | 3 | 16 | 28 |
+| 9 | Novos clientes por mês | 6 | 18 | 32 |
 | 10 | Churn mensal | 8% | 6% | 5% |
 | 15 | Descrição da receita (Linha 2) | Assinatura faixa Business (a partir de R$ 449) + créditos extras | idem | idem |
 | 16 | Ticket médio (R$) | 511 | 538 | 572 |
 | 17 | Média de clientes pagantes | 0,5 | 4 | 10 |
 | 23 | Pessoal (R$/mês) | 0 | 7.000 | 14.000 |
-| 24 | Marketing (R$/mês) | 1.000 | 2.500 | 4.500 |
+| 24 | Marketing (R$/mês), com o teste gratuito | 2.300 | 5.500 | 9.500 |
 | 25 | Vendas e comissões (R$/mês) | 0 | 500 | 1.500 |
 | 26 | Tecnologia (R$/mês) | 1.200 | 2.500 | 4.000 |
 | 27 | Administrativo (R$/mês) | 600 | 1.000 | 1.600 |
@@ -521,16 +525,18 @@ Aba **Premissas**, apenas as células amarelas de entrada (todas as fórmulas e 
 
 O capital próprio de R$ 90 mil entra inteiro na linha 37 (ano 1), embora seja liberado em parcelas; a planilha não modela parcelas.
 
+A linha 9 só aceita inteiros, então as médias de 12 meses da rampa (5,7, 17,8 e 31,9) entram arredondadas (6, 18 e 32). A linha 24 soma o marketing (R$ 1.500, R$ 3.000 e R$ 5.000) e o custo médio do teste gratuito (R$ 790, R$ 2.490 e R$ 4.470 por mês), arredondado.
+
 ## Anexo B: Entradas para reproduzir o cenário acelerado com seed na planilha
 
 Trocar na aba Premissas (demais células como no Anexo A). A planilha vai subestimar o ano 3 pelo problema descrito em 7.2.
 
 | Linha | Campo | Ano 1 | Ano 2 | Ano 3 |
 |---|---|---|---|---|
-| 9 | Novos clientes por mês | 3 | 22 | 38 |
+| 9 | Novos clientes por mês | 6 | 24 | 43 |
 | 17 | Média de assinaturas Business | 0,5 | 6 | 14 |
 | 23 | Pessoal (R$/mês) | 0 | 12.000 | 24.000 |
-| 24 | Marketing (R$/mês) | 1.000 | 5.000 | 8.000 |
+| 24 | Marketing (R$/mês), com o teste gratuito | 2.300 | 8.400 | 14.000 |
 | 25 | Vendas (R$/mês) | 0 | 1.000 | 2.500 |
 | 26 | Tecnologia (R$/mês) | 1.200 | 3.000 | 5.000 |
 | 27 | Administrativo (R$/mês) | 600 | 1.100 | 1.800 |
@@ -571,19 +577,19 @@ Este anexo reúne **todas as premissas** do business case em um só lugar, com a
 
 | ID | Premissa e valor | Origem | Justificativa | Confiança | Como validar |
 |---|---|---|---|---|---|
-| P08 | Novos clientes pagantes por mês na Linha 1: 6 (a partir do mês 7), 16 e 28. Na planilha, a média de 12 meses do ano 1 é 3 | Estimativa nossa | Informada diretamente, **sem funil modelado**. Com conversão de 5% do trial para pago (benchmark não validado), isso exige cerca de 120, 320 e 560 cadastros por mês | Baixa | Funil real: visitas, cadastros, conversão |
+| P08 | Novos clientes pagantes por mês na Linha 1: rampa mensal com 10 no mês 7 e +5% ao mês (médias de 12 meses de 5,7, 17,8 e 31,9; na planilha, 6, 18 e 32) | Decisão do grupo, com estimativa nossa | Premissa mais arrojada adotada em 2 de novembro de 2026 (antes: 6, 16 e 28 por mês, em degraus; ver D.3). **Sem funil modelado.** Com conversão de 5% do teste para pago (referência não validada), exige cerca de 110, 360 e 640 cadastros por mês | Baixa | Funil real: visitas, cadastros, conversão |
 | P09 | Churn mensal: plano mensal 9%, 7% e 6%; plano anual equivalente a 3% (cerca de 30% de não renovação ao ano). Combinado: 8%, 6% e 5% | Estimativa nossa | Público de renda variável (freelancers e criadores). O referencial de SaaS B2B é menor que 3% | Baixa | Coortes reais |
 | P10 | Lançamento no mês 7; os 6 primeiros meses (MVP) sem receita | Decisão do grupo | Alinhado ao 5W2H (MVP em 6 meses) | Média | Cronograma de desenvolvimento |
-| P11 | Entrada de clientes constante ao longo de cada ano; churn constante; custos mudam em degrau no início de cada ano (modelo mensal) | Simplificação | Torna o modelo transparente; a realidade é irregular | Média | Comparar com o realizado |
+| P11 | Entrada de clientes em rampa mensal (P08); churn constante dentro de cada ano; custos mudam em degrau no início de cada ano, exceto o marketing do ano 1 (R$ 1.000 até o lançamento e R$ 3.000 depois) (modelo mensal) | Simplificação | Torna o modelo transparente; a realidade é irregular | Média | Comparar com o realizado |
 
 **C. Custos**
 
 | ID | Premissa e valor | Origem | Justificativa | Confiança | Como validar |
 |---|---|---|---|---|---|
-| P12 | COGS: 38%, 33% e 28% da receita. Regra de projeto: inferência no saldo cheio ≤ 40% da mensalidade | Estimativa nossa, com base em dado | Custo de LLM de US$ 0,05 a 0,30 por entrevista curta (estudo de mercado). Cai com cache de prompt, lote e modelos menores. Inclui gateway, cloud e o custo do teste gratuito | Baixa | Medir o custo por crédito no MVP |
+| P12 | COGS: 38%, 33% e 28% da receita. Regra de projeto: inferência no saldo cheio ≤ 40% da mensalidade | Estimativa nossa, com base em dado | Custo de LLM de US$ 0,05 a 0,30 por entrevista curta (estudo de mercado). Cai com cache de prompt, lote e modelos menores. Inclui gateway e cloud; o teste gratuito é linha à parte (P34) | Baixa | Medir o custo por crédito no MVP |
 | P13 | Câmbio: R$ 5,50 por dólar | Estimativa nossa | Só converte o custo de LLM e o mercado em dólar | Média | Cotação atual |
 | P14 | Pessoal: R$ 0, 7 mil e 14 mil por mês | Decisão do grupo, com estimativa nossa | Ano 1 sem pró-labore (sócios com renda própria). A partir do ano 2, pró-labore escalonado e apoio part-time. **O custo de oportunidade dos sócios não entra** | Média | Decisão dos sócios |
-| P15 | Marketing: R$ 1 mil, 2,5 mil e 4,5 mil por mês. Vendas: R$ 0, 500 e 1,5 mil | Estimativa nossa | Modelo PLG com conteúdo, comunidades e indicação; bônus de parceria com agências | Média | Custo real por canal |
+| P15 | Marketing: R$ 1,5 mil, 3 mil e 5 mil por mês (no ano 1, R$ 1 mil até o lançamento e R$ 2 mil depois). Vendas: R$ 0, 500 e 1,5 mil | Estimativa nossa | Modelo PLG com conteúdo, comunidades, influência (comissão ou permuta) e indicação (boca a boca); bônus de parceria com agências. Subiu pouco em relação ao plano anterior (D.3) e fica abaixo do que o volume pediria: a aquisição depende de influência e boca a boca, hipóteses sem dado | Média | Custo real por canal |
 | P16 | Tecnologia fixa: R$ 1,2 mil, 2,5 mil e 4 mil por mês. Administrativo: R$ 600, 1 mil e 1,6 mil | Estimativa nossa | Cloud base, ferramentas, contador, jurídico e LGPD. O LLM está no COGS | Média | Cotações |
 | P17 | Impostos sobre receita: 6%, 8% e 10% | Estimativa nossa | Simples Nacional. O fator R, sem folha no ano 1, pode elevar a alíquota (ver C.3) | Baixa | Contador |
 | P18 | Investimento inicial: R$ 18 mil (tecnologia R$ 8 mil, marketing R$ 5 mil, abertura e LGPD R$ 5 mil) | Estimativa nossa | O MVP é construído pelos sócios, sem custo de desenvolvimento | Média | Orçamentos |
@@ -617,7 +623,7 @@ Este anexo reúne **todas as premissas** do business case em um só lugar, com a
 | P31 | Créditos do plano e extras valem até o fim do período contratado; depois, são perdidos | Decisão do grupo | Coerente com a expiração mensal do saldo e com a regra dos créditos extras | Média | Revisão jurídica |
 | P32 | Plano anual pago adiantado e sem reembolso; quem cancela usa até o fim do plano e não renova | Decisão do grupo | Prática comum em SaaS anual. Pode haver exceção legal de 7 dias de arrependimento | Média | Revisão jurídica |
 | P33 | Créditos extras vendidos em pacotes de 100, 300 e 1.000 créditos, a R$ 59, R$ 159 e R$ 499 (R$ 0,59, R$ 0,53 e R$ 0,50 por crédito), com o mesmo preço no mensal e no anual | Estimativa nossa | Cinco regras (seção 2.5): acima do crédito de qualquer plano (R$ 0,26 a R$ 0,45); dois pacotes de 300 passam a diferença Starter e Pro (R$ 190), o que incentiva a troca de plano; margem de 72% a 76% com custo de R$ 0,14 e de 34% a 44% com R$ 0,33; desconto de volume de cerca de 15%; pacote de entrada menor que a mensalidade do Starter. Média simples de R$ 0,54 por crédito. Não altera a receita projetada (P05 continua valendo) | Baixa | Teste de preço; custo real por crédito; preço do extra no anual |
-| P34 | Teste gratuito: 200 créditos de boas-vindas por cadastro, sem cartão. **Não está no modelo financeiro** | Decisão do grupo | Custo de R$ 28 por cadastro (200 × R$ 0,14). Com conversão de 5% (referência não validada), são 720, 3.840 e 6.720 cadastros nos anos 1, 2 e 3, ou R$ 20 mil, R$ 108 mil e R$ 188 mil por ano com o bônus inteiro consumido, de 73% a 22% da receita. O CAC completo do ano 2 iria de R$ 625 para R$ 1.185, e o LTV/CAC de 4,2 para 2,2. Com 50 créditos, seria R$ 7 por cadastro e LTV/CAC de 3,4 | Baixa | Taxa de uso do bônus e conversão reais |
+| P34 | Teste gratuito: 50 créditos de boas-vindas por cadastro, sem cartão. **Está no modelo** como custo de aquisição | Decisão do grupo | Custo de R$ 7 por cadastro (50 × R$ 0,14), com conversão de 5% do teste para pago (referência não validada) e bônus inteiro consumido. São 1.360, 4.266 e 7.661 cadastros nos anos 1, 2 e 3, ou R$ 10 mil, R$ 30 mil e R$ 54 mil por ano (20%, 8% e 6% da receita do modelo mensal). Cada cliente pagante carrega R$ 140 de bônus. Com 200 créditos (R$ 28 por cadastro) o custo iria a R$ 38 mil, R$ 120 mil e R$ 215 mil, e o aporte necessário, a R$ 143 mil | Baixa | Taxa de uso do bônus e conversão reais |
 
 ### C.3 O que acontece se as premissas frágeis estiverem erradas
 
@@ -625,25 +631,28 @@ Modelo mensal, uma alteração por vez (ou combinada, quando indicado). O aporte
 
 | Premissa alterada | Ticket Linha 1, ano 1 | Receita ano 3 | EBITDA ano 3 | Aporte necessário | Payback |
 |---|---|---|---|---|---|
-| **Base** (mix 35/65, extras 10%) | R$ 222 | R$ 865 mil | +R$ 229 mil | R$ 50 mil | Mês 26 |
-| P03: mix 50/50 em todos os anos | R$ 192 | R$ 700 mil | +R$ 127 mil | R$ 60 mil | Mês 31 |
-| P03: mix 65% Starter / 35% Pro | R$ 162 | R$ 602 mil | +R$ 66 mil | R$ 72 mil | Mês 36 |
-| P05: sem créditos extras (L1 e Business) | R$ 202 | R$ 718 mil | +R$ 138 mil | R$ 59 mil | Mês 31 |
-| P03 + P05: mix 50/50 e sem créditos extras | R$ 175 | R$ 579 mil | +R$ 52 mil | R$ 73 mil | Não ocorre em 36 meses |
-| P10: lançamento no mês 10 | R$ 222 | R$ 851 mil | +R$ 221 mil | R$ 67 mil | Mês 29 |
-| P10: lançamento no mês 13 | R$ 222 | R$ 834 mil | +R$ 210 mil | R$ 83 mil | Mês 30 |
-| Estresse: mix 50/50 e lançamento no mês 10 | R$ 192 | R$ 689 mil | +R$ 120 mil | R$ 77 mil | Mês 33 |
-| P12: COGS de 45%, 40% e 35% | R$ 222 | R$ 865 mil | +R$ 169 mil | R$ 58 mil | Mês 30 |
-| P17: imposto de 15,5% no ano 1 (fator R) | R$ 222 | R$ 865 mil | +R$ 229 mil | R$ 54 mil | Mês 27 |
-| P02/P04: sem plano anual (churn de 9%, 7% e 6%) | R$ 234 | R$ 889 mil | +R$ 244 mil | R$ 47 mil | Mês 25 |
+| **Base** (mix 35/65, extras 10%) | R$ 222 | R$ 962 mil | +R$ 230 mil | R$ 54 mil | Mês 27 |
+| P03: mix 50/50 em todos os anos | R$ 192 | R$ 777 mil | +R$ 115 mil | R$ 70 mil | Mês 33 |
+| P03: mix 65% Starter / 35% Pro | R$ 162 | R$ 667 mil | +R$ 46 mil | R$ 95 mil | Não ocorre em 36 meses |
+| P05: sem créditos extras (L1 e Business) | R$ 202 | R$ 800 mil | +R$ 129 mil | R$ 67 mil | Mês 32 |
+| P03 + P05: mix 50/50 e sem créditos extras | R$ 175 | R$ 643 mil | +R$ 32 mil | R$ 97 mil | Não ocorre em 36 meses |
+| P08: metade dos novos clientes | R$ 222 | R$ 515 mil | −R$ 21 mil | R$ 147 mil | Não ocorre em 36 meses |
+| P10: lançamento no mês 10 | R$ 222 | R$ 820 mil | +R$ 149 mil | R$ 87 mil | Mês 33 |
+| P10: lançamento no mês 13 | R$ 222 | R$ 691 mil | +R$ 75 mil | R$ 128 mil | Não ocorre em 36 meses |
+| Estresse: mix 50/50 e lançamento no mês 10 | R$ 192 | R$ 664 mil | +R$ 52 mil | R$ 111 mil | Não ocorre em 36 meses |
+| P12: COGS de 45%, 40% e 35% | R$ 222 | R$ 962 mil | +R$ 162 mil | R$ 67 mil | Mês 31 |
+| P17: imposto de 15,5% no ano 1 (fator R) | R$ 222 | R$ 962 mil | +R$ 230 mil | R$ 61 mil | Mês 28 |
+| P34: teste gratuito de 200 créditos (em vez de 50) | R$ 222 | R$ 962 mil | +R$ 69 mil | R$ 143 mil | Não ocorre em 36 meses |
+| P02/P04: sem plano anual (churn de 9%, 7% e 6%) | R$ 234 | R$ 986 mil | +R$ 245 mil | R$ 51 mil | Mês 26 |
 
 Leitura:
 
-1. **O mix é a premissa mais frágil.** Se ele for 50/50, o resultado cai cerca de 19% na receita do ano 3 e 45% no EBITDA, mas o aporte de R$ 90 mil ainda cobre com folga. Com 65% no Starter, o aporte necessário é de R$ 72 mil e o capital só se recupera no mês 36.
-2. **O aporte de R$ 90 mil cobre todas as combinações testadas.** A mais pesada, mix 50/50 sem créditos extras, exige R$ 73 mil, mas o capital não se recupera em 36 meses.
-3. **Atrasar o lançamento custa mais no caixa que no resultado:** um atraso de 6 meses (mês 13) leva o aporte necessário a R$ 83 mil, o mais perto do limite.
-4. **Com o preço mensal atual, o plano anual custa receita no modelo** (cerca de 3% da receita do ano 3), porque o desconto de cerca de 26% pesa mais que o ganho de churn. O ganho do anual está no caixa antecipado e na fidelização, que não entram nos números (P23). Esse custo é o preço de tornar o anual atraente.
-5. **Funil não modelado (P08):** os novos clientes por mês são uma meta, não o resultado de um funil. Com conversão de 5%, exigem de 120 a 560 cadastros por mês, e isso não foi validado.
+1. **O mix é a premissa mais frágil.** Se ele for 50/50, a receita do ano 3 cai cerca de 19% e o EBITDA, 50%; o aporte necessário (R$ 70 mil) ainda cabe nos R$ 90 mil, com folga de R$ 20 mil. Com 65% no Starter, o aporte necessário é de R$ 95 mil, acima do capital, e o capital não se recupera em 36 meses.
+2. **O aporte de R$ 90 mil cobre as premissas isoladas mais prováveis** (mix 50/50, sem créditos extras, lançamento no mês 10, COGS, impostos), **mas não cobre** o mix 65% Starter (R$ 95 mil), o lançamento no mês 13 (R$ 128 mil) e as combinações de mix com extras ou com atraso (R$ 97 mil e R$ 111 mil). A folga do base é de R$ 36 mil.
+3. **Atrasar o lançamento custa mais no caixa que no resultado:** três meses de atraso (mês 10) levam o aporte necessário a R$ 87 mil, e seis meses (mês 13), a R$ 128 mil.
+4. **O teste gratuito de 50 créditos é parte do que sustenta o plano.** Com 200 créditos, o aporte necessário iria a R$ 143 mil e o EBITDA do ano 3 cairia para +R$ 69 mil.
+5. **Com o preço mensal atual, o plano anual custa receita no modelo** (cerca de 2% da receita do ano 3), porque o desconto de cerca de 26% pesa mais que o ganho de churn. O ganho do anual está no caixa antecipado e na fidelização, que não entram nos números (P23). Esse custo é o preço de tornar o anual atraente.
+6. **Funil não modelado (P08):** os novos clientes por mês são uma meta, não o resultado de um funil. Com conversão de 5%, exigem de 110 a 640 cadastros por mês, e isso não foi validado.
 
 **Ponto em aberto:** o cenário base mantém o mix 35/65. Diante da evidência de que ele é otimista, o grupo precisa decidir se adota um mix mais prudente (por exemplo, 50/50) como base.
 
@@ -699,3 +708,54 @@ Cada decisão que altera premissas do modelo fica registrada aqui, com a data, o
 - No anual, o crédito extra custa de 1,5 a 2,3 vezes o crédito do plano. Testar um preço menor.
 - Se o custo real por crédito ficar no teto da faixa (R$ 0,33), a margem do pacote de 1.000 cai para 34%.
 
+### D.3 Volume de novos clientes mais arrojado, marketing um pouco maior e teste gratuito no modelo (14 de novembro de 2026)
+
+**Decisão do grupo.** Três mudanças juntas:
+
+1. **Novos clientes em rampa mensal.** Em vez de 6, 16 e 28 por mês em degraus (3, 16 e 28 na planilha), o modelo passa a ter **10 novos clientes no mês 7 (lançamento) e crescimento de 5% ao mês**, até cerca de 41 no mês 36. Médias de 12 meses: 5,7, 17,8 e 31,9 (na planilha, 6, 18 e 32).
+2. **Marketing um pouco maior, para acompanhar o volume:** R$ 1.500, R$ 3.000 e R$ 5.000 por mês (antes R$ 1.000, R$ 2.500 e R$ 4.500). No ano 1, R$ 1.000 por mês até o lançamento e R$ 2.000 depois. O grupo preferiu um aumento menor que o volume pediria e justifica a diferença com **influência (comissão ou permuta) e boca a boca**, hipóteses sem dado. Sem aumento nenhum, o CAC de mídia cairia para R$ 176 no ano 1, baixo demais para ser crível; com o novo valor, fica em cerca de R$ 265 antes do teste gratuito.
+3. **Teste gratuito de 50 créditos dentro do modelo**, como custo de aquisição (R$ 7 por cadastro, 5% de conversão, bônus inteiro consumido). Antes o teste (então de 200 créditos) estava fora dos números (P34). O grupo avaliou reduzir o bônus (30 ou 20 créditos) e **manteve 50**.
+
+O plano anterior **não foi mantido como cenário**: foi substituído.
+
+**Motivo.** Os 6, 16 e 28 eram uma meta arbitrária e o ano 1 parecia pouco ambicioso (3 por mês na planilha, que escondia 6 por mês depois do lançamento). A rampa tira os saltos artificiais entre os anos e dá uma regra simples de defender. O marketing e o custo do teste são a contrapartida de buscar mais volume.
+
+**D.3.1 Efeito nos números (cenário base, modelo mensal):**
+
+| Indicador | Antes (D.1) | Só o volume novo | Volume e marketing | **Depois (com o teste gratuito)** |
+|---|---|---|---|---|
+| Receita anos 1, 2 e 3 (R$ mil) | 28 / 319 / 865 | 48 / 377 / 962 | 48 / 377 / 962 | 48 / 377 / 962 |
+| EBITDA anos 1, 2 e 3 (R$ mil) | −18 / +26 / +229 | −7 / +60 / +289 | −13 / +54 / +283 | −22 / +24 / +230 |
+| Aporte necessário (caixa mínimo) | R$ 50 mil, mês 16 | R$ 36 mil, mês 8 | R$ 38 mil, mês 8 | **R$ 54 mil, mês 17** |
+| Payback do capital | Mês 26 | Mês 22 | Mês 23 | **Mês 27** |
+| EBITDA mensal positivo de forma sustentada | Mês 17 | Mês 16 | Mês 16 | **Mês 18** |
+| Folga do aporte de R$ 90 mil | R$ 40 mil | R$ 54 mil | R$ 52 mil | **R$ 36 mil** |
+| Assinaturas Starter/Pro no fim dos anos 1, 2 e 3 | 30 / 154 / 341 | 56 / 188 / 404 | 56 / 188 / 404 | 56 / 188 / 404 |
+| MRR no fim do ano 3 | R$ 91,2 mil | R$ 107,0 mil | R$ 107,0 mil | R$ 107,0 mil |
+| ROI em 36 meses | Cerca de 436% | n.c. | n.c. | **Cerca de 392%** |
+
+n.c.: não calculado nas etapas intermediárias.
+
+**D.3.2 Indicadores da planilha (leitura direta, antes e depois):**
+
+| Indicador | Antes | Depois |
+|---|---|---|
+| Receita da planilha, anos 1, 2 e 3 | R$ 35 mil, R$ 238 mil e R$ 579 mil | R$ 66 mil, R$ 278 mil e R$ 658 mil |
+| EBITDA da planilha, anos 1, 2 e 3 | −R$ 14 mil, −R$ 22 mil e +R$ 52 mil | −R$ 12 mil, −R$ 34 mil e +R$ 41 mil |
+| CAC de mídia | R$ 333, R$ 188 e R$ 214 | R$ 383, R$ 333 e R$ 344 (inclui o teste gratuito) |
+| CAC completo | R$ 333, R$ 625 e R$ 714 | R$ 383, R$ 722 e R$ 781 |
+| LTV/CAC completo | 5,2, 4,2 e 5,1 | 4,5, 3,6 e 4,6 |
+| Payback do CAC completo | 2,4, 4,0 e 4,0 meses | 2,8, 4,6 e 4,3 meses |
+| Ponto de equilíbrio (assinaturas) | 23, 98 e 165 | 33, 120 e 197 |
+
+**D.3.3 O que isso mostra.**
+- O volume novo, sozinho, melhora o resultado (aporte de R$ 36 mil), mas isso é mecânico: o modelo só supõe mais clientes, sem mostrar que eles existem.
+- O marketing um pouco maior custa pouco (aporte de R$ 38 mil sem o teste). O teste gratuito é o que mais pesa: leva o aporte necessário a **R$ 54 mil, pouco acima dos R$ 50 mil do plano anterior**, e o EBITDA do ano 2 de +R$ 54 mil para +R$ 24 mil. O teste custa cerca de 20% da receita no ano 1.
+- Os indicadores da planilha pioram (CAC, payback do CAC) porque o custo de aquisição passou a incluir o teste gratuito e o marketing subiu. O LTV/CAC completo fica entre 3,6 e 4,6, acima de 3, com pouca folga no ano 2.
+- O aporte de R$ 90 mil cobre os casos isolados mais prováveis; alguns cenários de estresse passam dele (C.3). Os sócios devem decidir se mantêm o aporte ou o elevam (9.2).
+
+**D.3.4 Riscos e o que validar.**
+- A rampa (10 clientes novos no lançamento e +5% ao mês) é uma premissa nossa, **sem funil**: com 5% de conversão, exige 1.360, 4.266 e 7.661 cadastros nos anos 1, 2 e 3. Validar com lista de espera e com os primeiros meses de operação.
+- O marketing menor que o volume pediria só se sustenta se influência e boca a boca entregarem clientes. Com 20% menos clientes que a rampa, o aporte necessário seria de R$ 70 mil e o EBITDA do ano 2 ficaria negativo (−R$ 11 mil).
+- A conversão de 5% do teste para pago e o consumo total do bônus de 50 créditos são referências não validadas. Com 200 créditos, o aporte necessário iria a R$ 143 mil. Reduzir o bônus (30 créditos) baixaria o aporte em cerca de R$ 7 mil.
+- Com metade dos novos clientes da nova rampa, o aporte necessário é de R$ 147 mil e o EBITDA do ano 3 é de −R$ 21 mil.
