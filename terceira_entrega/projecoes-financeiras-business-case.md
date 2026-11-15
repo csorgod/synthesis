@@ -466,7 +466,7 @@ O Canvas já previa assinatura mensal por perfil de uso e um modelo por crédito
 | Faixa sob orçamento reintroduz atrito de venda | Contradiz o diferencial self-service e pode atrasar a conversão | Preço "a partir de" público; orçamento só para volumes maiores |
 | Ceticismo sobre dados sintéticos | Conversão baixa do trial | Transparência metodológica, cases com acurácia verificável |
 | Concorrência (Galaxies no topo, global no entry) | Pressão de preço | Posição de self-service acessível e foco no Brasil |
-| Teste gratuito de 50 créditos consome custo de LLM (R$ 7 por cadastro, a R$ 0,14 por crédito) | CAC: com 5% de conversão, cada cliente pagante carrega R$ 140 de bônus. Com 200 créditos o aporte necessário iria a R$ 143 mil | Exigir verificação de e-mail e limitar um bônus por pessoa; medir uso do bônus e conversão (ver P34) |
+| Teste gratuito de 50 créditos consome custo de LLM (R$ 7 por cadastro, a R$ 0,14 por crédito) | CAC: com 5% de conversão, cada cliente pagante carrega R$ 140 de bônus | Exigir verificação de e-mail e limitar um bônus por pessoa; medir uso do bônus e conversão (ver P34) |
 | Regime tributário e fator R | Impostos acima de 6% | Validar com contador |
 | Fórmula da planilha subestima receita (7.2) | Resultado anual da planilha pior que o real | Reportado; fórmula corrigida mostrada em paralelo |
 | Pesquisa com apenas 20 respondentes | Indício de disposição a pagar, não prova | Ampliar a amostra e validar com pré-vendas |
@@ -623,7 +623,7 @@ Este anexo reúne **todas as premissas** do business case em um só lugar, com a
 | P31 | Créditos do plano e extras valem até o fim do período contratado; depois, são perdidos | Decisão do grupo | Coerente com a expiração mensal do saldo e com a regra dos créditos extras | Média | Revisão jurídica |
 | P32 | Plano anual pago adiantado e sem reembolso; quem cancela usa até o fim do plano e não renova | Decisão do grupo | Prática comum em SaaS anual. Pode haver exceção legal de 7 dias de arrependimento | Média | Revisão jurídica |
 | P33 | Créditos extras vendidos em pacotes de 100, 300 e 1.000 créditos, a R$ 59, R$ 159 e R$ 499 (R$ 0,59, R$ 0,53 e R$ 0,50 por crédito), com o mesmo preço no mensal e no anual | Estimativa nossa | Cinco regras (seção 2.5): acima do crédito de qualquer plano (R$ 0,26 a R$ 0,45); dois pacotes de 300 passam a diferença Starter e Pro (R$ 190), o que incentiva a troca de plano; margem de 72% a 76% com custo de R$ 0,14 e de 34% a 44% com R$ 0,33; desconto de volume de cerca de 15%; pacote de entrada menor que a mensalidade do Starter. Média simples de R$ 0,54 por crédito. Não altera a receita projetada (P05 continua valendo) | Baixa | Teste de preço; custo real por crédito; preço do extra no anual |
-| P34 | Teste gratuito: 50 créditos de boas-vindas por cadastro, sem cartão. **Está no modelo** como custo de aquisição | Decisão do grupo | Custo de R$ 7 por cadastro (50 × R$ 0,14), com conversão de 5% do teste para pago (referência não validada) e bônus inteiro consumido. São 1.360, 4.266 e 7.661 cadastros nos anos 1, 2 e 3, ou R$ 10 mil, R$ 30 mil e R$ 54 mil por ano (20%, 8% e 6% da receita do modelo mensal). Cada cliente pagante carrega R$ 140 de bônus. Com 200 créditos (R$ 28 por cadastro) o custo iria a R$ 38 mil, R$ 120 mil e R$ 215 mil, e o aporte necessário, a R$ 143 mil | Baixa | Taxa de uso do bônus e conversão reais |
+| P34 | Teste gratuito: 50 créditos de boas-vindas por cadastro, sem cartão. **Está no modelo** como custo de aquisição | Decisão do grupo | Custo de R$ 7 por cadastro (50 × R$ 0,14), com conversão de 5% do teste para pago (referência não validada) e bônus inteiro consumido. São 1.360, 4.266 e 7.661 cadastros nos anos 1, 2 e 3, ou R$ 10 mil, R$ 30 mil e R$ 54 mil por ano (20%, 8% e 6% da receita do modelo mensal). Cada cliente pagante carrega R$ 140 de bônus | Baixa | Taxa de uso do bônus e conversão reais |
 
 ### C.3 O que acontece se as premissas frágeis estiverem erradas
 
@@ -642,7 +642,6 @@ Modelo mensal, uma alteração por vez (ou combinada, quando indicado). O aporte
 | Estresse: mix 50/50 e lançamento no mês 10 | R$ 192 | R$ 664 mil | +R$ 52 mil | R$ 111 mil | Não ocorre em 36 meses |
 | P12: COGS de 45%, 40% e 35% | R$ 222 | R$ 962 mil | +R$ 162 mil | R$ 67 mil | Mês 31 |
 | P17: imposto de 15,5% no ano 1 (fator R) | R$ 222 | R$ 962 mil | +R$ 230 mil | R$ 61 mil | Mês 28 |
-| P34: teste gratuito de 200 créditos (em vez de 50) | R$ 222 | R$ 962 mil | +R$ 69 mil | R$ 143 mil | Não ocorre em 36 meses |
 | P02/P04: sem plano anual (churn de 9%, 7% e 6%) | R$ 234 | R$ 986 mil | +R$ 245 mil | R$ 51 mil | Mês 26 |
 
 Leitura:
@@ -650,7 +649,7 @@ Leitura:
 1. **O mix é a premissa mais frágil.** Se ele for 50/50, a receita do ano 3 cai cerca de 19% e o EBITDA, 50%; o aporte necessário (R$ 70 mil) ainda cabe nos R$ 90 mil, com folga de R$ 20 mil. Com 65% no Starter, o aporte necessário é de R$ 95 mil, acima do capital, e o capital não se recupera em 36 meses.
 2. **O aporte de R$ 90 mil cobre as premissas isoladas mais prováveis** (mix 50/50, sem créditos extras, lançamento no mês 10, COGS, impostos), **mas não cobre** o mix 65% Starter (R$ 95 mil), o lançamento no mês 13 (R$ 128 mil) e as combinações de mix com extras ou com atraso (R$ 97 mil e R$ 111 mil). A folga do base é de R$ 36 mil.
 3. **Atrasar o lançamento custa mais no caixa que no resultado:** três meses de atraso (mês 10) levam o aporte necessário a R$ 87 mil, e seis meses (mês 13), a R$ 128 mil.
-4. **O teste gratuito de 50 créditos é parte do que sustenta o plano.** Com 200 créditos, o aporte necessário iria a R$ 143 mil e o EBITDA do ano 3 cairia para +R$ 69 mil.
+4. **O teste gratuito de 50 créditos é parte do que sustenta o plano.** Ele custa cerca de R$ 10 mil, R$ 30 mil e R$ 54 mil por ano (P34), e esse custo já está no modelo.
 5. **Com o preço mensal atual, o plano anual custa receita no modelo** (cerca de 2% da receita do ano 3), porque o desconto de cerca de 26% pesa mais que o ganho de churn. O ganho do anual está no caixa antecipado e na fidelização, que não entram nos números (P23). Esse custo é o preço de tornar o anual atraente.
 6. **Funil não modelado (P08):** os novos clientes por mês são uma meta, não o resultado de um funil. Com conversão de 5%, exigem de 110 a 640 cadastros por mês, e isso não foi validado.
 
@@ -757,5 +756,5 @@ n.c.: não calculado nas etapas intermediárias.
 **D.3.4 Riscos e o que validar.**
 - A rampa (10 clientes novos no lançamento e +5% ao mês) é uma premissa nossa, **sem funil**: com 5% de conversão, exige 1.360, 4.266 e 7.661 cadastros nos anos 1, 2 e 3. Validar com lista de espera e com os primeiros meses de operação.
 - O marketing menor que o volume pediria só se sustenta se influência e boca a boca entregarem clientes. Com 20% menos clientes que a rampa, o aporte necessário seria de R$ 70 mil e o EBITDA do ano 2 ficaria negativo (−R$ 11 mil).
-- A conversão de 5% do teste para pago e o consumo total do bônus de 50 créditos são referências não validadas. Com 200 créditos, o aporte necessário iria a R$ 143 mil. Reduzir o bônus (30 créditos) baixaria o aporte em cerca de R$ 7 mil.
+- A conversão de 5% do teste para pago e o consumo total do bônus de 50 créditos são referências não validadas. Reduzir o bônus (30 créditos) baixaria o aporte em cerca de R$ 7 mil.
 - Com metade dos novos clientes da nova rampa, o aporte necessário é de R$ 147 mil e o EBITDA do ano 3 é de −R$ 21 mil.
