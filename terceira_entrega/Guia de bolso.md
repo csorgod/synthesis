@@ -131,7 +131,6 @@ O aporte foi dimensionado pelo caixa mínimo do modelo mensal, que é de R$ 54 m
 | Lançamento no mês 10 | R$ 820 mil | +R$ 149 mil | R$ 87 mil |
 | Lançamento no mês 13 | R$ 691 mil | +R$ 75 mil | R$ 128 mil |
 | COGS de 45%, 40% e 35% | R$ 962 mil | +R$ 162 mil | R$ 67 mil |
-| Teste gratuito de 200 créditos | R$ 962 mil | +R$ 69 mil | R$ 143 mil |
 | Metade dos novos clientes | R$ 515 mil | −R$ 21 mil | R$ 147 mil |
 
 - Nada disso foi validado com clientes. A pesquisa tem 20 respondentes e serve de indício de disposição a pagar.
