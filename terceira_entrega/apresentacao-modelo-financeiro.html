@@ -468,7 +468,7 @@ svg text{font-family:'Inter',sans-serif}
     <div class="grid rv" style="gap:12px;align-content:start">
       <div class="card" style="padding:16px 18px"><h3>A proporção entre planos é a premissa mais frágil</h3><p class="small muted" style="margin-top:6px">Com 50% das assinaturas no Pro em vez de 65%, a receita do ano 3 cai 19% e o EBITDA, 50% (de R$ 230 mil para R$ 115 mil). Com 65% no Starter, o aporte necessário vai a R$ 95 mil.</p></div>
       <div class="card" style="padding:16px 18px"><h3>Combinar premissas passa do capital</h3><p class="small muted" style="margin-top:6px">Proporção de 50/50 sem créditos extras exige R$ 97 mil, acima do capital previsto, e o capital não se recupera em 36 meses.</p></div>
-      <div class="card" style="padding:16px 18px"><h3>Atraso de lançamento custa caixa</h3><p class="small muted" style="margin-top:6px">Três meses de atraso levam o aporte necessário a R$ 87 mil, e seis meses, a R$ 128 mil. O teste gratuito de 200 créditos, em vez de 50, o levaria a R$ 143 mil.</p></div>
+      <div class="card" style="padding:16px 18px"><h3>Atraso de lançamento custa caixa</h3><p class="small muted" style="margin-top:6px">Três meses de atraso levam o aporte necessário a R$ 87 mil, e seis meses, a R$ 128 mil.</p></div>
     </div>
   </div>
   <div class="foot"><span>Uma alteração por vez, exceto onde indicado · projeção mensal</span><span data-n></span></div>
@@ -635,7 +635,7 @@ lineChart('ch-scen',{w:760,h:430,xmax:36,xstep:6,ymin:-100000,ymax:200000,ystep:
 
 /* sensibilidade: barras horizontais */
 (function(){
-  const rows=[['Base',54,0],['Sem créditos extras',67,0],['Proporção 50/50',70,0],['Ticket da Linha 1 20% menor',75,0],['Lançamento no mês 10',87,1],['65% Starter / 35% Pro',95,2],['50/50 e sem créditos extras',97,2],['Lançamento no mês 13',128,2],['Teste gratuito de 200 créditos',143,2],['Metade dos novos clientes',147,2]];
+  const rows=[['Base',54,0],['Sem créditos extras',67,0],['Proporção 50/50',70,0],['Ticket da Linha 1 20% menor',75,0],['Lançamento no mês 10',87,1],['65% Starter / 35% Pro',95,2],['50/50 e sem créditos extras',97,2],['Lançamento no mês 13',128,2],['Metade dos novos clientes',147,2]];
   const w=700,rh=34,h=rows.length*rh+34,l=235,r=30,max=175;
   const sx=v=>l+v/max*(w-l-r);let s=`<svg viewBox="0 0 ${w} ${h}" width="100%" style="display:block">`;
   [0,25,50,75,100,125,150,175].forEach(v=>{s+=`<line x1="${sx(v)}" x2="${sx(v)}" y1="0" y2="${h-22}" stroke="${C.grid}"/><text x="${sx(v)}" y="${h-6}" text-anchor="middle" font-size="10.5" fill="${C.mut}">${v}</text>`});
