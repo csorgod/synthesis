@@ -52,7 +52,7 @@ O ticket é a receita média por assinatura e não coincide com o preço de nenh
 | Premissa | Ano 1 | Ano 2 | Ano 3 | Origem |
 |---|---|---|---|---|
 | Novos clientes por mês, Linha 1 (média do ano) | 5,7 (planilha: 6) | 17,8 (planilha: 18) | 31,9 (planilha: 32) | Estimativa nossa: rampa de 10 no mês 7 e +5% ao mês |
-| Assinaturas Business (média do ano) | 0,5 | 4 | 10 | Estimativa nossa |
+| Assinaturas Business (média do ano) | 1 | 4 | 10 | Estimativa nossa |
 | Churn mensal, plano mensal | 9% | 7% | 6% | Estimativa nossa |
 | Churn do plano anual | 3% ao mês equivalente (cerca de 30% de não renovação ao ano) | | | Estimativa nossa |
 | **Churn combinado usado na planilha** | **8%** | **6%** | **5%** | Resultado das linhas acima |
@@ -99,17 +99,17 @@ Os novos clientes são uma meta informada, não o resultado de um funil. Com 5% 
 | Parcelas | R$ 35 mil no início, R$ 30 mil no lançamento do MVP, R$ 25 mil como reserva no mês 12 |
 | Condição da parcela 3 | MRR de pelo menos R$ 3 mil no mês 12 |
 | Alternativa | Seed de R$ 150 mil por volta do mês 9 |
-| Variante com um sócio em tempo integral | Aporte necessário sobe para cerca de R$ 96 mil (recomendação: R$ 120 mil) |
+| Variante com um sócio em tempo integral | Aporte necessário sobe para cerca de R$ 95 mil (recomendação: R$ 120 mil) |
 
-O aporte foi dimensionado pelo caixa mínimo do modelo mensal, que é de R$ 54 mil no cenário base, no mês 17 (folga de R$ 36 mil). Alguns cenários de estresse passam de R$ 90 mil (seção 8); um aporte de cerca de R$ 100 mil cobriria mais deles. A decisão é dos sócios.
+O aporte foi dimensionado pelo caixa mínimo do modelo mensal, que é de R$ 53 mil no cenário base, no mês 17 (folga de R$ 37 mil). Alguns cenários de estresse passam de R$ 90 mil (seção 8); um aporte de cerca de R$ 100 mil cobriria mais deles. A decisão é dos sócios.
 
 ## 7. Resultados (cenário base)
 
 | | Ano 1 | Ano 2 | Ano 3 |
 |---|---|---|---|
-| Receita, modelo mensal | R$ 48 mil | R$ 377 mil | R$ 962 mil |
-| EBITDA, modelo mensal | −R$ 22 mil | +R$ 24 mil | +R$ 230 mil |
-| MRR no fim do ano | R$ 13,0 mil | R$ 46,1 mil | R$ 107,0 mil |
+| Receita, modelo mensal | R$ 51 mil | R$ 377 mil | R$ 962 mil |
+| EBITDA, modelo mensal | −R$ 21 mil | +R$ 24 mil | +R$ 230 mil |
+| MRR no fim do ano | R$ 13,6 mil | R$ 46,1 mil | R$ 107,0 mil |
 | CAC (marketing, teste gratuito e vendas) | R$ 383 | R$ 333 | R$ 344 |
 | CAC completo (com pessoal) | R$ 383 | R$ 722 | R$ 781 |
 | LTV | R$ 1.720 | R$ 2.613 | R$ 3.614 |
@@ -123,15 +123,15 @@ O aporte foi dimensionado pelo caixa mínimo do modelo mensal, que é de R$ 54 m
 
 | Premissa alterada | Receita ano 3 | EBITDA ano 3 | Aporte necessário |
 |---|---|---|---|
-| Base | R$ 962 mil | +R$ 230 mil | R$ 54 mil |
-| Mix 50/50 | R$ 777 mil | +R$ 115 mil | R$ 70 mil |
-| Mix 65% Starter / 35% Pro | R$ 667 mil | +R$ 46 mil | R$ 95 mil |
-| Sem créditos extras | R$ 800 mil | +R$ 129 mil | R$ 67 mil |
-| Mix 50/50 e sem créditos extras | R$ 643 mil | +R$ 32 mil | R$ 97 mil |
-| Lançamento no mês 10 | R$ 820 mil | +R$ 149 mil | R$ 87 mil |
+| Base | R$ 962 mil | +R$ 230 mil | R$ 53 mil |
+| Mix 50/50 | R$ 777 mil | +R$ 115 mil | R$ 68 mil |
+| Mix 65% Starter / 35% Pro | R$ 667 mil | +R$ 46 mil | R$ 94 mil |
+| Sem créditos extras | R$ 800 mil | +R$ 129 mil | R$ 66 mil |
+| Mix 50/50 e sem créditos extras | R$ 643 mil | +R$ 32 mil | R$ 96 mil |
+| Lançamento no mês 10 | R$ 820 mil | +R$ 149 mil | R$ 86 mil |
 | Lançamento no mês 13 | R$ 691 mil | +R$ 75 mil | R$ 128 mil |
-| COGS de 45%, 40% e 35% | R$ 962 mil | +R$ 162 mil | R$ 67 mil |
-| Metade dos novos clientes | R$ 515 mil | −R$ 21 mil | R$ 147 mil |
+| COGS de 45%, 40% e 35% | R$ 962 mil | +R$ 162 mil | R$ 65 mil |
+| Metade dos novos clientes | R$ 515 mil | −R$ 21 mil | R$ 146 mil |
 
 - Nada disso foi validado com clientes. A pesquisa tem 20 respondentes e serve de indício de disposição a pagar.
 - O mix 35/65 é provavelmente otimista. A decisão sobre usar 50/50 como base está em aberto.
